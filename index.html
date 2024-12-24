@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMeld</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/TripMeld_Icon.png" />
+
+    <!-- Boostrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="main-page">
+    <header>
+        <div class="header-container padding-x">
+            <div>
+                <div class="logo-container">
+                    <img src="/assets/Images/TM_Logo.png" class="h-100" alt="">
+                </div>
+            </div>
+            <div>
+                <div class="navbar-container">
+                    <div class="nav-item">
+                        <a href="#featuesSection" class="nav-link">Features</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#pricingSection" class="nav-link">Prices</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#faqsSection" class="nav-link">FAQs</a>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!userLoggedIn">
+                <!-- <button class="clear-black-btn me-2" (click)="openSignInModal()">Sign In</button> -->
+                <button class="unfilled-orange-btn show-contactForm">Get A Demo</button>
+            </div>
+
+            <!-- <div *ngIf="userLoggedIn">
+                <div class="profile-container d-flex align-items-center">
+                    <div class="me-2">
+                        <button class="user-profile-btn">
+                            <img alt="Silhouette of a person's head"
+                                src="../../../../assets/Images/person-placeholder.png" />
+                        </button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <p class="avatar-name">{{userDetails?.userName}}</p>
+                            <p class="avatar-role">{{userDetails?.role}}</p>
+                        </div>
+                    </div>
+
+                    <div class="abs-container">
+                        <div class="main-container">
+                            <div>
+                                <p class="avatar-name">{{userDetails?.userName}}</p>
+                                <p class="avatar-role">{{userDetails?.role}}</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button class="signout-btn" (click)="logoutUser()">Sign Out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </header>
+
+    <div class="main-body">
+        <div>
+            <!-- landing section start -->
+            <section class="landing-section padding-x py-2">
+                <div class="d-flex h-100">
+                    <div class="inner-container-1 py-3">
+                        <div class="heading-container">
+                            <h1 class="landing-main-title text-capitilize">Discover Our All-In-One <span
+                                    class="orange-color">CRM</span>
+                            </h1>
+                            <p class="page-text">
+                                Transform your travel business with our smart, AI-driven platform designed specially for
+                                the travel
+                                industry. You can effortlessly connect your data, improve team collaboration, and
+                                enhance customer
+                                relationships on a powerful CRM that scales with your growth.
+                            </p>
+                        </div>
+
+                        <div class="pb-3">
+                            <div class="d-flex mb-1" *ngIf="!userLoggedIn">
+                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For Free</button>
+                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                            </div>
+                            <!-- <div *ngIf="userLoggedIn">
+                                <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
+                                    Apps</button>
+                            </div> -->
+                            <div>
+                                <p class="page-text">
+                                    Try our premium travel CRM for free: Get Started Today!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inner-container-2">
+                        <div class="w-100 h-100">
+                            <img class="w-100" src="assets/Images/home/landing-section-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Landing section end -->
+
+            <!-- Features section start -->
+            <section id="featuesSection">
+                <div class="features-section padding-x py-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="page-text white-color">
+                                Satisfied Clients, Motivated Teams - Success That Always Speaks
+                            </p>
+                            <h3 class="section-heading white-color">TripMeld Features</h3>
+                        </div>
+                        <div>
+                            <div class="d-flex mb-1" *ngIf="!userLoggedIn">
+                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For Free</button>
+                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                            </div>
+                            <!-- <div *ngIf="userLoggedIn">
+                                <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
+                                    Apps</button>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between">
+                            <div class="features-headings-main-container">
+                                <div class="feature-titles-carousel">
+                                    <div class="single-feature-container">
+                                        <div>
+                                            <p class="title">Intant Lead Generation</p>
+                                            <p class="sub-text">Efficient Lead Management with Smart Automation</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="single-feature-container">
+                                        <div>
+                                            <p class="title">AI-Integrated Quote Creation</p>
+                                            <p class="sub-text">Get Smarter & Custom Itineraries Within Minutes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="single-feature-container">
+                                        <div>
+                                            <p class="title">Seamless Communication</p>
+                                            <p class="sub-text">Effortless Chats and Calls All at One Place</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="single-feature-container">
+                                        <div>
+                                            <p class="title">Top DMC Integration</p>
+                                            <p class="sub-text">Get Instant Access To 200+ Destination Experts</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="single-feature-container">
+                                        <div>
+                                            <p class="title">Real-Time Visa Tracking </p>
+                                            <p class="sub-text">Quick & Hassle-Free Visa Processing Updates</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="single-feature-container">
+                                        <div>
+                                            <p class="title">Inventory Pool for Itineraries & Images </p>
+                                            <p class="sub-text">Quick & Hassle-Free Visa Processing Updates</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-details-main-container">
+                                <div>
+                                    <div class="img-container">
+                                        <img class="img" src="assets/Images/home/route-craft.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="page-text mt-2">Captures lead information, create quote and tracks
+                                            visa application statuses. Allows leads to download their visas directly
+                                            from the portal, providing a seamless customer experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscribe plan section start -->
+            <section id="pricingSection">
+                <div class="plans-section padding-x py-3 bg-cover">
+                    <div>
+                        <div class="text-center">
+                            <h3 class="section-heading mb-0">Choose your right plan!</h3>
+                            <p class="page-text">
+                                Happy clients. Inspired staff. That’s success in action.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div>
+                            <div class="plans-container">
+                                <div class="plan-item">
+                                    <!-- plan info -->
+                                    <div>
+                                        <div>
+                                            <h3 class="title">Essential</h3>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="page-text fw-bold mb-1">Key Features</p>
+                                            <div class="check-list">
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Dashboard</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Lead Management</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Quote & Itinerary Management</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Custom Route Builder</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Task Management</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Itinerary Inventory</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Standard Itinerary Format</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Calendar</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pricing info -->
+                                    <div>
+                                        <div class="pricing-details">
+                                            <p class="text">Starting From</p>
+                                            <p class="text"><span class="text-xl">INR 350</span> Per User</p>
+                                            <p class="text">Minimum 5 Users- INR 19,999/-Annually</p>
+                                            <p class="text">Every User Above 5- INR 4,200/-per user/Annually</p>
+                                            <p class="text">Unlimited Users- INR 49,999/-Annually</p>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="plan-item">
+                                    <!-- plan info -->
+                                    <div>
+                                        <div>
+                                            <h3 class="title">Enhanced</h3>
+                                            <p class="mb-0 sub-title">Includes Essential Package +</p>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="page-text fw-bold mb-1">Key Features</p>
+                                            <div class="check-list">
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">AI Route Crafter</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Voucher Management</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Invoice Management</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Meeting Scheduler</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">In-App Messaging</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Client & Partner Management</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pricing info -->
+                                    <div>
+                                        <div class="pricing-details">
+                                            <p class="text">Starting From</p>
+                                            <p class="text"><span class="text-xl">INR 400</span> Per User</p>
+                                            <p class="text">Minimum 5 Users- INR 24,999/-Annually</p>
+                                            <p class="text">Every User Above 5- INR 4,800/-per user/Annually</p>
+                                            <p class="text">Unlimited Users- INR 59,999/-Annually</p>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="plan-item">
+                                    <!-- plan info -->
+                                    <div>
+                                        <div>
+                                            <h3 class="title">Professional</h3>
+                                            <p class="mb-0 sub-title">Includes Enhanced Package +</p>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="page-text fw-bold mb-1">Key Features</p>
+                                            <div class="check-list">
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Enhanced Call Tracking</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">1 Customizable Itinerary Format</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">DMC Integration</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pricing info -->
+                                    <div>
+                                        <div class="pricing-details">
+                                            <p class="text">Starting From</p>
+                                            <p class="text"><span class="text-xl">INR 450</span> Per User</p>
+                                            <p class="text">Minimum 5 Users- INR 29,999/-Annually</p>
+                                            <p class="text">Every User Above 5- INR 5,400/-per user/Annually</p>
+                                            <p class="text">Unlimited Users- INR 69,999/-Annually</p>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="plan-item">
+                                    <!-- plan info -->
+                                    <div>
+                                        <div>
+                                            <h3 class="title">Enterprise</h3>
+                                            <p class="mb-0 sub-title">Includes Professional Package +</p>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="page-text fw-bold mb-1">Key Features</p>
+                                            <div class="check-list">
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">Visa Processing & Tracking Module</p>
+                                                </div>
+                                                <div class="check-item">
+                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                    <p class="page-text">2 Customizable Itinerary Formats</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pricing info -->
+                                    <div>
+                                        <div class="pricing-details">
+                                            <p class="text">Starting From</p>
+                                            <p class="text"><span class="text-xl">INR 500</span> Per User</p>
+                                            <p class="text">Minimum 5 Users- INR 34,999/-Annually</p>
+                                            <p class="text">Every User Above 5- INR 6,000/-per user/Annually</p>
+                                            <p class="text">Unlimited Users- INR 79,999/-Annually</p>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-3">
+                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Banner container start -->
+            <section>
+                <div class="ai-features-banner padding-x">
+                    <div class="padding-x">
+                        <div class="d-flex">
+                            <div class="w-50 py-2">
+                                <div>
+                                    <h4 class="title white-color">Experience Our AI-Driven Feature</h4>
+                                    <p class="page-text white-color">Boost your sales success with our AI-powered
+                                        features. Phase out manual
+                                        processes, streamline communication and make data-driven decisions for smarter,
+                                        faster sales.</p>
+                                </div>
+                                <div class="mt-4" *ngIf="!userLoggedIn">
+                                    <button class="filled-orange-btn show-contactForm" (click)="openSignUpModal()">Try For Free</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services section start -->
+            <section>
+                <div class="services-section padding-x py-3 bg-cover">
+                    <div>
+                        <div class="text-center w-50 m-auto">
+                            <h3 class="section-heading mb-0">Innovative Services Catering to All Aspects of the Travel
+                                Sector</h3>
+                            <!-- <p class="page-text">
+                        Powered by TripMeld
+                      </p> -->
+                        </div>
+                    </div>
+
+                    <div class="pt-4 service-grid">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/assistance.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Travel Agencies Management</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/air-travel.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Group Travel Management</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/map.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Destination Management Companies(DMC)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/sustainable.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Tourism Boards</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/visa.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Visas Management</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/business-trip.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Corporate Travel Management</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/tour-guide.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Tour Operators & Vendors</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="service-item">
+                                    <div class="img-container">
+                                        <img class="img" src="/assets/Images/home/Icons/hotel.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="label">Accommodation Management </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mt-2 d-flex justify-content-center">
+                        <div class="d-flex mb-1" *ngIf="!userLoggedIn">
+                            <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For Free</button>
+                            <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                        </div>
+                        <!-- <div *ngIf="userLoggedIn">
+                            <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your Apps</button>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Marquee section -->
+            <section>
+                <!-- Marquee Section -->
+                <div class="marquee-section">
+                    <div class="marquee">
+                        <div class="marquee-group">
+                            <span class="line-text orange-color">AI Generative Creation</span>
+                            <div class="middot"></div>
+                            <span class="line-text dark-blue-color">Recommended itineraries</span>
+                            <div class="middot"></div>
+                            <span class="line-text orange-color">VISA PROCESSING</span>
+                            <div class="middot"></div>
+                            <span class="line-text dark-blue-color">INVENTORY BUNCH</span>
+                            <div class="middot"></div>
+                            <span class="line-text orange-color">RECOMMENDED DMC</span>
+                            <div class="middot"></div>
+                            <span class="line-text dark-blue-color">QUOTE CREATION</span>
+                            <div class="middot"></div>
+                        </div>
+
+                        <div aria-hidden="true" class="marquee-group">
+                            <span class="line-text orange-color">AI Generative Creation</span>
+                            <div class="middot"></div>
+                            <span class="line-text dark-blue-color">Recommended itineraries</span>
+                            <div class="middot"></div>
+                            <span class="line-text orange-color">VISA PROCESSING</span>
+                            <div class="middot"></div>
+                            <span class="line-text dark-blue-color">INVENTORY BUNCH</span>
+                            <div class="middot"></div>
+                            <span class="line-text orange-color">RECOMMENDED DMC</span>
+                            <div class="middot"></div>
+                            <span class="line-text dark-blue-color">QUOTE CREATION</span>
+                            <div class="middot"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Marquee Section -->
+            </section>
+
+            <!-- FAQs section start -->
+            <section id="faqsSection">
+                <div class="py-2 padding-x faq-section">
+                    <div class="title-container py-2">
+                        <h3 class="title section-heading mb-0">TripMeld FAQs</h3>
+                    </div>
+
+                    <div>
+                        <div class="faqs-list-container">
+                            <!-- FAQ items will be dynamically inserted here -->
+                        </div>
+
+                        <!-- Show More/Show Less -->
+                        <div class="d-flex justify-content-end">
+                            <p class="mb-0 clickable-text show-more-text" id="show-more-text">Show More</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="cta-container-1 padding-x py-2">
+                    <div class="main-container">
+
+                        <div class="content-container">
+                            <h2 class="title">Elevate Your Travel Business to New Heights with TripMeld</h2>
+                            <p class="page-text mb-0 mt-2">Streamline operations, enhance customer experiences, and
+                                drive growth with our all-in-one travel industry solutions.</p>
+                        </div>
+
+                        <div class="img-container">
+                            <img class="img" src="assets/images/TripMeld_Icon.png" alt="">
+                        </div>
+
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center h-100">
+                                <div class="d-flex mb-1" *ngIf="!userLoggedIn">
+                                    <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For
+                                        Free</button>
+                                    <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                                </div>
+                                <!-- <div *ngIf="userLoggedIn">
+                                    <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
+                                        Apps</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="padding-x py-2 footer-section" id="footerSection">
+            <div class="main-container">
+                <div class="content-container">
+                    <div class="text-center w-75 m-auto pt-2">
+                        <h2 class="title white-color">Accelerate Your Business with TMCRM</h2>
+                        <p class="page-text white-color w-75 m-auto">Your Success is just a click away! Sign up now and
+                            experience the
+                            power of our AI-driven CRM to manage leads smarter and faster helping your travel business
+                            grow fast.</p>
+
+                    </div>
+
+                    <div class="email-container" *ngIf="!userLoggedIn">
+                        <div class="form-input">
+                            <input type="text" class="email-input" placeholder="Your Email Address">
+                            <button class="filled-orange-btn">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-inner-container">
+
+                    <div class="row">
+                        <div class="col-5 p-2">
+                            <div class="item">
+                                <p class="label">About TripMeld</p>
+                                <p class="content mb-0">TripMeld isn’t just a powerful CRM tool but with its smart
+                                    features and easy integration,
+                                    it simplifies your lead management and sales tracking. The AI-powered system
+                                    generates custom itineraries
+                                    in minutes, boosting efficiency and productivity every step of the way.</p>
+                            </div>
+                        </div>
+                        <div class="col-4 p-2">
+                            <div class="item">
+                                <p class="label">Contact Us On</p>
+                                <p class="content">+91 92811 17171 or contact&#64;tripmeld.com</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="label">Address</p>
+                                <p class="content mb-0">2nd Floor, Plot no 151, Green Park Avenue, Jeedimetla Village,
+                                    Hyderabad, India,
+                                    Telangana</p>
+                            </div>
+                        </div>
+                        <div class="col-3 p-2">
+
+                            <div class="item">
+                                <p class="label">Social Media</p>
+                                <p class="btn-container d-flex">
+                                    <button class="social-media-btn" onclick="openInNewTab('https://www.facebook.com/share/1Ay6rToAD5/?mibextid=wwXIfr')"><ion-icon name="logo-facebook"></ion-icon></button>
+                                    <button class="social-media-btn" onclick="openInNewTab('https://www.instagram.com/tripmeld?igsh=c3lmZG15ZW1zODc5')"><ion-icon
+                                            name="logo-instagram"></ion-icon></button>
+                                    <button class="social-media-btn" onclick="openInNewTab('https://www.linkedin.com/company/tripmeld')"><ion-icon name="logo-linkedin"></ion-icon></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- bg-line -->
+                <span class="bg-line one"></span>
+                <span class="bg-line two"></span>
+                <span class="bg-line three"></span>
+                <span class="bg-line four"></span>
+                <span class="bg-line five"></span>
+            </div>
+
+            <div class="disclamer-container">
+                <p class="disclamer mb-0">© Copyright 2024, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal popup container -->
+
+    <section class="contact-form-container" id="contactFormModal">
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+            <div class="my-modal-component-css">
+                <div class="extension-modal position-relative">
+                    <div class="main-container">
+                        <div class="d-flex h-100">
+                            <div class="col-6 p-0">
+                                <div class="right-main-container bg-cover">
+                                    <div class="img-container">
+                                        <img src="assets/Images/extensions/desktop-person.svg" alt="" class="img">
+
+                                        <!-- ABS images -->
+                                        <img src="assets/Images/extensions/circles-cylinder.gif" alt=""
+                                            class="circles-1-gif">
+                                        <img src="assets/Images/extensions/circles-cylinder.gif" alt=""
+                                            class="circles-2-gif">
+                                        <img src="assets/Images/extensions/arrow-tick.gif" alt="" class="arrow-gif">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 p-0">
+                                <div class="left-main-container">
+                                    <div class="logo-container">
+                                        <img src="/assets/Images/TM_Logo.png" alt="" class="logo">
+                                    </div>
+                                    <div class="form-main-container">
+                                        <div class="form-container w-100">
+                                            <p class="form-title">Contact Us</p>
+                                            <form>
+                                                <div class="form-input">
+                                                    <input type="text" class="input" placeholder="Full Name*"
+                                                        formControlName="name">
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <input type="text" class="input" placeholder="Work Email*">
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <input type="text" class="input" placeholder="Phone Number*">
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <input type="text" class="input" placeholder="Company Name*">
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <select name="" id="" class="input">
+                                                        <option value="" hidden>Company Size</option>
+                                                        <option value="Above 100">Above 100</option>
+                                                        <option value="51 - 100">51 - 100</option>
+                                                        <option value="21 - 50">21 - 50</option>
+                                                        <option value="06 - 20">06 - 20</option>
+                                                        <option value="0 - 05">0 - 05</option>
+                                                    </select>
+                                                </div>
+
+
+                                                <div class="form-input">
+                                                    <button class="submit-btn" type="submit">Send</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close-btn" onclick="hideContactFormModal()">x</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquory CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Ionic icons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Custom JS files -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>

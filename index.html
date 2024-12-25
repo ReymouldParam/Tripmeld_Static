@@ -13,6 +13,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <!-- Slick carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -25,26 +33,32 @@
                     <img src="/assets/Images/TM_Logo.png" class="h-100" alt="">
                 </div>
             </div>
-            <div>
+            <div class="navbar-main-container">
                 <div class="navbar-container">
                     <div class="nav-item">
-                        <a href="#featuesSection" class="nav-link">Features</a>
+                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
                     </div>
                     <div class="nav-item">
-                        <a href="#pricingSection" class="nav-link">Prices</a>
+                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
                     </div>
                     <div class="nav-item">
-                        <a href="#faqsSection" class="nav-link">FAQs</a>
+                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
                     </div>
                     <div class="nav-item">
                         <p class="nav-link show-contactForm">Contact</p>
                     </div>
                 </div>
             </div>
-            <div *ngIf="!userLoggedIn">
+            <div class="d-flex align-items-center">
                 <!-- <button class="clear-black-btn me-2" (click)="openSignInModal()">Sign In</button> -->
-                <button class="unfilled-orange-btn show-contactForm">Get A Demo</button>
+                <button class="unfilled-orange-btn show-contactForm">Get Demo</button>
+                <div class="toggle-btn-container ms-2">
+                    <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </div>
             </div>
+
 
             <!-- <div *ngIf="userLoggedIn">
                 <div class="profile-container d-flex align-items-center">
@@ -75,6 +89,22 @@
                     </div>
                 </div>
             </div> -->
+            <div class="mobile-navbar-container">
+                <div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -82,13 +112,13 @@
         <div>
             <!-- landing section start -->
             <section class="landing-section padding-x py-2">
-                <div class="d-flex h-100">
+                <div class="d-flex h-100 main-container">
                     <div class="inner-container-1 py-3">
                         <div class="heading-container">
                             <h1 class="landing-main-title text-capitilize">Discover Our All-In-One <span
                                     class="orange-color">CRM</span>
                             </h1>
-                            <p class="page-text">
+                            <p class="page-text mb-2">
                                 Transform your travel business with our smart, AI-driven platform designed specially for
                                 the travel
                                 industry. You can effortlessly connect your data, improve team collaboration, and
@@ -99,8 +129,10 @@
 
                         <div class="pb-3">
                             <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For Free</button>
-                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try
+                                    For Free</button>
+                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a
+                                    Demo</button>
                             </div>
                             <!-- <div *ngIf="userLoggedIn">
                                 <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -126,7 +158,7 @@
             <!-- Features section start -->
             <section id="featuesSection">
                 <div class="features-section padding-x py-2">
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center features-title-flex-container">
                         <div>
                             <p class="page-text white-color">
                                 Satisfied Clients, Motivated Teams - Success That Always Speaks
@@ -135,8 +167,10 @@
                         </div>
                         <div>
                             <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For Free</button>
-                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try
+                                    For Free</button>
+                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a
+                                    Demo</button>
                             </div>
                             <!-- <div *ngIf="userLoggedIn">
                                 <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -146,7 +180,7 @@
                     </div>
 
                     <div class="mt-3">
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between features-flex-container">
                             <div class="features-headings-main-container">
                                 <div class="feature-titles-carousel">
                                     <div class="single-feature-container">
@@ -186,7 +220,7 @@
 
                                     <div class="single-feature-container">
                                         <div>
-                                            <p class="title">Inventory Pool for Itineraries & Images </p>
+                                            <p class="title">Inventory Pool </p>
                                             <p class="sub-text">Quick & Hassle-Free Visa Processing Updates</p>
                                         </div>
                                     </div>
@@ -194,16 +228,78 @@
                             </div>
 
                             <div class="feature-details-main-container">
-                                <div>
-                                    <div class="img-container">
-                                        <img class="img" src="assets/Images/home/route-craft.jpg" alt="">
+                                <div class="feature-details-carousel w-100">
+                                    <div class="carousel-item">
+                                        <div class="img-container">
+                                            <img class="img" src="assets/images/home/features/lead.webp" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="page-text mt-2">Streamlined lead capturing and tracking process
+                                                from inquiry to conversion. Automated status updates for leads based on
+                                                quote and voucher actions.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p class="page-text mt-2">Captures lead information, create quote and tracks
-                                            visa application statuses. Allows leads to download their visas directly
-                                            from the portal, providing a seamless customer experience.</p>
+
+                                    <div class="carousel-item">
+                                        <div class="img-container">
+                                            <img class="img" src="assets/images/home/features/route-craft.webp" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="page-text mt-2">Automatically generates optimized day-to-day
+                                                travel plans.Reduces manual effort in crafting itineraries while
+                                                ensuring personalized experiences for clients.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="img-container">
+                                            <img class="img" src="assets/images/home/features/chat.webp" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="page-text mt-2">Enables real-time
+                                                communication between internal teams, external DMCs, and vendors for
+                                                better collaboration. Call Recording and Lead Integration: Automatically
+                                                records calls, links them to leads, and maintains detailed records for
+                                                easy reference.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="img-container">
+                                            <img class="img" src="assets/images/home/features/dmc.webp" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="page-text mt-2">Seamless communication and collaboration between
+                                                travel agents, DMCs, and vendors.Enables efficient sharing of
+                                                itineraries, quotes, and service details.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="img-container">
+                                            <img class="img" src="assets/images/home/features/visa.webp" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="page-text mt-2">Captures lead information and tracks visa
+                                                application statuses. Allows leads to download their visas directly from
+                                                the portal, providing a seamless customer experience. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="img-container">
+                                            <img class="img" src="assets/images/home/features/inventory.webp" alt="">
+                                        </div>
+                                        <div>
+                                            <p class="page-text mt-2">Centralized repository of pre-designed itineraries
+                                                for quick use.Customizable templates for creating professional and
+                                                detailed day-to-day itineraries.</p>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -225,195 +321,203 @@
 
                     <div class="mt-3">
                         <div>
-                            <div class="plans-container">
-                                <div class="plan-item">
-                                    <!-- plan info -->
-                                    <div>
+                            <div class="plans-container subscribe-plan-carousel">
+                                <div class="carousel-item">
+                                    <div class="plan-item">
+                                        <!-- plan info -->
                                         <div>
-                                            <h3 class="title">Essential</h3>
-                                        </div>
-                                        <div class="mt-2">
-                                            <p class="page-text fw-bold mb-1">Key Features</p>
-                                            <div class="check-list">
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Dashboard</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Lead Management</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Quote & Itinerary Management</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Custom Route Builder</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Task Management</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Itinerary Inventory</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Standard Itinerary Format</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Calendar</p>
+                                            <div>
+                                                <h3 class="title">Essential</h3>
+                                            </div>
+                                            <div class="mt-2">
+                                                <p class="page-text fw-bold mb-1">Key Features</p>
+                                                <div class="check-list">
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Dashboard</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Lead Management</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Quote & Itinerary Management</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Custom Route Builder</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Task Management</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Itinerary Inventory</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Standard Itinerary Format</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Calendar</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Pricing info -->
-                                    <div>
-                                        <div class="pricing-details">
-                                            <p class="text">Starting From</p>
-                                            <p class="text"><span class="text-xl">INR 350</span> Per User</p>
-                                            <p class="text">Minimum 5 Users- INR 19,999/-Annually</p>
-                                            <p class="text">Every User Above 5- INR 4,200/-per user/Annually</p>
-                                            <p class="text">Unlimited Users- INR 49,999/-Annually</p>
-                                        </div>
-                                        <div class="d-flex justify-content-end mt-3">
-                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        <!-- Pricing info -->
+                                        <div>
+                                            <div class="pricing-details">
+                                                <p class="text">Starting From</p>
+                                                <p class="text"><span class="text-xl">INR 350</span> Per User</p>
+                                                <p class="text">Minimum 5 Users- INR 19,999/-Annually</p>
+                                                <p class="text">Every User Above 5- INR 4,200/-per user/Annually</p>
+                                                <p class="text">Unlimited Users- INR 49,999/-Annually</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="plan-item">
-                                    <!-- plan info -->
-                                    <div>
+                                <div class="carousel-item">
+                                    <div class="plan-item">
+                                        <!-- plan info -->
                                         <div>
-                                            <h3 class="title">Enhanced</h3>
-                                            <p class="mb-0 sub-title">Includes Essential Package +</p>
-                                        </div>
-                                        <div class="mt-2">
-                                            <p class="page-text fw-bold mb-1">Key Features</p>
-                                            <div class="check-list">
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">AI Route Crafter</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Voucher Management</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Invoice Management</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Meeting Scheduler</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">In-App Messaging</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Client & Partner Management</p>
+                                            <div>
+                                                <h3 class="title">Enhanced</h3>
+                                                <p class="mb-0 sub-title">Includes Essential Package +</p>
+                                            </div>
+                                            <div class="mt-2">
+                                                <p class="page-text fw-bold mb-1">Key Features</p>
+                                                <div class="check-list">
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">AI Route Crafter</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Voucher Management</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Invoice Management</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Meeting Scheduler</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">In-App Messaging</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Client & Partner Management</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Pricing info -->
-                                    <div>
-                                        <div class="pricing-details">
-                                            <p class="text">Starting From</p>
-                                            <p class="text"><span class="text-xl">INR 400</span> Per User</p>
-                                            <p class="text">Minimum 5 Users- INR 24,999/-Annually</p>
-                                            <p class="text">Every User Above 5- INR 4,800/-per user/Annually</p>
-                                            <p class="text">Unlimited Users- INR 59,999/-Annually</p>
-                                        </div>
-                                        <div class="d-flex justify-content-end mt-3">
-                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        <!-- Pricing info -->
+                                        <div>
+                                            <div class="pricing-details">
+                                                <p class="text">Starting From</p>
+                                                <p class="text"><span class="text-xl">INR 400</span> Per User</p>
+                                                <p class="text">Minimum 5 Users- INR 24,999/-Annually</p>
+                                                <p class="text">Every User Above 5- INR 4,800/-per user/Annually</p>
+                                                <p class="text">Unlimited Users- INR 59,999/-Annually</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="plan-item">
-                                    <!-- plan info -->
-                                    <div>
+                                <div class="carousel-item">
+                                    <div class="plan-item">
+                                        <!-- plan info -->
                                         <div>
-                                            <h3 class="title">Professional</h3>
-                                            <p class="mb-0 sub-title">Includes Enhanced Package +</p>
-                                        </div>
-                                        <div class="mt-2">
-                                            <p class="page-text fw-bold mb-1">Key Features</p>
-                                            <div class="check-list">
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Enhanced Call Tracking</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">1 Customizable Itinerary Format</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">DMC Integration</p>
-                                                </div>
+                                            <div>
+                                                <h3 class="title">Professional</h3>
+                                                <p class="mb-0 sub-title">Includes Enhanced Package +</p>
+                                            </div>
+                                            <div class="mt-2">
+                                                <p class="page-text fw-bold mb-1">Key Features</p>
+                                                <div class="check-list">
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Enhanced Call Tracking</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">1 Customizable Itinerary Format</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">DMC Integration</p>
+                                                    </div>
 
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Pricing info -->
-                                    <div>
-                                        <div class="pricing-details">
-                                            <p class="text">Starting From</p>
-                                            <p class="text"><span class="text-xl">INR 450</span> Per User</p>
-                                            <p class="text">Minimum 5 Users- INR 29,999/-Annually</p>
-                                            <p class="text">Every User Above 5- INR 5,400/-per user/Annually</p>
-                                            <p class="text">Unlimited Users- INR 69,999/-Annually</p>
-                                        </div>
-                                        <div class="d-flex justify-content-end mt-3">
-                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        <!-- Pricing info -->
+                                        <div>
+                                            <div class="pricing-details">
+                                                <p class="text">Starting From</p>
+                                                <p class="text"><span class="text-xl">INR 450</span> Per User</p>
+                                                <p class="text">Minimum 5 Users- INR 29,999/-Annually</p>
+                                                <p class="text">Every User Above 5- INR 5,400/-per user/Annually</p>
+                                                <p class="text">Unlimited Users- INR 69,999/-Annually</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="plan-item">
-                                    <!-- plan info -->
-                                    <div>
+                                <div class="carousel-item">
+                                    <div class="plan-item">
+                                        <!-- plan info -->
                                         <div>
-                                            <h3 class="title">Enterprise</h3>
-                                            <p class="mb-0 sub-title">Includes Professional Package +</p>
-                                        </div>
-                                        <div class="mt-2">
-                                            <p class="page-text fw-bold mb-1">Key Features</p>
-                                            <div class="check-list">
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">Visa Processing & Tracking Module</p>
-                                                </div>
-                                                <div class="check-item">
-                                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                                                    <p class="page-text">2 Customizable Itinerary Formats</p>
+                                            <div>
+                                                <h3 class="title">Enterprise</h3>
+                                                <p class="mb-0 sub-title">Includes Professional Package +</p>
+                                            </div>
+                                            <div class="mt-2">
+                                                <p class="page-text fw-bold mb-1">Key Features</p>
+                                                <div class="check-list">
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">Visa Processing & Tracking Module</p>
+                                                    </div>
+                                                    <div class="check-item">
+                                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                                        <p class="page-text">2 Customizable Itinerary Formats</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Pricing info -->
-                                    <div>
-                                        <div class="pricing-details">
-                                            <p class="text">Starting From</p>
-                                            <p class="text"><span class="text-xl">INR 500</span> Per User</p>
-                                            <p class="text">Minimum 5 Users- INR 34,999/-Annually</p>
-                                            <p class="text">Every User Above 5- INR 6,000/-per user/Annually</p>
-                                            <p class="text">Unlimited Users- INR 79,999/-Annually</p>
-                                        </div>
-                                        <div class="d-flex justify-content-end mt-3">
-                                            <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                        <!-- Pricing info -->
+                                        <div>
+                                            <div class="pricing-details">
+                                                <p class="text">Starting From</p>
+                                                <p class="text"><span class="text-xl">INR 500</span> Per User</p>
+                                                <p class="text">Minimum 5 Users- INR 34,999/-Annually</p>
+                                                <p class="text">Every User Above 5- INR 6,000/-per user/Annually</p>
+                                                <p class="text">Unlimited Users- INR 79,999/-Annually</p>
+                                            </div>
+                                            <div class="d-flex justify-content-end mt-3">
+                                                <button class="buy-now-btn show-contactForm">Buy Now</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -427,8 +531,8 @@
             <section>
                 <div class="ai-features-banner padding-x">
                     <div class="padding-x">
-                        <div class="d-flex">
-                            <div class="w-50 py-2">
+                        <div class="grid-container">
+                            <div class="py-2">
                                 <div>
                                     <h4 class="title white-color">Experience Our AI-Driven Feature</h4>
                                     <p class="page-text white-color">Boost your sales success with our AI-powered
@@ -437,7 +541,8 @@
                                         faster sales.</p>
                                 </div>
                                 <div class="mt-4" *ngIf="!userLoggedIn">
-                                    <button class="filled-orange-btn show-contactForm" (click)="openSignUpModal()">Try For Free</button>
+                                    <button class="filled-orange-btn show-contactForm" (click)="openSignUpModal()">Try
+                                        For Free</button>
                                 </div>
                             </div>
                         </div>
@@ -449,7 +554,7 @@
             <section>
                 <div class="services-section padding-x py-3 bg-cover">
                     <div>
-                        <div class="text-center w-50 m-auto">
+                        <div class="text-center w-50 m-auto services-heading-container">
                             <h3 class="section-heading mb-0">Innovative Services Catering to All Aspects of the Travel
                                 Sector</h3>
                             <!-- <p class="page-text">
@@ -459,8 +564,8 @@
                     </div>
 
                     <div class="pt-4 service-grid">
-                        <div class="row">
-                            <div class="col-3">
+                        <div class="service-grid-container">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/assistance.png" alt="">
@@ -471,7 +576,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/air-travel.png" alt="">
@@ -482,7 +587,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/map.png" alt="">
@@ -493,7 +598,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/sustainable.png" alt="">
@@ -504,7 +609,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/visa.png" alt="">
@@ -515,7 +620,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/business-trip.png" alt="">
@@ -526,7 +631,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/tour-guide.png" alt="">
@@ -537,7 +642,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-3">
+                            <div class="">
                                 <div class="service-item">
                                     <div class="img-container">
                                         <img class="img" src="/assets/Images/home/Icons/hotel.png" alt="">
@@ -553,8 +658,10 @@
 
                     <div class="mt-2 d-flex justify-content-center">
                         <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                            <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For Free</button>
-                            <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                            <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For
+                                Free</button>
+                            <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a
+                                Demo</button>
                         </div>
                         <!-- <div *ngIf="userLoggedIn">
                             <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your Apps</button>
@@ -641,9 +748,11 @@
                         <div>
                             <div class="d-flex justify-content-between align-items-center h-100">
                                 <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                                    <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For
+                                    <button class="filled-orange-btn me-2 show-contactForm"
+                                        (click)="openSignUpModal()">Try For
                                         Free</button>
-                                    <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a Demo</button>
+                                    <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get
+                                        a Demo</button>
                                 </div>
                                 <!-- <div *ngIf="userLoggedIn">
                                     <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -664,7 +773,7 @@
         <div class="padding-x py-2 footer-section" id="footerSection">
             <div class="main-container">
                 <div class="content-container">
-                    <div class="text-center w-75 m-auto pt-2">
+                    <div class="text-center w-75 m-auto pt-2 text-container">
                         <h2 class="title white-color">Accelerate Your Business with TMCRM</h2>
                         <p class="page-text white-color w-75 m-auto">Your Success is just a click away! Sign up now and
                             experience the
@@ -676,15 +785,15 @@
                     <div class="email-container" *ngIf="!userLoggedIn">
                         <div class="form-input">
                             <input type="text" class="email-input" placeholder="Your Email Address">
-                            <button class="filled-orange-btn">Try For Free</button>
+                            <button class="filled-orange-btn">Send</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="footer-inner-container">
 
-                    <div class="row">
-                        <div class="col-5 p-2">
+                    <div class="grid-container">
+                        <div class=" p-2">
                             <div class="item">
                                 <p class="label">About TripMeld</p>
                                 <p class="content mb-0">TripMeld isn’t just a powerful CRM tool but with its smart
@@ -694,7 +803,7 @@
                                     in minutes, boosting efficiency and productivity every step of the way.</p>
                             </div>
                         </div>
-                        <div class="col-4 p-2">
+                        <div class=" p-2">
                             <div class="item">
                                 <p class="label">Contact Us On</p>
                                 <p class="content">+91 92811 17171 or contact&#64;tripmeld.com</p>
@@ -707,15 +816,20 @@
                                     Telangana</p>
                             </div>
                         </div>
-                        <div class="col-3 p-2">
+                        <div class=" p-2">
 
                             <div class="item">
                                 <p class="label">Social Media</p>
                                 <p class="btn-container d-flex">
-                                    <button class="social-media-btn" onclick="openInNewTab('https://www.facebook.com/share/1Ay6rToAD5/?mibextid=wwXIfr')"><ion-icon name="logo-facebook"></ion-icon></button>
-                                    <button class="social-media-btn" onclick="openInNewTab('https://www.instagram.com/tripmeld?igsh=c3lmZG15ZW1zODc5')"><ion-icon
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.facebook.com/share/1Ay6rToAD5/?mibextid=wwXIfr')"><ion-icon
+                                            name="logo-facebook"></ion-icon></button>
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.instagram.com/tripmeld?igsh=c3lmZG15ZW1zODc5')"><ion-icon
                                             name="logo-instagram"></ion-icon></button>
-                                    <button class="social-media-btn" onclick="openInNewTab('https://www.linkedin.com/company/tripmeld')"><ion-icon name="logo-linkedin"></ion-icon></button>
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.linkedin.com/company/tripmeld')"><ion-icon
+                                            name="logo-linkedin"></ion-icon></button>
                                 </p>
                             </div>
                         </div>
@@ -744,8 +858,8 @@
             <div class="my-modal-component-css">
                 <div class="extension-modal position-relative">
                     <div class="main-container">
-                        <div class="d-flex h-100">
-                            <div class="col-6 p-0">
+                        <div class="h-100 contact-modal-grid-container">
+                            <div class=" p-0">
                                 <div class="right-main-container bg-cover">
                                     <div class="img-container">
                                         <img src="assets/Images/extensions/desktop-person.svg" alt="" class="img">
@@ -760,7 +874,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-6 p-0">
+                            <div class=" p-0">
                                 <div class="left-main-container">
                                     <div class="logo-container">
                                         <img src="/assets/Images/TM_Logo.png" alt="" class="logo">
@@ -822,6 +936,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- SLick carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Ionic icons CDN -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

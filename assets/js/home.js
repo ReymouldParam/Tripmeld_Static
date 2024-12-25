@@ -3,9 +3,81 @@ $(document).ready(function () {
         $("#contactFormModal").show(); // Show the element with the specified id
         $('body').css('overflow', 'hidden');
     });
+
+    // features caorusel
+
+
+    $('.feature-titles-carousel').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
+        asNavFor: '.feature-details-carousel',
+        responsive: [
+            {
+                breakpoint: 557,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    vertical: false,
+                    verticalSwiping: false,
+                    dots: false,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+    $('.feature-details-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.feature-titles-carousel',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: false,
+        arrows: false,
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 557,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    vertical: false,
+                    verticalSwiping: false,
+                    dots: true,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+
+    // Subsctibe plan
+    $('.subscribe-plan-carousel').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 557,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    vertical: false,
+                    verticalSwiping: false,
+                    dots: true,
+                    arrows: true,
+                }
+            }
+        ]
+    });
 });
 
-function hideContactFormModal(){
+function hideContactFormModal() {
     $("#contactFormModal").hide();
     $('body').css('overflow', 'auto');
 }

@@ -36,6 +36,8 @@
     border-radius: 10px;
     background-color: #fff;
     margin-bottom: 5px;
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 .features-section .features-headings-main-container .single-feature-container .title {
     color: var(--theme-color-dark-blue);
@@ -48,6 +50,12 @@
     color: var(--theme-color-dark-blue);
     font-size: 12px;
     margin-bottom: 0px;
+}
+.slick-current .single-feature-container{
+    background-color: var(--theme-color-dark-blue) !important;
+}
+.slick-current .single-feature-container .title, .slick-current .single-feature-container .sub-text{
+    color: #fff !important;
 }
 .features-section .feature-details-main-container {
     width: 70%;
@@ -64,6 +72,16 @@
     border: 7px solid #f8f8ff;
     border-radius: 5px;
 }
+
+.feature-details-carousel .carousel-item{
+    transition: all 0.7s ease ;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.feature-details-carousel .slick-current .carousel-item{
+    opacity: 1;
+    transform: translateY(0px);
+}
 .plans-section {
     background-image: url('/assets/Images/home/grid-design-bg.png');
 }
@@ -71,6 +89,9 @@
     display: flex;
     gap: 20px;
     width: 100%;
+}
+.plans-container .carousel-item{
+    padding: 0 10px;
 }
 .plans-container .plan-item {
     flex: 1;
@@ -80,6 +101,7 @@
     background-color: #ffd9bd;
     border-radius: 20px;
     padding: 15px;
+    height: 530px;
 }
 .plans-container .plan-item .title {
     color: #fff;
@@ -135,6 +157,10 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
+.ai-features-banner .grid-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 .services-section {
     background-color: #ffd9bd;
     border-radius: 25px;
@@ -159,6 +185,11 @@
 .services-section .service-grid .service-item .label {
     font-size: 16px;
     font-weight: 400;
+}
+
+.service-grid .service-grid-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 .marquee-section {
     position: relative;
@@ -311,4 +342,98 @@
 .cta-container-1 .main-container .img-container .img {
     height: 100%;
     width: auto;
+}
+
+
+
+/* Media querys */
+
+/* Large laptop */
+@media screen and (max-width:1400px) {
+}
+/* Small laptop */
+@media screen and (max-width:1200px) {
+}
+/* Tablet */
+@media screen and (max-width:992px) {
+}
+@media screen and (max-width:768px) {  
+}
+/* Large mobile */
+@media screen and (max-width:576px) {  
+    .landing-section{
+        height: auto;
+    }
+    .landing-section .main-container{
+        flex-direction: column;
+    }
+
+    .landing-section .inner-container-1{
+        width: 100%;
+    }
+    .landing-section .inner-container-2{
+        width: 100%;
+    }
+    .landing-section .inner-container-1 .landing-main-title{
+        font-size: 40px;
+    }
+
+    .features-title-flex-container{
+        flex-direction: column;
+        align-items: start !important;
+        margin-top: 20px;
+    }
+    .features-flex-container{
+        flex-direction: column;
+    }
+    .features-section .features-headings-main-container{
+        border-left: 0;
+        width: 100%;
+        padding-left: 0;
+    }
+    .features-section .feature-details-main-container{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .plans-container .plan-item{
+        height: 500px;
+    }
+
+    .ai-features-banner .grid-container{
+        grid-template-columns: 100%;
+    }
+
+    .service-grid .service-grid-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .services-section .service-grid .service-item .img-container {
+        width: 139px;
+        height: 112px;
+    }
+    .marquee-section .marquee{
+        --duration: 20s;
+    }
+    .marquee-section .line-text{
+        font-size: 35px;
+    }
+    .services-heading-container{
+        width: 100% !important;
+    }
+    .faq-section .faqs-list-container .faq-item{
+        width: 100%;
+    }
+    .cta-container-1 .main-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-container-1 .main-container .content-container .title{
+        font-size: 30px;
+    }
+}
+/* Small mobile */
+@media screen and (max-width:375px) {
+}
+@media screen and (max-width:320px) {
 }

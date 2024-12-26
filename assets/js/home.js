@@ -171,10 +171,12 @@ const faqsData = {
 const defaultFaqCount = 10; // Default number of FAQs to show
 let openedFaqs = [];
 let showAll = false;
+let allExpanded = false; // Tracks whether all FAQs are expanded
 
 // References to HTML elements
 const faqsContainer = document.querySelector(".faqs-list-container");
 const showMoreText = document.getElementById("show-more-text");
+const toggleExpandCollapseBtn = document.querySelector(".toggle-expand-collapse-btn");
 
 // Render FAQs
 function updateDisplayedFaqs() {
@@ -192,14 +194,13 @@ function updateDisplayedFaqs() {
         const titleContainer = document.createElement("div");
         titleContainer.className = "title-container";
         titleContainer.innerHTML = `
-      <div><p class="title">${faq.question}</p></div>
-      <div>
-        <button class="toggle-btn">
-          <ion-icon name="${openedFaqs.includes(index) ? "chevron-up-outline" : "chevron-down-outline"
-            }"></ion-icon>
-        </button>
-      </div>
-    `;
+        <div><p class="title">${faq.question}</p></div>
+        <div>
+          <button class="toggle-btn">
+            <ion-icon name="${openedFaqs.includes(index) ? "chevron-up-outline" : "chevron-down-outline"}"></ion-icon>
+          </button>
+        </div>
+      `;
         titleContainer.addEventListener("click", () => toggleAnswer(index));
 
         // Answer container
@@ -226,6 +227,21 @@ function toggleAnswer(index) {
     }
     updateDisplayedFaqs();
 }
+
+// Toggle Expand/Collapse All
+toggleExpandCollapseBtn.addEventListener("click", () => {
+    if (allExpanded) {
+        // Collapse All
+        openedFaqs = [];
+        toggleExpandCollapseBtn.textContent = "Expand All";
+    } else {
+        // Expand All
+        openedFaqs = faqsData.faqs.map((_, index) => index);
+        toggleExpandCollapseBtn.textContent = "Collapse All";
+    }
+    allExpanded = !allExpanded; // Toggle state
+    updateDisplayedFaqs();
+});
 
 // Toggle Show More/Show Less
 showMoreText.addEventListener("click", () => {

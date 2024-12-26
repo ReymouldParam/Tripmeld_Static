@@ -1,6 +1,6 @@
 .landing-section {
     width: 100%;
-    background-image: url('/assets/Images/home/landing-section-bg.png');
+    background-image: url('/assets/images/home/landing-section-bg.png');
     background-position: left;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -83,7 +83,7 @@
     transform: translateY(0px);
 }
 .plans-section {
-    background-image: url('/assets/Images/home/grid-design-bg.png');
+    background-image: url('/assets/images/home/grid-design-bg.png');
 }
 .plans-container {
     display: flex;
@@ -164,7 +164,7 @@
 .services-section {
     background-color: #ffd9bd;
     border-radius: 25px;
-    background-image: url('/assets/Images/home/grid-design-bg.png');
+    background-image: url('/assets/images/home/grid-design-bg.png');
 }
 .services-section .service-grid .service-item {
     text-align: center;
@@ -316,6 +316,9 @@
     padding-left: 10px;
 }
 .faq-section .show-more-text {
+    font-size: 14px;
+}
+.faq-section .expand-all-btn{
     font-size: 14px;
 }
 .cta-container-1 .main-container {

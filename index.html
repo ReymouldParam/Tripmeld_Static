@@ -50,7 +50,8 @@
                 </div>
             </div>
             <div class="d-flex align-items-center">
-                <!-- <button class="clear-black-btn me-2" (click)="openSignInModal()">Sign In</button> -->
+                <!-- navigation to crm application -->
+                <button class="clear-black-btn me-2" onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign In</button>
                 <button class="unfilled-orange-btn show-contactForm">Get Demo</button>
                 <div class="toggle-btn-container ms-2">
                     <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
@@ -885,26 +886,26 @@
                                     <div class="form-main-container">
                                         <div class="form-container w-100">
                                             <p class="form-title">Contact Us</p>
-                                            <form>
+                                            <form action="contact_form.php" method="post">
                                                 <div class="form-input">
                                                     <input type="text" class="input" placeholder="Full Name*"
-                                                        formControlName="name">
+                                                        name="fullName">
                                                 </div>
 
                                                 <div class="form-input">
-                                                    <input type="text" class="input" placeholder="Work Email*">
+                                                    <input type="text" class="input" placeholder="Work Email*" name="email">
                                                 </div>
 
                                                 <div class="form-input">
-                                                    <input type="text" class="input" placeholder="Phone Number*">
+                                                    <input type="text" class="input" placeholder="Phone Number*" name="phone">
                                                 </div>
 
                                                 <div class="form-input">
-                                                    <input type="text" class="input" placeholder="Company Name*">
+                                                    <input type="text" class="input" placeholder="Company Name*" name="companyName">
                                                 </div>
 
                                                 <div class="form-input">
-                                                    <select name="" id="" class="input">
+                                                    <select name="" id="" class="input" name="companySize">
                                                         <option value="" hidden>Company Size</option>
                                                         <option value="Above 100">Above 100</option>
                                                         <option value="51 - 100">51 - 100</option>
@@ -930,6 +931,21 @@
             </div>
         </div>
     </section>
+
+    <!-- Response popup -->
+     <section class="response-popup-container" id="responseMessageModal">
+        <div class="d-flex justify-content-center align-items-center w-100 h-100">
+            <div class="response-modal">
+                <div class="title-container">
+                    <p class="title">Success</p>
+                </div>
+                <div class="message-container">
+                    <p class="message">Your Message has be sent succesfully</p>
+                </div>
+                <button class="modal-close-btn" onclick="hideResponseModal()">x</button>
+            </div>
+        </div>
+     </section>
 
     <!-- Jquory CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"

@@ -476,6 +476,55 @@
     border: 1px solid gray;
 }
 
+/* Response modal styles */
+.response-popup-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #00000096;
+    backdrop-filter: blur(3px);
+    z-index: 1000;
+    display: none;
+}
+
+.response-popup-container .response-modal{
+    position: relative;
+}
+
+.response-popup-container .response-modal .title-container{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    padding: 5px 20px;
+    border-radius: 10px 10px 0 0;
+}
+.response-popup-container .response-modal .title-container .title{
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.response-popup-container .response-modal .message-container{
+    padding: 10px;
+    background-color: #fff;
+    border-radius:  0 0 10px 10px;
+    max-width: 300px;
+}
+
+.response-popup-container .response-modal .message-container .message{
+    margin-bottom: 0;
+    font-size: 15px;
+    text-align: left;
+}
+
+.response-popup-container .modal-close-btn{
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+}
+
 /* Media querys */
 
 /* Large laptop */

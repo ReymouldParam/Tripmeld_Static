@@ -552,6 +552,10 @@
     .header-container .logo-container{
         height: 40px;
     }
+
+    .header-container .sign-in-btn{
+        display: none;
+    }
     .navbar-main-container{
         display: none;
     }

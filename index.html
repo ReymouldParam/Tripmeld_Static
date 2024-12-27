@@ -51,7 +51,7 @@
             </div>
             <div class="d-flex align-items-center">
                 <!-- navigation to crm application -->
-                <button class="clear-black-btn me-2" onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign In</button>
+                <button class="clear-black-btn me-2 sign-in-btn" onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign In</button>
                 <button class="unfilled-orange-btn show-contactForm">Get Demo</button>
                 <div class="toggle-btn-container ms-2">
                     <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
@@ -103,6 +103,9 @@
                     </div>
                     <div class="nav-item">
                         <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link" onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign In</p>
                     </div>
                 </div>
             </div>
@@ -533,7 +536,7 @@
                 <div class="ai-features-banner padding-x">
                     <div class="padding-x">
                         <div class="grid-container">
-                            <div class="py-2">
+                            <div class="py-2 d-flex justify-content-center flex-column">
                                 <div>
                                     <h4 class="title white-color">Experience Our AI-Driven Feature</h4>
                                     <p class="page-text white-color">Boost your sales success with our AI-powered
@@ -544,6 +547,12 @@
                                 <div class="mt-4" *ngIf="!userLoggedIn">
                                     <button class="filled-orange-btn show-contactForm" (click)="openSignUpModal()">Try
                                         For Free</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="img-container w-100">
+                                    <img src="assets/images/home/ai-image.webp" alt="" class="w-100">
                                 </div>
                             </div>
                         </div>

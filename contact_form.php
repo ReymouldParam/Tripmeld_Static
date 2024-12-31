@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $to = "contact@reymodul.com";
+    $to = "contact@tripmeld.com";
     $subject = "Enquiry From Tripmeld Website";
     $message = "Name : " . $_POST["fullName"].
                 "\nEmail : " . $_POST["email"].
@@ -8,7 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 "\nCompany Name : " . $_POST["companyName"].
                 "\Company size : " . $_POST["companySize"];
 
-    
+
+    mail('contact@reymould.com', $subject, $message);
     if(mail($to, $subject, $message)){
         header("Location: .?emailSuccess=true");
     }else{

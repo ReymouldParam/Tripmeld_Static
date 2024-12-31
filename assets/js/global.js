@@ -49,12 +49,22 @@ jQuery(document).ready(function ($) {
     $("#responseMessageModal .message").html("Failed to send message, please contact us on +91 92811 17171 or contact@tripmeld.com");
     $("#responseMessageModal").css("display", "block");
     $("body").css("overflow", "hidden");
+  } else if (flagValue === 'subscribeTrue'){
+    $("#responseMessageModal").css("display", "block");
+    $("#responseMessageModal .title").html("Success");
+    $("#responseMessageModal .message").html("Thank you for subscribing to TripMeld. Stay tune with our updated.");
+    $("body").css("overflow", "hidden");
+  } else if (flagValue === 'subscribeFalse'){
+    $("#responseMessageModal .title").html("Failure");
+    $("#responseMessageModal .message").html("Failed to subscribe, please try again.");
+    $("#responseMessageModal").css("display", "block");
+    $("body").css("overflow", "hidden");
   }
 
   // Get the current URL without the query parameters
   const baseUrl = window.location.href.split('?')[0];
 
   // Replace the current state with a new state without the query parameters
-  window.history.replaceState(null, null, baseUrl);
+  // window.history.replaceState(null, null, baseUrl);
 });
 

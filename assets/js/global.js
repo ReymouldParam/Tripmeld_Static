@@ -65,6 +65,6 @@ jQuery(document).ready(function ($) {
   const baseUrl = window.location.href.split('?')[0];
 
   // Replace the current state with a new state without the query parameters
-  // window.history.replaceState(null, null, baseUrl);
+  window.history.replaceState(null, null, baseUrl);
 });
 

@@ -50,6 +50,7 @@
     color: var(--theme-color-dark-blue);
     font-size: 12px;
     margin-bottom: 0px;
+    text-transform: capitalize;
 }
 .slick-current .single-feature-container{
     background-color: var(--theme-color-dark-blue) !important;

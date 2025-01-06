@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMeld</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/TripMeld_Icon.png" />
+
+    <!-- Boostrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Slick carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/policies.css">
+</head>
+
+<body class="main-page">
+    <header>
+        <div class="header-container padding-x">
+            <div>
+                <div class="logo-container">
+                    <a href=".">
+                        <img src="/assets/images/TM_Logo.png" class="h-100" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-main-container">
+                <div class="navbar-container">
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <!-- navigation to crm application -->
+                <button class="clear-black-btn me-2 sign-in-btn"
+                    onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign In</button>
+                <button class="unfilled-orange-btn show-contactForm">Get Demo</button>
+                <div class="toggle-btn-container ms-2">
+                    <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- <div *ngIf="userLoggedIn">
+                <div class="profile-container d-flex align-items-center">
+                    <div class="me-2">
+                        <button class="user-profile-btn">
+                            <img alt="Silhouette of a person's head"
+                                src="../../../../assets/images/person-placeholder.png" />
+                        </button>
+                    </div>
+
+                    <div>
+                        <div>
+                            <p class="avatar-name">{{userDetails?.userName}}</p>
+                            <p class="avatar-role">{{userDetails?.role}}</p>
+                        </div>
+                    </div>
+
+                    <div class="abs-container">
+                        <div class="main-container">
+                            <div>
+                                <p class="avatar-name">{{userDetails?.userName}}</p>
+                                <p class="avatar-role">{{userDetails?.role}}</p>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button class="signout-btn" (click)="logoutUser()">Sign Out</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="mobile-navbar-container">
+                <div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link" onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign
+                            In</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-body">
+        <div class="">
+            <div class="policies-main-container">
+                <div class="left-nav-container">
+                    <div>
+                        <div class="list-item">
+                            <!-- When the following label is clicked, the visibility of sub-list-container should toggle -->
+                            <p class="list-label">Privacy Policy</p>
+                            <div class="sub-list-container">
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy1')" >1. Information We Collect</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy2')">2. How We Use Your Information</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy3')">3. How We Share Your Information</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy4')">4. Data Retention</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy5')">5. Your Rights</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy6')">6. Cookies and Tracking</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy7')">7. Data Security</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy8')">8. Data Breach Notification</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy9')">9. Children’s Privacy</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy10')">10. International Data Transfers</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy11')">11. Governing Law and Dispute Resolution</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy12')">12. Changes to This Policy</p>
+                                </div>
+                                <div class="sub-list-item">
+                                    <p class="nav-list-item" onClick="scrollToSectionById('privacy13')">13. Contact Us</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="list-item">
+                            <p class="list-label">Terms and Conditions</p>
+                            <div class="sub-list-container">
+                                <div class="sub-list-item">
+                                    <a href="#">General</a>
+                                </div>
+                                <div class="sub-list-item">
+                                    <a href="#">item</a>
+                                </div>
+                                <div class="sub-list-item">
+                                    <a href="#">item2</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <p class="list-label">Security</p>
+                            <div class="sub-list-container">
+                                <div class="sub-list-item">
+                                    <a href="#">General</a>
+                                </div>
+                                <div class="sub-list-item">
+                                    <a href="#">item</a>
+                                </div>
+                                <div class="sub-list-item">
+                                    <a href="#">item2</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <p class="list-label">Anti spam policy</p>
+                            <div class="sub-list-container">
+                                <div class="sub-list-item">
+                                    <a href="#">General</a>
+                                </div>
+                                <div class="sub-list-item">
+                                    <a href="#">item</a>
+                                </div>
+                                <div class="sub-list-item">
+                                    <a href="#">item2</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="content-main-container" id="contentMainContainer">
+                    <div class="p-3">
+                        <!-- Privacy policy content start -->
+                        <div class="d-flex justify-content-end">
+                            <div>
+                                <p class="page-text"><span class="text-bold">Effective Date: </span>01.12.2024</p>
+                                <p class="page-text"><span class="text-bold">Last Updated: </span>04.01.2025</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="section-title">Privacy Policy</h2>
+                        </div>
+                        <div class="mb-2">
+                            <p class="page-text">At <span class="text-bold">TripMeld</span>, a product of <span class="text-bold">Reymould Technology Solutions Private Limited</span>
+                                ("Reymould," "we," "our," or "us"), we are deeply committed to protecting your privacy.
+                                This Privacy Policy outlines the types of information we collect, how we use and
+                                safeguard it, and the rights you have concerning your data. By using TripMeld, you agree
+                                to the terms of this Privacy Policy.
+                                If you do not agree to this policy, you must refrain from using TripMeld.</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="section-sub-title" id="privacy1">1. Information We Collect</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title">1.1 Information You Provide</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We collect information directly from you when you:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold">Register an Account:</span> Name,
+                                    email, phone number, company name, and password.</p>
+                                <p class="list-item page-text"><span class="text-bold">Make a Purchase: </span>Billing
+                                    details (e.g., address, payment details) are securely processed via third-party
+                                    gateways. We shall not store any payment details with us.</p>
+                                <p class="list-item page-text"><span class="text-bold">Communicate with Us:</span>
+                                    Information you provide during customer support interactions or when responding to
+                                    surveys.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title">1.2 Information We Collect Automatically</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">When you use TripMeld, we collect certain information automatically:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold">Usage Data:</span> Actions you take within the platform, including features accessed, navigation activity, and session durations.</p>
+                                <p class="list-item page-text"><span class="text-bold">Make a Purchase: </span>IP address, browser type, operating system, and device identifiers.</p>
+                                <p class="list-item page-text"><span class="text-bold">Communicate with Us:</span>
+                                    Data stored using cookies or similar technologies.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title">1.3 Information From Third Parties</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We may receive information about you from:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold">Referral Partners:</span> Contact information provided by resellers or affiliates.</p>
+                                <p class="list-item page-text"><span class="text-bold">Social Media: </span>Public data from your interactions with our social media accounts.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy2">2. How We Use Your Information</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We use your information to:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold">Operate and Improve TripMeld:</span> Manage accounts, enable features, and optimize performance.</p>
+                                <p class="list-item page-text"><span class="text-bold">Process Transactions: </span>Ensure secure payment processing and manage subscriptions.</p>
+                                <p class="list-item page-text"><span class="text-bold">Communicate With You: </span>Send important updates, promotional emails, and feedback requests.</p>
+                                <p class="list-item page-text"><span class="text-bold">Ensure Security: </span>Detect, prevent, and address fraud, misuse, or unauthorized access.</p>
+                                <p class="list-item page-text"><span class="text-bold">Comply With Legal Obligations: </span>Meet applicable laws and respond to lawful requests.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="section-sub-title" id="privacy3">3. How We Share Your Information</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title">3.1 Service Providers</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We share your data with trusted third-party vendors for:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold"></span>Payment processing.</p>
+                                <p class="list-item page-text"><span class="text-bold"></span>Cloud hosting and data storage.</p>
+                                <p class="list-item page-text"><span class="text-bold"></span>Analytics to improve our services.</p>
+                                <p class="list-item page-text"><span class="text-bold"></span>Third party vendors who can give business.</p>
+                            </div>
+                            <p class="page-text">These providers are contractually bound to use your data solely for the purposes specified by us and comply with strict confidentiality requirements.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title">3.2 Legal and Regulatory Compliance</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We may disclose your data to:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold"></span>Comply with applicable laws, regulations, or legal processes. </p>
+                                <p class="list-item page-text"><span class="text-bold"></span>Protect our rights, users, or the public in cases of fraud or security risks. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title">3.3 Business Transfers</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">In the event of a merger, acquisition, or sale of assets, your information may be transferred to the involved parties.</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="section-sub-title" id="privacy4">4. Data Retention</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We retain your personal information only for as long as necessary to fulfil the purposes outlined in this Privacy Policy, unless a longer retention period is required by law. When we no longer have a legitimate need to process your information, we will delete or anonymize your information from our active databases. </p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy5">5. Your Rights</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">Depending on your location, you have the following rights regarding your personal data:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text">Access and Correction:<span class="text-bold"></span> Request access to or correction of your data.</p>
+                                <p class="list-item page-text">Data Deletion:<span class="text-bold"></span> Request deletion of your personal information, subject to legal exceptions.</p>
+                                <p class="list-item page-text">Data Portability: <span class="text-bold"></span> Obtain a copy of your data in a structured, machine-readable format.</p>
+                                <p class="list-item page-text">Withdrawal of Consent:<span class="text-bold"></span> Revoke consent for data processing at any time.</p>
+                            </div>
+                            <p class="page-text">To exercise your rights, contact us at contact@tripmeld.com. We will respond within the timeframe required by applicable laws.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy6">6. Cookies and Tracking</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">TripMeld uses cookies and similar technologies to:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold"></span>Enhance user experience. </p>
+                                <p class="list-item page-text"><span class="text-bold"></span>Track site usage and improve services. </p>
+                                <p class="list-item page-text"><span class="text-bold"></span>Deliver relevant marketing messages. </p>
+                            </div>
+                            <p class="page-text">You can manage cookie preferences through your browser settings, though disabling cookies may limit functionality.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy7">7. Data Security</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We employ industry-standard measures to protect your data, including:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold">Encryption:</span> Data is encrypted both in transit and at rest.</p>
+                                <p class="list-item page-text"><span class="text-bold">Access Controls:</span> Role-based permissions restrict access to sensitive information.</p>
+                                <p class="list-item page-text"><span class="text-bold">Monitoring and Audits:</span> Regular security audits and threat monitoring.</p>
+                            </div>
+                            <p class="page-text">While we take reasonable precautions, no system is completely secure, and we cannot guarantee the absolute security of your information.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy8">8. Data Breach Notification</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">In the unlikely event of a data breach that affects your personal information:</p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold"></span>We will notify affected users and relevant regulatory authorities within 72 hours, as required by law. </p>
+                                <p class="list-item page-text"><span class="text-bold"></span>We will provide details about the breach, actions taken, and recommended steps to protect your information. </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy9">9. Children’s Privacy</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">TripMeld is not intended for individuals under 18. We do not knowingly collect data from children. If you believe a child under 18 has provided personal information, contact us at contact@tripmeld.com, and we will delete the data.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy10">10. International Data Transfers</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">Your data may be transferred to and processed in countries outside your own. Where applicable, we implement safeguards such as standard contractual clauses to ensure your data is protected.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy11">11. Governing Law and Dispute Resolution</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">This Privacy Policy is governed by the laws of <span class="text-bold">India</span>. Any disputes arising under this policy will be resolved through binding arbitration under the rules of the <span class="text-bold">Indian Arbitration and Conciliation Act</span>, with proceedings held in <span class="text-bold">Hyderabad, Telangana.</span></p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title" id="privacy12">12. Changes to This Policy</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">We reserve the right to update this Privacy Policy. If significant changes are made, we will notify users via email or in-app notifications. Continued use of TripMeld after updates constitutes acceptance of the revised policy.</p>
+                        </div>
+
+                        <div class="mb-1">
+                            <p class="section-sub-title"  id="privacy13">13. Contact Us</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text">If you have questions or concerns about this Privacy Policy, please contact us:
+                                Reymould Technology Solutions Private Limited.</p>
+                            <p class="page-text">PAN: AAMCR3010L</p>
+                            <p class="page-text">Address: Plot No 81, Green Park Avenue, Suchitra, Hyderabad 500067</p>
+                            <p class="page-text">Email: contact@tripmeld.com</p>
+                        </div>
+
+
+<!-- 
+                        
+
+                        <div class="mb-1">
+                            <p class="section-sub-title"></p>
+                        </div>
+
+                        <div class="mb-2">
+                            <p class="page-text"></p>
+                            <div class="list-container">
+                                <p class="list-item page-text"><span class="text-bold"></span> </p>
+                                <p class="list-item page-text"><span class="text-bold"></span> </p>
+                            </div>
+                        </div> -->
+
+
+
+                        <!-- Privacy plicy content end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="padding-x py-2 footer-section" id="footerSection">
+            <div class="main-container">
+                <div class="content-container">
+                    <div class="text-center w-75 m-auto pt-2 text-container">
+                        <h2 class="title white-color">Accelerate Your Business with TripMeld</h2>
+                        <p class="page-text white-color w-75 m-auto">Your Success is just a click away! Sign up now and
+                            experience the
+                            power of our AI-driven CRM to manage leads smarter and faster helping your travel business
+                            grow fast.</p>
+
+                    </div>
+
+                    <div class="email-container" *ngIf="!userLoggedIn">
+                        <form action="subscribe_form.php" method="post" onsubmit="changeSubscribeButtonText()">
+                            <div class="form-input">
+                                <input type="email" class="email-input" name="email" placeholder="Your Email Address"
+                                    required>
+                                <button class="filled-orange-btn" type="submit" id="subscribeSubmitBtn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-inner-container">
+
+                    <div class="grid-container">
+                        <div class=" p-2">
+                            <div class="item">
+                                <p class="label">About TripMeld</p>
+                                <p class="content mb-0">TripMeld isn’t just a powerful CRM tool but with its smart
+                                    features and easy integration,
+                                    it simplifies your lead management and sales tracking. The AI-powered system
+                                    generates custom itineraries
+                                    in minutes, boosting efficiency and productivity every step of the way.</p>
+                            </div>
+                        </div>
+                        <div class=" p-2">
+                            <div class="item">
+                                <p class="label">Contact Us On</p>
+                                <p class="content">+91 92811 17171 or contact&#64;tripmeld.com</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="label">Address</p>
+                                <p class="content mb-0">2nd Floor, Plot no 151, Green Park Avenue, Jeedimetla Village,
+                                    Hyderabad, India,
+                                    Telangana</p>
+                            </div>
+                        </div>
+                        <div class=" p-2">
+
+                            <div class="item">
+                                <p class="label">Social Media</p>
+                                <p class="btn-container d-flex">
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.facebook.com/share/1Ay6rToAD5/?mibextid=wwXIfr')"><ion-icon
+                                            name="logo-facebook"></ion-icon></button>
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.instagram.com/tripmeld?igsh=c3lmZG15ZW1zODc5')"><ion-icon
+                                            name="logo-instagram"></ion-icon></button>
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.linkedin.com/company/tripmeld')"><ion-icon
+                                            name="logo-linkedin"></ion-icon></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- bg-line -->
+                <span class="bg-line one"></span>
+                <span class="bg-line two"></span>
+                <span class="bg-line three"></span>
+                <span class="bg-line four"></span>
+                <span class="bg-line five"></span>
+            </div>
+
+            <div class="disclamer-container">
+                <p class="disclamer mb-0">© Copyright 2024, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal popup container -->
+
+    <section class="contact-form-container" id="contactFormModal">
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+            <div class="my-modal-component-css">
+                <div class="extension-modal position-relative">
+                    <div class="main-container">
+                        <div class="h-100 contact-modal-grid-container">
+                            <div class=" p-0">
+                                <div class="right-main-container bg-cover">
+                                    <div class="img-container">
+                                        <img src="assets/images/extensions/desktop-person.svg" alt="" class="img">
+
+                                        <!-- ABS images -->
+                                        <img src="assets/images/extensions/circles-cylinder.gif" alt=""
+                                            class="circles-1-gif">
+                                        <img src="assets/images/extensions/circles-cylinder.gif" alt=""
+                                            class="circles-2-gif">
+                                        <img src="assets/images/extensions/arrow-tick.gif" alt="" class="arrow-gif">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class=" p-0">
+                                <div class="left-main-container">
+                                    <div class="logo-container">
+                                        <img src="/assets/images/TM_Logo.png" alt="" class="logo">
+                                    </div>
+                                    <div class="form-main-container">
+                                        <div class="form-container w-100">
+                                            <p class="form-title">Contact Us</p>
+                                            <form action="contact_form.php" method="post"
+                                                onsubmit="changeContactButtonText()">
+                                                <div class="form-input">
+                                                    <input type="text" class="input" placeholder="Full Name*"
+                                                        name="fullName" required>
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <input type="email" class="input" placeholder="Work Email"
+                                                        name="email">
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <input type="tel" class="input" placeholder="Phone Number*"
+                                                        name="phone" pattern="[0-9]{10}" required>
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <input type="text" class="input" placeholder="Company Name"
+                                                        name="companyName">
+                                                </div>
+
+                                                <div class="form-input">
+                                                    <select name="" id="" class="input" name="companySize">
+                                                        <option value="" hidden>Company Size</option>
+                                                        <option value="Above 100">Above 100</option>
+                                                        <option value="51 - 100">51 - 100</option>
+                                                        <option value="21 - 50">21 - 50</option>
+                                                        <option value="06 - 20">06 - 20</option>
+                                                        <option value="0 - 05">0 - 05</option>
+                                                    </select>
+                                                </div>
+
+
+                                                <div class="form-input">
+                                                    <button class="submit-btn" type="submit"
+                                                        id="contactSubmitBtn">Send</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close-btn" onclick="hideContactFormModal()">x</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response popup -->
+    <section class="response-popup-container" id="responseMessageModal">
+        <div class="d-flex justify-content-center align-items-center w-100 h-100">
+            <div class="response-modal">
+                <div class="title-container">
+                    <p class="title">Success</p>
+                </div>
+                <div class="message-container">
+                    <p class="message">Your Message has been sent succesfully</p>
+                </div>
+                <button class="modal-close-btn" onclick="hideResponseModal()">x</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jquory CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- SLick carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Ionic icons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Custom JS files -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/home.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Toggle visibility of sub-list-container when list-label is clicked
+            $('.left-nav-container .list-label').on('click', function () {
+                // Find the closest sub-list-container and toggle it
+                $(this).next('.left-nav-container .sub-list-container').slideToggle();
+            });
+        });
+    </script>
+
+    <script>
+        // Funtion to scroll to section
+        function scrollToSectionById(sectionId) {
+            // Get the container and section elements
+            var container = $("#contentMainContainer");
+            var section = $("#" + sectionId);
+
+            if (container.length && section.length) {
+                // Calculate the position of the section relative to the container
+                var position = section.position().top + container.scrollTop() - 70; // Add container's scrollTop to maintain position
+
+                // Animate the container scroll
+                container.animate(
+                {
+                    scrollTop: position
+                },
+                500 // Duration of animation in milliseconds
+                );
+            } else {
+                console.warn(
+                "Container with ID " + containerId + " or section with ID " + sectionId + " not found."
+                );
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

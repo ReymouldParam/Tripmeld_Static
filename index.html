@@ -30,7 +30,9 @@
         <div class="header-container padding-x">
             <div>
                 <div class="logo-container">
-                    <img src="/assets/images/TM_Logo.png" class="h-100" alt="">
+                    <a href=".">
+                        <img src="/assets/images/TM_Logo.png" class="h-100" alt="">
+                    </a>                    
                 </div>
             </div>
             <div class="navbar-main-container">
@@ -53,7 +55,7 @@
                 <!-- navigation to crm application -->
                 <button class="clear-black-btn me-2 sign-in-btn"
                     onclick="openUrl('https://rmcrmproddata001.z29.web.core.windows.net')">Sign In</button>
-                <button class="unfilled-orange-btn show-contactForm">Get Demo</button>
+                <button class="unfilled-orange-btn show-contactForm">Demo</button>
                 <div class="toggle-btn-container ms-2">
                     <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
                         <ion-icon name="menu-outline"></ion-icon>
@@ -125,9 +127,9 @@
                                     class="orange-color">CRM</span>
                             </h1>
                             <p class="page-text mb-2">
-                                Transform your travel business with our smart, AI-driven platform designed specially for
+                                Transform your travel business with our smart, AI-Powered platform designed especially for
                                 the travel
-                                industry. You can effortlessly connect your data, improve team collaboration, and
+                                industry. Effortlessly connect your data, improve team collaboration, and
                                 enhance customer
                                 relationships on a powerful CRM that scales with your growth.
                             </p>
@@ -135,10 +137,8 @@
 
                         <div class="pb-3">
                             <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try
-                                    For Free</button>
-                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a
-                                    Demo</button>
+                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Free Trial</button>
+                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Demo</button>
                             </div>
                             <!-- <div *ngIf="userLoggedIn">
                                 <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -146,7 +146,7 @@
                             </div> -->
                             <div>
                                 <p class="page-text">
-                                    Try our premium travel CRM for free: Get Started Today!
+                                    Try our premium travel CRM for free. Get Started Today!
                                 </p>
                             </div>
                         </div>
@@ -173,10 +173,8 @@
                         </div>
                         <div>
                             <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try
-                                    For Free</button>
-                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a
-                                    Demo</button>
+                                <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Free Trial</button>
+                                <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Demo</button>
                             </div>
                             <!-- <div *ngIf="userLoggedIn">
                                 <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -191,7 +189,7 @@
                                 <div class="feature-titles-carousel">
                                     <div class="single-feature-container">
                                         <div>
-                                            <p class="title">Intant Lead Generation</p>
+                                            <p class="title">Instant Lead Generation</p>
                                             <p class="sub-text">Efficient Lead Management with Smart Automation</p>
                                         </div>
                                     </div>
@@ -220,14 +218,14 @@
                                     <div class="single-feature-container">
                                         <div>
                                             <p class="title">Real-Time Visa Tracking </p>
-                                            <p class="sub-text">Quick & Hassle-Free Visa Processing Updates</p>
+                                            <p class="sub-text">Quick And hassle-free visa processing updates</p>
                                         </div>
                                     </div>
 
                                     <div class="single-feature-container">
                                         <div>
                                             <p class="title">Inventory Pool </p>
-                                            <p class="sub-text">Quick & Hassle-Free Visa Processing Updates</p>
+                                            <p class="sub-text">Central Hub For Ready-Made Itineraries</p>
                                         </div>
                                     </div>
                                 </div>
@@ -289,7 +287,7 @@
                                         <div>
                                             <p class="page-text mt-2">Captures lead information and tracks visa
                                                 application statuses. Allows leads to download their visas directly from
-                                                the portal, providing a seamless customer experience. 
+                                                the portal, providing a seamless customer experience.
                                             </p>
                                         </div>
                                     </div>
@@ -379,9 +377,9 @@
                                             <div class="pricing-details">
                                                 <p class="text">Starting From</p>
                                                 <p class="text"><span class="text-xl">INR 350</span> Per User</p>
-                                                <p class="text">Minimum 5 Users- INR 19,999/-Annually</p>
-                                                <p class="text">Every User Above 5- INR 4,200/-per user/Annually</p>
-                                                <p class="text">Unlimited Users- INR 49,999/-Annually</p>
+                                                <p class="text">Minimum 5 Users- INR 19,999/-annually</p>
+                                                <p class="text">Every User Above 5- INR 4,200/-per user/annually</p>
+                                                <p class="text">Unlimited Users- INR 49,999/-annually</p>
                                             </div>
                                             <div class="d-flex justify-content-end mt-3">
                                                 <button class="buy-now-btn show-contactForm">Buy Now</button>
@@ -434,9 +432,9 @@
                                             <div class="pricing-details">
                                                 <p class="text">Starting From</p>
                                                 <p class="text"><span class="text-xl">INR 400</span> Per User</p>
-                                                <p class="text">Minimum 5 Users- INR 24,999/-Annually</p>
-                                                <p class="text">Every User Above 5- INR 4,800/-per user/Annually</p>
-                                                <p class="text">Unlimited Users- INR 59,999/-Annually</p>
+                                                <p class="text">Minimum 5 Users- INR 24,999/-annually</p>
+                                                <p class="text">Every User Above 5- INR 4,800/-per user/annually</p>
+                                                <p class="text">Unlimited Users- INR 59,999/-annually</p>
                                             </div>
                                             <div class="d-flex justify-content-end mt-3">
                                                 <button class="buy-now-btn show-contactForm">Buy Now</button>
@@ -478,9 +476,9 @@
                                             <div class="pricing-details">
                                                 <p class="text">Starting From</p>
                                                 <p class="text"><span class="text-xl">INR 450</span> Per User</p>
-                                                <p class="text">Minimum 5 Users- INR 29,999/-Annually</p>
-                                                <p class="text">Every User Above 5- INR 5,400/-per user/Annually</p>
-                                                <p class="text">Unlimited Users- INR 69,999/-Annually</p>
+                                                <p class="text">Minimum 5 Users- INR 29,999/-annually</p>
+                                                <p class="text">Every User Above 5- INR 5,400/-per user/annually</p>
+                                                <p class="text">Unlimited Users- INR 69,999/-annually</p>
                                             </div>
                                             <div class="d-flex justify-content-end mt-3">
                                                 <button class="buy-now-btn show-contactForm">Buy Now</button>
@@ -517,9 +515,9 @@
                                             <div class="pricing-details">
                                                 <p class="text">Starting From</p>
                                                 <p class="text"><span class="text-xl">INR 500</span> Per User</p>
-                                                <p class="text">Minimum 5 Users- INR 34,999/-Annually</p>
-                                                <p class="text">Every User Above 5- INR 6,000/-per user/Annually</p>
-                                                <p class="text">Unlimited Users- INR 79,999/-Annually</p>
+                                                <p class="text">Minimum 5 Users- INR 34,999/-annually</p>
+                                                <p class="text">Every User Above 5- INR 6,000/-per user/annually</p>
+                                                <p class="text">Unlimited Users- INR 79,999/-annually</p>
                                             </div>
                                             <div class="d-flex justify-content-end mt-3">
                                                 <button class="buy-now-btn show-contactForm">Buy Now</button>
@@ -547,8 +545,7 @@
                                         faster sales.</p>
                                 </div>
                                 <div class="mt-4" *ngIf="!userLoggedIn">
-                                    <button class="filled-orange-btn show-contactForm" (click)="openSignUpModal()">Try
-                                        For Free</button>
+                                    <button class="filled-orange-btn show-contactForm" (click)="openSignUpModal()">Free Trial</button>
                                 </div>
                             </div>
 
@@ -649,7 +646,7 @@
                                         <img class="img" src="/assets/images/home/Icons/tour-guide.png" alt="">
                                     </div>
                                     <div>
-                                        <p class="label">Tour Operators & Vendors</p>
+                                        <p class="label">Support For Tour Operators And Vendors</p>
                                     </div>
                                 </div>
                             </div>
@@ -670,10 +667,8 @@
 
                     <div class="mt-2 d-flex justify-content-center">
                         <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                            <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Try For
-                                Free</button>
-                            <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get a
-                                Demo</button>
+                            <button class="filled-orange-btn me-2 show-contactForm" (click)="openSignUpModal()">Free Trial</button>
+                            <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Demo</button>
                         </div>
                         <!-- <div *ngIf="userLoggedIn">
                             <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your Apps</button>
@@ -764,10 +759,8 @@
                             <div class="d-flex justify-content-between align-items-center h-100">
                                 <div class="d-flex mb-1" *ngIf="!userLoggedIn">
                                     <button class="filled-orange-btn me-2 show-contactForm"
-                                        (click)="openSignUpModal()">Try For
-                                        Free</button>
-                                    <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Get
-                                        a Demo</button>
+                                        (click)="openSignUpModal()">Free Trial</button>
+                                    <button class="unfilled-orange-btn show-contactForm" (click)="openSignUpModal()">Demo</button>
                                 </div>
                                 <!-- <div *ngIf="userLoggedIn">
                                     <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -790,11 +783,8 @@
                 <div class="content-container">
                     <div class="text-center w-75 m-auto pt-2 text-container">
                         <h2 class="title white-color">Accelerate Your Business with TripMeld</h2>
-                        <p class="page-text white-color w-75 m-auto">Your Success is just a click away! Sign up now and
-                            experience the
-                            power of our AI-driven CRM to manage leads smarter and faster helping your travel business
-                            grow fast.</p>
-
+                        <p class="page-text white-color w-75 m-auto">Your success is just a click away! Sign up now and experience the power of our
+                            AI-powered CRM to manage leads smarter and faster, helping your travel business grow rapidly.</p>
                     </div>
 
                     <div class="email-container" *ngIf="!userLoggedIn">
@@ -957,7 +947,7 @@
                     <p class="title">Success</p>
                 </div>
                 <div class="message-container">
-                    <p class="message">Your Message has be sent succesfully</p>
+                    <p class="message">Your Message has been sent succesfully</p>
                 </div>
                 <button class="modal-close-btn" onclick="hideResponseModal()">x</button>
             </div>

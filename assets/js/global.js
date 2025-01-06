@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
   if (flagValue === 'true') {
     $("#responseMessageModal").css("display", "block");
     $("#responseMessageModal .title").html("Success");
-    $("#responseMessageModal .message").html("Your message was successfully send, our team will get back to you soon.");
+    $("#responseMessageModal .message").html("Your message has been successfully, our team will get back to you soon.");
     $("body").css("overflow", "hidden");
   } else if (flagValue === 'false') {
     $("#responseMessageModal .title").html("Failure");

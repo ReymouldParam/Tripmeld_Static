@@ -103,3 +103,29 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+/* Media querys */
+
+/* Large laptop */
+@media screen and (max-width:1400px) {
+}
+/* Small laptop */
+@media screen and (max-width:1200px) {
+}
+/* Tablet */
+@media screen and (max-width:992px) {
+}
+@media screen and (max-width:768px) {  
+}
+/* Large mobile */
+@media screen and (max-width:576px) {
+    .policies-main-container .left-nav-container{
+        display: none;
+    }
+}
+/* Small mobile */
+@media screen and (max-width:375px) {
+}
+@media screen and (max-width:320px) {
+}

@@ -27,7 +27,7 @@ body {
 .recent-blogs {
     background-color: #f3f5fb;
     /* Light background to match the screenshot */
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 /* Heading Styles */
@@ -63,6 +63,15 @@ body {
 .image-blog {
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .image-blog {
+        width: 100%;
+        height: 100%;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
 }
 
 /* Label/Tag in the corner */
@@ -116,7 +125,7 @@ body {
     justify-content: space-between;
 }
 
-.blog-meta-overview{
+.blog-meta-overview {
     font-size: 14px;
     align-items: center;
     color: var(--text-color-gray);
@@ -133,24 +142,29 @@ body {
 
 .share-btn {
     border: none;
-    background: none; /* Removes default button styling */
+    background: none;
+    /* Removes default button styling */
     font-size: 14px;
     color: var(--theme-color-light-blue);
     display: flex;
     align-items: center;
-    gap: 5px; /* Adds space between text and icon */
+    gap: 5px;
+    /* Adds space between text and icon */
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
 
 .share-btn ion-icon {
     font-size: 20px;
-    color: inherit; /* Inherits color from .share-btn */
+    color: inherit;
+    /* Inherits color from .share-btn */
 }
 
 .share-btn:hover {
-    color: #d9534f; /* Change color on hover */
+    color: #d9534f;
+    /* Change color on hover */
 }
+
 /* "Read More" link */
 .read-more {
     font-size: 14px;
@@ -198,7 +212,7 @@ hr {
     right: 15px;
     font-size: 20px;
     text-decoration: none;
-    color:var(--theme-color-light-blue);
+    color: var(--theme-color-light-blue);
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -310,5 +324,56 @@ hr {
 
     .blog-card {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .close-btn {
+        top: 2px;
+        right: 5px;
+        font-size: 18px;
+        z-index: 9999; /* Ensure the close button appears on top */
+      }
+    /* Stack the image-content vertically on mobile */
+    .overview-card .image-content {
+        flex-direction: column;
+        gap: 20px;
+        margin: 10px;
+    }
+
+    /* Make the overview image full width and auto height */
+    .overview-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+
+    /* Adjust the overview text padding and font sizes for smaller screens */
+    .overview-text {
+        padding: 10px;
+    }
+
+    .overview-text h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .overview-text p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Adjust additional details paragraph */
+    .blog-details-paragraph {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Center the meta info and reduce its font size */
+    .blog-meta-overview {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
     }
 }

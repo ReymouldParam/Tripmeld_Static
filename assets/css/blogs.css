@@ -112,12 +112,45 @@ body {
     font-size: 14px;
     color: var(--text-color-gray);
     /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-meta-overview{
+    font-size: 14px;
+    align-items: center;
+    color: var(--text-color-gray);
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+
 }
 
 .blog-meta span {
     margin-right: 15px;
 }
 
+.share-btn {
+    border: none;
+    background: none; /* Removes default button styling */
+    font-size: 14px;
+    color: var(--theme-color-light-blue);
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds space between text and icon */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.share-btn ion-icon {
+    font-size: 20px;
+    color: inherit; /* Inherits color from .share-btn */
+}
+
+.share-btn:hover {
+    color: #d9534f; /* Change color on hover */
+}
 /* "Read More" link */
 .read-more {
     font-size: 14px;
@@ -150,13 +183,31 @@ hr {
 
 /* Hide the overview container by default */
 .blog-overview-container {
+    position: relative;
     display: none;
-  }
-  
-  /* When active, show the container */
-  .blog-overview-container.active {
+}
+
+/* When active, show the container */
+.blog-overview-container.active {
     display: block;
-  }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color:var(--theme-color-light-blue);
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #d9534f;
+    /* Red color on hover */
+}
 
 /* The main "overview" card layout */
 .overview-card {
@@ -249,7 +300,8 @@ hr {
 /* Utility class to hide elements */
 .hidden {
     display: none !important;
-  }
+}
+
 /* For responsiveness on smaller screens */
 @media (max-width: 768px) {
     .overview-card {
@@ -260,4 +312,3 @@ hr {
         flex-direction: column;
     }
 }
-

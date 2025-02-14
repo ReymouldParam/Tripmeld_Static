@@ -316,6 +316,46 @@ hr {
     display: none !important;
 }
 
+/* Positioning wrapper for share button */
+.share-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Floating share popover; hidden by default */
+  .share-popover {
+    position: absolute;
+    bottom: 100%; /* positions popover above the share button */
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    white-space: nowrap;
+  }
+  
+  /* When active, show the popover */
+  .share-popover.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Optional: Style the icons */
+  .share-popover a {
+    margin: 0 4px;
+    display: inline-block;
+  }
+  .share-popover img {
+    width: 24px;
+    height: 24px;
+  }
+  
 /* For responsiveness on smaller screens */
 @media (max-width: 768px) {
     .overview-card {

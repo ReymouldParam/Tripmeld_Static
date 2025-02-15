@@ -175,7 +175,7 @@ body {
 }
 
 .read-more:hover {
-    border-bottom: 1px solid var(--theme-color-light-blue);
+    /* border-bottom: 0px solid var(--theme-color-light-blue); */
 }
 
 hr {

@@ -46,7 +46,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* Helps for responsive layout if needed */
 }
 
@@ -186,41 +186,41 @@ hr {
 
 /* ------------------------------------- */
 /* BLOG OVERVIEW (displayed on "Read More") */
-/* ------------------------------------- */
 
-.blog-overview-section {
-    background-color: #f3f5fb;
-    padding: 40px 0;
-    display: none;
-    /* hidden by default, toggled by JS */
-}
-
-/* Hide the overview container by default */
 .blog-overview-container {
-    position: relative;
     display: none;
 }
 
-/* When active, show the container */
-.blog-overview-container.active {
+.blog-container-card.active .blog-overview-container {
     display: block;
+}
+
+.blog-container-card.active .image-blog {
+    margin-top: 20px;
+}
+
+
+.blog-container-card.active .read-more,
+.blog-container-card.active .blog-meta {
+    display: none;
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 20px;
-    text-decoration: none;
-    color: var(--theme-color-light-blue);
-    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    color: #333;
+    display: none;
+    /* Initially hidden */
 }
 
-.close-btn:hover {
-    color: #d9534f;
-    /* Red color on hover */
+/* Show close button only when blog-container-card is expanded */
+.blog-container-card.active .close-btn {
+    display: block;
 }
 
 /* The main "overview" card layout */
@@ -233,7 +233,7 @@ hr {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .overview-card .image-content {
@@ -320,15 +320,16 @@ hr {
 .share-wrapper {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Floating share popover; hidden by default */
-  .share-popover {
+}
+
+/* Floating share popover; hidden by default */
+.share-popover {
     position: absolute;
-    bottom: 100%; /* positions popover above the share button */
+    bottom: 100%;
+    /* positions popover above the share button */
     right: 0;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 8px;
     border-radius: 4px;
     opacity: 0;
@@ -337,25 +338,26 @@ hr {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     z-index: 10;
     white-space: nowrap;
-  }
-  
-  /* When active, show the popover */
-  .share-popover.active {
+}
+
+/* When active, show the popover */
+.share-popover.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-  }
-  
-  /* Optional: Style the icons */
-  .share-popover a {
+}
+
+/* Optional: Style the icons */
+.share-popover a {
     margin: 0 4px;
     display: inline-block;
-  }
-  .share-popover img {
+}
+
+.share-popover img {
     width: 24px;
     height: 24px;
-  }
-  
+}
+
 /* For responsiveness on smaller screens */
 @media (max-width: 768px) {
     .overview-card {
@@ -372,8 +374,10 @@ hr {
         top: 2px;
         right: 5px;
         font-size: 18px;
-        z-index: 9999; /* Ensure the close button appears on top */
-      }
+        z-index: 9999;
+        /* Ensure the close button appears on top */
+    }
+
     /* Stack the image-content vertically on mobile */
     .overview-card .image-content {
         flex-direction: column;

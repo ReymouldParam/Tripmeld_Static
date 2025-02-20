@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog1</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/blogs.css">
+</head>
+
+<body>
+    <div class="blog-overview-container">
+        <a href="index.html" class="back-btn">⬅ Back to Blogs</a>
+        <div class="overview-card">
+            <div class="image-content">
+                <img id="blog-image" src="" alt="Blog Image" class="overview-image">
+            </div>
+            <div class="overview-text">
+                <div class="logo-blog">
+                    <img src="./assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                    <span class="blog-label blog">Blog</span>
+                </div>
+                <h1 id="blog-title"></h1>
+                <p id="blog-content"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const title = sessionStorage.getItem("blogTitle") || "No Title Available";
+            const content = sessionStorage.getItem("blogContent") || "No Content Available";
+            const image = sessionStorage.getItem("blogImage");
+
+            document.getElementById("blog-title").innerText = title;
+            document.getElementById("blog-content").innerText = content;
+
+            const blogImageElement = document.getElementById("blog-image");
+            if (image) {
+                blogImageElement.src = image;
+                blogImageElement.alt = title;
+            } else {
+                blogImageElement.style.display = "none"; // Hide image if not found
+            }
+        });
+
+    </script> -->
+
+</body>
+
+</html>

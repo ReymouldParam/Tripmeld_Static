@@ -113,7 +113,7 @@
         <section class="recent-blogs">
             <div class="container">
                 <!-- first blog card -->
-                <div class="blog-container-card" data-blog-id="12345">
+                <div class="blog-container-card" id="Revolutionizing-Business-Growth">
                     <!-- Blog Card -->
                     <div class="blog-card">
                         <!-- Close Button (Initially Hidden) -->
@@ -153,7 +153,8 @@
                                             Share <ion-icon name="share-social-outline"></ion-icon>
                                         </button>
                                         <div class="share-popover">
-                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                            <a href="javascript:void(0)"
+                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
                                                 <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
                                                     title="Copy URL">
                                             </a>
@@ -897,7 +898,7 @@
                     var container = el.closest('.blog-container-card');
                     if (container) {
                         var blogId = container.getAttribute('data-blog-id'); // Unique ID
-                        var blogUrl = `${window.location.origin}/blog.php?id=${blogId}`; // Correct URL
+                        var blogUrl = `${window.location.origin}/blog/${blogId}`; // Generate unique URL
 
                         // Update LinkedIn share link
                         var linkedinLink = popover.querySelector('.linkedin-link');
@@ -918,18 +919,18 @@
         }
 
         // Copy the blog URL from the current blog card to the clipboard
-        function copyLinkFromCard(el) {
-            var container = el.closest('.blog-container-card');
-            if (container) {
-                var blogId = container.getAttribute('data-blog-id'); // Unique ID
-                var blogUrl = `${window.location.origin}/blog.php?id=${blogId}`; // Correct URL
+        function copyLinkFromCard(url) {
+            navigator.clipboard.writeText(url);
+            // var container = el.closest('.blog-container-card');
+            // if (container) {
+            //     var blogId = container.getAttribute('data-blog-id'); // Unique ID
+            //     var blogUrl = `${window.location.origin}/blog/${blogId}`; // Generate unique URL
 
-                navigator.clipboard.writeText(blogUrl)
-                    .then(() => alert('Link copied to clipboard!'))
-                    .catch(err => console.error('Failed to copy text: ', err));
-            }
+            //     navigator.clipboard.writeText(blogUrl)
+            //         .then(() => alert('Link copied to clipboard!'))
+            //         .catch(err => console.error('Failed to copy text: ', err));
+            // }
         }
-
     </script>
 
     <!-- Custom JS files -->

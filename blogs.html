@@ -924,17 +924,11 @@
 
         // Copy the blog URL from the current blog card to the clipboard
         function copyLinkFromCard(url) {
-            navigator.clipboard.writeText(url);
-            // var container = el.closest('.blog-container-card');
-            // if (container) {
-            //     var blogId = container.getAttribute('data-blog-id'); // Unique ID
-            //     var blogUrl = `${window.location.origin}/blog/${blogId}`; // Generate unique URL
-
-            //     navigator.clipboard.writeText(blogUrl)
-            //         .then(() => alert('Link copied to clipboard!'))
-            //         .catch(err => console.error('Failed to copy text: ', err));
-            // }
+            navigator.clipboard.writeText(url)
+                .then(() => alert('Link copied to clipboard!'))
+                .catch(err => console.error('Failed to copy text: ', err));
         }
+
     </script>
 
     <!-- Custom JS files -->

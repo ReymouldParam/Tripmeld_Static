@@ -112,7 +112,8 @@
         <!-- Blog Section -->
         <section class="recent-blogs">
             <div class="container">
-                <div class="blog-container-card" id="blog1">
+                <!-- first blog card -->
+                <div class="blog-container-card" data-blog-id="12345">
                     <!-- Blog Card -->
                     <div class="blog-card">
                         <!-- Close Button (Initially Hidden) -->
@@ -882,10 +883,9 @@
 
     </script>
 
-
     <!-- blog share functinality -->
     <script>
-        // Toggle the share popover for the current blog card.
+        // Toggle the share popover for the current blog card
         function toggleSharePopover(el) {
             var wrapper = el.closest('.share-wrapper');
             if (wrapper) {
@@ -893,21 +893,22 @@
                 if (popover) {
                     popover.classList.toggle('active');
 
-                    // Retrieve the blog URL from the parent blog-container-card.
+                    // Get blog ID from the parent blog-container-card
                     var container = el.closest('.blog-container-card');
                     if (container) {
-                        var blogUrl = container.getAttribute('data-blog-url');
+                        var blogId = container.getAttribute('data-blog-id'); // Unique ID
+                        var blogUrl = `${window.location.origin}/blog.php?id=${blogId}`; // Correct URL
+
                         // Update LinkedIn share link
                         var linkedinLink = popover.querySelector('.linkedin-link');
                         if (linkedinLink) {
-                            linkedinLink.href = "http://www.linkedin.com/shareArticle?mini=true&url=" +
-                                encodeURIComponent(blogUrl) +
-                                "&title=Revolutionizing%20Business%20Growth&summary=Check%20this%20blog%20out!&source=tripmeld.com";
+                            linkedinLink.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(blogUrl)}&title=Check%20this%20out!`;
                         }
+
                         // Update Facebook share link
                         var facebookLink = popover.querySelector('.facebook-link');
                         if (facebookLink) {
-                            facebookLink.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(blogUrl);
+                            facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blogUrl)}`;
                         }
                     }
                 } else {
@@ -916,65 +917,19 @@
             }
         }
 
-        // Copy the blog URL from the current blog card to the clipboard.
+        // Copy the blog URL from the current blog card to the clipboard
         function copyLinkFromCard(el) {
             var container = el.closest('.blog-container-card');
             if (container) {
-                var blogUrl = container.getAttribute('data-blog-url');
+                var blogId = container.getAttribute('data-blog-id'); // Unique ID
+                var blogUrl = `${window.location.origin}/blog.php?id=${blogId}`; // Correct URL
+
                 navigator.clipboard.writeText(blogUrl)
-                    .then(function () {
-                        alert('Link copied to clipboard!');
-                    })
-                    .catch(function (err) {
-                        console.error('Failed to copy text: ', err);
-                    });
+                    .then(() => alert('Link copied to clipboard!'))
+                    .catch(err => console.error('Failed to copy text: ', err));
             }
         }
 
-        // Existing functions for blog overview toggling (if used)
-        document.addEventListener("DOMContentLoaded", function () {
-            window.showBlogOverview = function (el) {
-                var container = el.closest('.blog-container-card');
-                if (!container) {
-                    console.error("Blog container card not found.");
-                    return;
-                }
-                var overview = container.querySelector('.blog-overview-container');
-                if (overview) {
-                    overview.classList.add('active');
-                    overview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    console.error("Overview container not found.");
-                }
-                var summary = container.querySelector('.blog-card');
-                if (summary) {
-                    summary.classList.add('hidden');
-                } else {
-                    console.error("Blog summary not found.");
-                }
-            };
-
-            window.hideBlogOverview = function (el) {
-                var container = el.closest('.blog-container-card');
-                if (!container) {
-                    console.error("Blog container card not found.");
-                    return;
-                }
-                var overview = container.querySelector('.blog-overview-container');
-                if (overview) {
-                    overview.classList.remove('active');
-                } else {
-                    console.error("Overview container not found.");
-                }
-                var summary = container.querySelector('.blog-card');
-                if (summary) {
-                    summary.classList.remove('hidden');
-                    summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    console.error("Blog summary not found.");
-                }
-            };
-        });
     </script>
 
     <!-- Custom JS files -->

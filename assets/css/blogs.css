@@ -75,6 +75,16 @@ body {
 }
 
 /* Label/Tag in the corner */
+.refactor-blog{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width:768px){
+    .refactor-blog{
+        flex-direction: column;
+    }
+}
+
 .blog-label {
     top: 16px;
     left: 16px;

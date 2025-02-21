@@ -119,7 +119,7 @@
                         </button>
 
 
-                        <div style="display: flex; flex-direction: row;">
+                        <div class="refactor-blog">
                             <div class="card-image">
                                 <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
                             </div>
@@ -213,114 +213,102 @@
                 </div>
 
                 <!-- Second Blog Card -->
-                <div class="blog-container-card">
-                    <!-- Blog Overview (Initially Hidden) -->
-                    <div class="blog-overview-container">
-                        <a class="clickable-text close-btn" onclick="hideBlogOverview(this)"> ▼ </a>
-                        <div class="overview-card">
-                            <div class="image-content">
-                                <div class="overview-image">
-                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Overview"
-                                        class="special-overview-image" />
-                                </div>
-                                <div class="overview-text">
-                                    <div class="logo-blog">
-                                        <img src="./assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                        <span class="blog-label blog">Blog</span>
-                                    </div>
-                                    <h1>Revolutionizing Business Growth: The Power of CRM Technology</h1>
-                                </div>
-                            </div>
-                            <div class="blog-details-paragraph">
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial purpose of simply storing customer data.
-                                </p>
-                                <p>
-                                    In today’s competitive landscape, CRM systems empower businesses to understand their
-                                    customers more intimately, enhance collaboration among teams, and build data-driven
-                                    strategies
-                                    that fuel sustainable growth.
-                                </p>
-                            </div>
-                            <hr />
-                            <div class="blog-meta-overview">
-                                <p>August 3, 2023</p>
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <div class="share-popover">
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blog Card (Summary) -->
+                <div class="blog-container-card" id="blog1">
+                    <!-- Blog Card -->
                     <div class="blog-card">
-                        <div class="card-image">
-                            <img src="assets/images/blogs/blog2.png" alt="CRM Blog Image" class="image-blog" />
-                        </div>
-                        <div class="card-content">
-                            <div class="logo-blog">
-                                <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                <span class="blog-label blog">Blog</span>
+
+                        <!-- Close Button (Initially Hidden) -->
+                        <button class="close-btn" onclick="closeBlogOverview(this)">
+                            &times;
+                        </button>
+
+
+                        <div class="refactor-blog">
+                            <div class="card-image">
+                                <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
                             </div>
-                            <h3>CRM Technology Set to Redefine Business Strategies in 2025: Key Trends to Watch</h3>
-                            <p>
-                                Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                strategic asset that empowers
-                                businesses to connect, engage, and nurture relationships with their clients and
-                                personalize experiences.
-                                Discover how CRM technology is driving innovation and unlocking new opportunities for
-                                businesses to thrive.
-                            </p>
-                            <a href="javascript:void(0)" class="read-more clickable-text"
-                                onclick="showBlogOverview(this)">Read More <img
-                                    src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" /></a>
-                            <hr />
-                            <div class="blog-meta">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <!-- <button class="share-btn">
-                                    Share <ion-icon name="share-social-outline"></ion-icon>
-                                </button> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
+                            <div class="card-content">
+                                <div class="logo-blog">
+                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                    <span class="blog-label blog">Blog</span>
+                                </div>
+                                <h3>Revolutionizing Business Growth: The Power of CRM Technology</h3>
+                                <p>
+                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
+                                    strategic asset that empowers businesses to connect, engage, and nurture
+                                    relationships
+                                    with their clients
+                                    and personalize experiences. Discover how CRM technology is driving innovation and
+                                    unlocking new opportunities
+                                    for businesses to thrive.
+                                </p>
+                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
+                                    Read More
+                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                </a>
+                                <hr class="horizontal" />
+                                <div class="blog-meta">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Overview (Initially Hidden) -->
+                        <div class="blog-overview-container">
+                            <div class="overview-card">
+                                <div class="blog-details-paragraph">
+                                    <p>
+                                        CRM technology has become a cornerstone of modern business strategies, evolving
+                                        far
+                                        beyond its initial purpose of simply storing customer data.
+                                    </p>
+                                    <p>
+                                        In today’s competitive landscape, CRM systems empower businesses to understand
+                                        their
+                                        customers more intimately,
+                                        enhance collaboration among teams, and build data-driven strategies that fuel
+                                        sustainable growth.
+                                    </p>
+                                </div>
+                                <hr />
+                                <div class="blog-meta-overview">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -329,432 +317,314 @@
                 </div>
 
                 <!-- third blog card -->
-                <div class="blog-container-card">
-                    <!-- Blog Overview (hidden by default) -->
-                    <div class="blog-overview-container">
-                        <!-- Close Button in the Top-Right Corner -->
-                        <!-- Close Button in the Top-Right Corner -->
-                        <a href="javascript:void(0)" class="clickable-text close-btn" onclick="hideBlogOverview(this)">
-                            ▼
-                        </a>
-                        <!-- Overview Card -->
-                        <div class="overview-card">
-                            <div class="image-content">
-                                <div class="overview-image">
-                                    <img src="assets/images/blogs/blog3.png" alt="CRM Blog Overview"
-                                        class="overview-image" />
+                <div class="blog-container-card" id="blog1">
+                    <!-- Blog Card -->
+                    <div class="blog-card">
+
+                        <!-- Close Button (Initially Hidden) -->
+                        <button class="close-btn" onclick="closeBlogOverview(this)">
+                            &times;
+                        </button>
+
+
+                        <div class="refactor-blog">
+                            <div class="card-image">
+                                <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                            </div>
+                            <div class="card-content">
+                                <div class="logo-blog">
+                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                    <span class="blog-label blog">Blog</span>
                                 </div>
-                                <div class="overview-text">
-                                    <div class="logo-blog">
-                                        <img src="./assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                        <span class="blog-label blog">Blog</span>
+                                <h3>Revolutionizing Business Growth: The Power of CRM Technology</h3>
+                                <p>
+                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
+                                    strategic asset that empowers businesses to connect, engage, and nurture
+                                    relationships
+                                    with their clients
+                                    and personalize experiences. Discover how CRM technology is driving innovation and
+                                    unlocking new opportunities
+                                    for businesses to thrive.
+                                </p>
+                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
+                                    Read More
+                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                </a>
+                                <hr class="horizontal" />
+                                <div class="blog-meta">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <h1>How CRM Technology Enhances Customer Experience in the Digital Era</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Overview (Initially Hidden) -->
+                        <div class="blog-overview-container">
+                            <div class="overview-card">
+                                <div class="blog-details-paragraph">
                                     <p>
-                                        Customer Relationship Management (CRM) technology is no longer just a tool—it's
-                                        a strategic asset
-                                        that empowers businesses to connect, engage, and nurture relationships with
-                                        their clients and personalize
-                                        experiences. From automating mundane tasks to delivering personalized customer
-                                        journeys, CRM software is
-                                        reshaping how organizations interact with their clients and streamline
-                                        operations.
+                                        CRM technology has become a cornerstone of modern business strategies, evolving
+                                        far
+                                        beyond its initial purpose of simply storing customer data.
+                                    </p>
+                                    <p>
+                                        In today’s competitive landscape, CRM systems empower businesses to understand
+                                        their
+                                        customers more intimately,
+                                        enhance collaboration among teams, and build data-driven strategies that fuel
+                                        sustainable growth.
                                     </p>
                                 </div>
-                            </div>
-                            <!-- Additional details -->
-                            <div class="blog-details-paragraph">
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial
-                                    purpose of simply storing customer data. In today’s competitive landscape, CRM
-                                    systems empower businesses
-                                    to understand their customers more intimately, enhance collaboration among teams,
-                                    and build data-driven
-                                    strategies that fuel sustainable growth.
-                                </p>
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial
-                                    purpose of simply storing customer data.
-                                </p>
-                            </div>
-                            <hr />
-                            <div class="blog-meta-overview">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blog Card (Summary) -->
-                    <div class="blog-card">
-                        <div class="card-image">
-                            <img src="assets/images/blogs/blog3.png" alt="CRM Blog Image" class="image-blog" />
-                        </div>
-                        <div class="card-content">
-                            <div class="logo-blog">
-                                <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                <span class="blog-label blog">Blog</span>
-                            </div>
-                            <h3>How CRM Technology Enhances Customer Experience in the Digital Era</h3>
-                            <p>
-                                Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                strategic asset that empowers
-                                businesses to connect, engage, and nurture relationships with their clients and
-                                personalize experiences.
-                                Discover how CRM technology is driving innovation and unlocking new opportunities for
-                                businesses to thrive.
-                            </p>
-                            <a href="javascript:void(0)" class="read-more clickable-text"
-                                onclick="showBlogOverview(this)">Read More <img
-                                    src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" /></a>
-                            <hr />
-                            <div class="blog-meta">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <!-- <button class="share-btn">
-                                    Share <ion-icon name="share-social-outline"></ion-icon>
-                                </button> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
+                                <hr />
+                                <div class="blog-meta-overview">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- fourth blog card -->
-                <div class="blog-container-card">
-                    <!-- Blog Overview (hidden by default) -->
-                    <div class="blog-overview-container">
-                        <!-- Close Button in the Top-Right Corner -->
-                        <a href="javascript:void(0)" class="clickable-text close-btn" onclick="hideBlogOverview(this)">
-                            ▼
-                        </a>
-                        <!-- Overview Card -->
-                        <div class="overview-card">
-                            <div class="image-content">
-                                <div class="overview-image">
-                                    <img src="assets/images/blogs/blog5.png" alt="CRM Blog Overview"
-                                        class="overview-image" />
+                <div class="blog-container-card" id="blog1">
+                    <!-- Blog Card -->
+                    <div class="blog-card">
+
+                        <!-- Close Button (Initially Hidden) -->
+                        <button class="close-btn" onclick="closeBlogOverview(this)">
+                            &times;
+                        </button>
+
+
+                        <div class="refactor-blog">
+                            <div class="card-image">
+                                <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                            </div>
+                            <div class="card-content">
+                                <div class="logo-blog">
+                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                    <span class="blog-label blog">Blog</span>
                                 </div>
-                                <div class="overview-text">
-                                    <div class="logo-blog">
-                                        <img src="./assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                        <span class="blog-label blog">Blog</span>
+                                <h3>Revolutionizing Business Growth: The Power of CRM Technology</h3>
+                                <p>
+                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
+                                    strategic asset that empowers businesses to connect, engage, and nurture
+                                    relationships
+                                    with their clients
+                                    and personalize experiences. Discover how CRM technology is driving innovation and
+                                    unlocking new opportunities
+                                    for businesses to thrive.
+                                </p>
+                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
+                                    Read More
+                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                </a>
+                                <hr class="horizontal" />
+                                <div class="blog-meta">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <h1>CRM Technology Breakthrough: AI and Automation Lead the Way in 2025</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Overview (Initially Hidden) -->
+                        <div class="blog-overview-container">
+                            <div class="overview-card">
+                                <div class="blog-details-paragraph">
                                     <p>
-                                        Customer Relationship Management (CRM) technology is no longer just a tool—it's
-                                        a strategic asset
-                                        that empowers businesses to connect, engage, and nurture relationships with
-                                        their clients and personalize
-                                        experiences. From automating mundane tasks to delivering personalized customer
-                                        journeys, CRM software is
-                                        reshaping how organizations interact with their clients and streamline
-                                        operations.
+                                        CRM technology has become a cornerstone of modern business strategies, evolving
+                                        far
+                                        beyond its initial purpose of simply storing customer data.
+                                    </p>
+                                    <p>
+                                        In today’s competitive landscape, CRM systems empower businesses to understand
+                                        their
+                                        customers more intimately,
+                                        enhance collaboration among teams, and build data-driven strategies that fuel
+                                        sustainable growth.
                                     </p>
                                 </div>
-                            </div>
-                            <!-- Additional details -->
-                            <div class="blog-details-paragraph">
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial
-                                    purpose of simply storing customer data. In today’s competitive landscape, CRM
-                                    systems empower businesses
-                                    to understand their customers more intimately, enhance collaboration among teams,
-                                    and build data-driven
-                                    strategies that fuel sustainable growth.
-                                </p>
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial
-                                    purpose of simply storing customer data.
-                                </p>
-                            </div>
-                            <hr />
-                            <div class="blog-meta-overview">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blog Card (Summary) -->
-                    <div class="blog-card">
-                        <div class="card-image">
-                            <img src="assets/images/blogs/blog5.png" alt="CRM Blog Image" class="image-blog" />
-                        </div>
-                        <div class="card-content">
-                            <div class="logo-blog">
-                                <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                <span class="blog-label blog">Blog</span>
-                            </div>
-                            <h3>CRM Technology Breakthrough: AI and Automation Lead the Way in 2025</h3>
-                            <p>
-                                Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                strategic asset that empowers
-                                businesses to connect, engage, and nurture relationships with their clients and
-                                personalize experiences.
-                                Discover how CRM technology is driving innovation and unlocking new opportunities for
-                                businesses to thrive.
-                            </p>
-                            <a href="javascript:void(0)" class="read-more clickable-text"
-                                onclick="showBlogOverview(this)">Read More <img
-                                    src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" /></a>
-                            <hr />
-                            <div class="blog-meta">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <!-- <button class="share-btn">
-                                    Share <ion-icon name="share-social-outline"></ion-icon>
-                                </button> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
+                                <hr />
+                                <div class="blog-meta-overview">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- fifth blog card  -->
-                <div class="blog-container-card">
-                    <!-- Blog Overview (hidden by default) -->
-                    <div class="blog-overview-container">
-                        <!-- Close Button in the Top-Right Corner -->
-                        <a href="javascript:void(0)" class="clickable-text close-btn" onclick="hideBlogOverview(this)">
-                            ▼
-                        </a>
-                        <!-- Overview Card -->
-                        <div class="overview-card">
-                            <div class="image-content">
-                                <div class="overview-image">
-                                    <img src="assets/images/blogs/blog6.png" alt="CRM Blog Overview"
-                                        class="overview-image" />
+                <div class="blog-container-card" id="blog1">
+                    <!-- Blog Card -->
+                    <div class="blog-card">
+
+                        <!-- Close Button (Initially Hidden) -->
+                        <button class="close-btn" onclick="closeBlogOverview(this)">
+                            &times;
+                        </button>
+
+
+                        <div class="refactor-blog">
+                            <div class="card-image">
+                                <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                            </div>
+                            <div class="card-content">
+                                <div class="logo-blog">
+                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                    <span class="blog-label blog">Blog</span>
                                 </div>
-                                <div class="overview-text">
-                                    <div class="logo-blog">
-                                        <img src="./assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                        <span class="blog-label blog">Blog</span>
+                                <h3>Revolutionizing Business Growth: The Power of CRM Technology</h3>
+                                <p>
+                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
+                                    strategic asset that empowers businesses to connect, engage, and nurture
+                                    relationships
+                                    with their clients
+                                    and personalize experiences. Discover how CRM technology is driving innovation and
+                                    unlocking new opportunities
+                                    for businesses to thrive.
+                                </p>
+                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
+                                    Read More
+                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                </a>
+                                <hr class="horizontal" />
+                                <div class="blog-meta">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <h1>The Future of CRM Technology: Trends That Will Shape 2025 and Beyond</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blog Overview (Initially Hidden) -->
+                        <div class="blog-overview-container">
+                            <div class="overview-card">
+                                <div class="blog-details-paragraph">
                                     <p>
-                                        Customer Relationship Management (CRM) technology is no longer just a tool—it's
-                                        a strategic asset
-                                        that empowers businesses to connect, engage, and nurture relationships with
-                                        their clients and personalize
-                                        experiences. From automating mundane tasks to delivering personalized customer
-                                        journeys, CRM software is
-                                        reshaping how organizations interact with their clients and streamline
-                                        operations.
+                                        CRM technology has become a cornerstone of modern business strategies, evolving
+                                        far
+                                        beyond its initial purpose of simply storing customer data.
+                                    </p>
+                                    <p>
+                                        In today’s competitive landscape, CRM systems empower businesses to understand
+                                        their
+                                        customers more intimately,
+                                        enhance collaboration among teams, and build data-driven strategies that fuel
+                                        sustainable growth.
                                     </p>
                                 </div>
-                            </div>
-                            <!-- Additional details -->
-                            <div class="blog-details-paragraph">
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial
-                                    purpose of simply storing customer data. In today’s competitive landscape, CRM
-                                    systems empower businesses
-                                    to understand their customers more intimately, enhance collaboration among teams,
-                                    and build data-driven
-                                    strategies that fuel sustainable growth.
-                                </p>
-                                <p>
-                                    CRM technology has become a cornerstone of modern business strategies, evolving far
-                                    beyond its initial
-                                    purpose of simply storing customer data.
-                                </p>
-                            </div>
-                            <hr />
-                            <div class="blog-meta-overview">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blog Card (Summary) -->
-                    <div class="blog-card">
-                        <div class="card-image">
-                            <img src="assets/images/blogs/blog6.png" alt="CRM Blog Image" class="image-blog" />
-                        </div>
-                        <div class="card-content">
-                            <div class="logo-blog">
-                                <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                <span class="blog-label blog">Blog</span>
-                            </div>
-                            <h3>The Future of CRM Technology: Trends That Will Shape 2025 and Beyond</h3>
-                            <p>
-                                Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                strategic asset that empowers
-                                businesses to connect, engage, and nurture relationships with their clients and
-                                personalize experiences.
-                                Discover how CRM technology is driving innovation and unlocking new opportunities for
-                                businesses to thrive.
-                            </p>
-                            <a href="javascript:void(0)" class="read-more clickable-text"
-                                onclick="showBlogOverview(this)">Read More <img
-                                    src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" /></a>
-                            <hr />
-                            <div class="blog-meta">
-                                <p>August 3, 2023</p>
-                                <!-- <span>0 Comments</span>
-                                <span>0 Shares</span> -->
-                                <!-- <span>270 Likes</span> -->
-                                <!-- <button class="share-btn">
-                                    Share <ion-icon name="share-social-outline"></ion-icon>
-                                </button> -->
-                                <div class="share-wrapper">
-                                    <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                        Share <ion-icon name="share-social-outline"></ion-icon>
-                                    </button>
-                                    <!-- Popover for Share Options -->
-                                    <div class="share-popover">
-                                        <!-- Copy URL -->
-                                        <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
-                                            <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                title="Copy URL">
-                                        </a>
-                                        <!-- LinkedIn Share -->
-                                        <a target="_blank" class="linkedin-link">
-                                            <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                title="Share on LinkedIn">
-                                        </a>
-                                        <!-- Facebook Share -->
-                                        <a target="_blank" class="facebook-link">
-                                            <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                title="Share on Facebook">
-                                        </a>
+                                <hr />
+                                <div class="blog-meta-overview">
+                                    <p>August 3, 2023</p>
+                                    <div class="share-wrapper">
+                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                            Share <ion-icon name="share-social-outline"></ion-icon>
+                                        </button>
+                                        <div class="share-popover">
+                                            <a href="javascript:void(0)" onclick="copyLinkFromCard(this)">
+                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
+                                                    title="Copy URL">
+                                            </a>
+                                            <a href="#" target="_blank" class="linkedin-link">
+                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                    title="Share on LinkedIn">
+                                            </a>
+                                            <a href="#" target="_blank" class="facebook-link">
+                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                    title="Share on Facebook">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div> <!-- End container -->
         </section> <!-- End recent-blogs -->
     </div>

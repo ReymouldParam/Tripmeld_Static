@@ -936,6 +936,32 @@
 
     </script>
 
+    <!-- scroll to blog-card -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const expandBlogId = urlParams.get("expandBlog");
+
+            if (expandBlogId) {
+                // Wait for the blog card to be available
+                setTimeout(() => {
+                    const targetBlog = document.getElementById(expandBlogId);
+                    if (targetBlog) {
+                        targetBlog.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                        // Check if the blog has a Read More button
+                        const readMoreBtn = targetBlog.querySelector(".read-more");
+                        if (readMoreBtn) {
+                            setTimeout(() => {
+                                readMoreBtn.click(); // Expand the blog
+                            }, 500); // Wait for scrolling to complete
+                        }
+                    }
+                }, 500); // Delay ensures the blog card is loaded
+            }
+        });
+
+    </script>
     <!-- Custom JS files -->
     <script src="assets/js/global.js"></script>
     <script src="assets/js/home.js"></script>

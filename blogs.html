@@ -28,6 +28,15 @@
     <!-- blogs -->
     <link rel="stylesheet" href="assets/css/blogs.css" />
 
+    <!-- Open Graph Meta Tags for TripMeld Blogs Page -->
+    <meta property="og:title" content="TripMeld Blogs – Insights on CRM, Business Growth & More" />
+    <meta property="og:description"
+        content="Discover how CRM technology drives innovation, enhances customer experiences, and unlocks new growth opportunities. Explore six curated blogs covering CRM trends, business strategies, and more." />
+    <meta property="og:image" content="https://dev.tripmeld.com/assets/images/blogs/tripmeld-blogs-thumbnail.png" />
+    <meta property="og:url" content="https://dev.tripmeld.com/blogs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TripMeld" />
+
 
 </head>
 
@@ -160,11 +169,11 @@
                                             </a>
                                             <a href="#" target="_blank" class="linkedin-link">
                                                 <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                    title="Share on LinkedIn">
+                                                    title="Share on LinkedIn" />
                                             </a>
                                             <a href="#" target="_blank" class="facebook-link">
                                                 <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                    title="Share on Facebook">
+                                                    title="Share on Facebook" />
                                             </a>
                                         </div>
                                     </div>
@@ -895,35 +904,38 @@
 
     <!-- blog share functinality -->
     <script>
-        // Toggle the share popover for the current blog card
         function toggleSharePopover(el) {
             var wrapper = el.closest('.share-wrapper');
-            if (wrapper) {
-                var popover = wrapper.querySelector('.share-popover');
-                if (popover) {
-                    popover.classList.toggle('active');
+            if (!wrapper) return;
 
-                    // Get blog ID from the parent blog-container-card
-                    var container = el.closest('.blog-container-card');
-                    if (container) {
-                        var blogId = container.getAttribute('data-blog-id'); // Unique ID
-                        var blogUrl = `${window.location.origin}/blog/${blogId}`; // Generate unique URL
+            var popover = wrapper.querySelector('.share-popover');
+            if (!popover) return console.error("Share popover not found.");
 
-                        // Update LinkedIn share link
-                        var linkedinLink = popover.querySelector('.linkedin-link');
-                        if (linkedinLink) {
-                            linkedinLink.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(blogUrl)}&title=Check%20this%20out!`;
-                        }
+            popover.classList.toggle('active'); // Toggle popover visibility
 
-                        // Update Facebook share link
-                        var facebookLink = popover.querySelector('.facebook-link');
-                        if (facebookLink) {
-                            facebookLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blogUrl)}`;
-                        }
-                    }
-                } else {
-                    console.error("Share popover not found.");
-                }
+            // Get blog ID dynamically from the closest blog container
+            var container = el.closest('.blog-container-card');
+            if (!container) return console.error("Blog container not found.");
+
+            var blogId = container.id; // Retrieve the actual blog ID from the container
+            if (!blogId) return console.error("Blog ID not found.");
+
+            var blogUrl = `${window.location.origin}/blogs?expandBlog=${blogId}`;
+
+            // Update LinkedIn share link
+            var linkedinLink = popover.querySelector('.linkedin-link');
+            if (linkedinLink) {
+                var linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogUrl)}`;
+                linkedinLink.setAttribute("href", linkedInShareUrl);
+                linkedinLink.setAttribute("target", "_blank"); // Open in a new tab
+            }
+
+            // Update Facebook share link
+            var facebookLink = popover.querySelector('.facebook-link');
+            if (facebookLink) {
+                var facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blogUrl)}`;
+                facebookLink.setAttribute("href", facebookShareUrl);
+                facebookLink.setAttribute("target", "_blank"); // Open in a new tab
             }
         }
 

@@ -122,42 +122,358 @@
         <section class="recent-blogs">
             <div class="container">
                 <!-- first blog card -->
-                <div class="blog-container-card" id="Revolutionizing-Business-Growth">
-                    <!-- Blog Card -->
-                    <div class="blog-card">
-                        <!-- Close Button (Initially Hidden) -->
-                        <button class="close-btn" onclick="closeBlogOverview(this)">
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
-
-
-                        <div class="refactor-blog">
-                            <div class="card-image">
-                                <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
-                            </div>
-                            <div class="card-content">
-                                <div class="logo-blog">
-                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                    <span class="blog-label blog">Blog</span>
+                <div class="blog-container-flex">
+                    <!-- Blog Card (Left Side) -->
+                    <div class="blog-list">
+                        <!-- blog card1 -->
+                        <div class="blog-card" id="blog-card-1">
+                            <div class="refactor-blog">
+                                <div class="card-content">
+                                    <div class="logo-blog">
+                                        <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                        <span class="blog-label blog">Blog</span>
+                                    </div>
+                                    <h3>Do I Really Need a Travel CRM or How to Choose One?</h3>
+                                    <p>
+                                        Running a travel business without the right tools is like working with one hand
+                                        tied
+                                        behind your back. It not only affects productivity but also drains your valuable
+                                        time.
+                                        A Travel CRM is the solution to staying organized, managing relationships, and
+                                        boosting efficiency.
+                                    </p>
+                                    <a class="read-more clickable-text" onclick="toggleBlogOverview('blog-overview-1')">
+                                        Read More
+                                        <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                    </a>
+                                    <hr class="line" />
+                                    <div class="blog-meta">
+                                        <p>March 1, 2025</p>
+                                        <div class="share-wrapper">
+                                            <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                                Share <ion-icon name="share-social-outline"></ion-icon>
+                                            </button>
+                                            <div class="share-popover">
+                                                <a href="javascript:void(0)"
+                                                    onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
+                                                    <img src="assets/images/icons/icons8-copy-link-40.png"
+                                                        alt="Copy Link" title="Copy URL">
+                                                </a>
+                                                <a href="#" target="_blank" class="linkedin-link">
+                                                    <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                        title="Share on LinkedIn">
+                                                </a>
+                                                <a href="#" target="_blank" class="facebook-link">
+                                                    <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                        title="Share on Facebook">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3>Do I Really Need a Travel CRM or How to Choose One?
-                                </h3>
-                                <p>
-                                    Running a travel business without the right tools is like working with one hand tied
-                                    behind your back. It not only affects productivity but also drains your valuable
-                                    time. A Travel CRM is the solution to staying organized, managing relationships, and
-                                    boosting efficiency. In today’s fast-paced and competitive industry, having a Travel
-                                    CRM is no longer a luxury, it’s a Mandate! So, when asked, "Do you really need a
-                                    Travel CRM?" The answer is a resounding YES!
+                            </div>
+                        </div>
+                        <!-- blog card2 -->
+                        <div class="blog-card" id="blog-card-2">
+                            <div class="refactor-blog">
+                                <div class="card-content">
+                                    <div class="logo-blog">
+                                        <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                        <span class="blog-label blog">Blog</span>
+                                    </div>
+                                    <h3>Do I Really Need a Travel CRM or How to Choose One?</h3>
+                                    <p>
+                                        Running a travel business without the right tools is like working with one hand
+                                        tied
+                                        behind your back. It not only affects productivity but also drains your valuable
+                                        time.
+                                        A Travel CRM is the solution to staying organized, managing relationships, and
+                                        boosting efficiency.
+                                    </p>
+                                    <a class="read-more clickable-text" onclick="toggleBlogOverview('blog-overview-2')">
+                                        Read More
+                                        <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                    </a>
+                                    <hr class="line" />
+                                    <div class="blog-meta">
+                                        <p>March 1, 2025</p>
+                                        <div class="share-wrapper">
+                                            <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                                Share <ion-icon name="share-social-outline"></ion-icon>
+                                            </button>
+                                            <div class="share-popover">
+                                                <a href="javascript:void(0)"
+                                                    onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
+                                                    <img src="assets/images/icons/icons8-copy-link-40.png"
+                                                        alt="Copy Link" title="Copy URL">
+                                                </a>
+                                                <a href="#" target="_blank" class="linkedin-link">
+                                                    <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                        title="Share on LinkedIn">
+                                                </a>
+                                                <a href="#" target="_blank" class="facebook-link">
+                                                    <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                        title="Share on Facebook">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- blog card 3 -->
+                        <div class="blog-card" id="blog-card-3">
+                            <div class="refactor-blog">
+                                <div class="card-content">
+                                    <div class="logo-blog">
+                                        <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                        <span class="blog-label blog">Blog</span>
+                                    </div>
+                                    <h3>Do I Really Need a Travel CRM or How to Choose One?</h3>
+                                    <p>
+                                        Running a travel business without the right tools is like working with one hand
+                                        tied
+                                        behind your back. It not only affects productivity but also drains your valuable
+                                        time.
+                                        A Travel CRM is the solution to staying organized, managing relationships, and
+                                        boosting efficiency.
+                                    </p>
+                                    <a class="read-more clickable-text" onclick="toggleBlogOverview('blog-overview-3')">
+                                        Read More
+                                        <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                    </a>
+                                    <hr class="line" />
+                                    <div class="blog-meta">
+                                        <p>March 1, 2025</p>
+                                        <div class="share-wrapper">
+                                            <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                                Share <ion-icon name="share-social-outline"></ion-icon>
+                                            </button>
+                                            <div class="share-popover">
+                                                <a href="javascript:void(0)"
+                                                    onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
+                                                    <img src="assets/images/icons/icons8-copy-link-40.png"
+                                                        alt="Copy Link" title="Copy URL">
+                                                </a>
+                                                <a href="#" target="_blank" class="linkedin-link">
+                                                    <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                        title="Share on LinkedIn">
+                                                </a>
+                                                <a href="#" target="_blank" class="facebook-link">
+                                                    <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                        title="Share on Facebook">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- blog-card4 -->
+                        <div class="blog-card" id="blog-card-4">
+                            <div class="refactor-blog">
+                                <div class="card-content">
+                                    <div class="logo-blog">
+                                        <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                        <span class="blog-label blog">Blog</span>
+                                    </div>
+                                    <h3>Do I Really Need a Travel CRM or How to Choose One?</h3>
+                                    <p>
+                                        Running a travel business without the right tools is like working with one hand
+                                        tied
+                                        behind your back. It not only affects productivity but also drains your valuable
+                                        time.
+                                        A Travel CRM is the solution to staying organized, managing relationships, and
+                                        boosting efficiency.
+                                    </p>
+                                    <a class="read-more clickable-text" onclick="toggleBlogOverview('blog-overview-4')">
+                                        Read More
+                                        <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                    </a>
+                                    <hr class="line" />
+                                    <div class="blog-meta">
+                                        <p>March 1, 2025</p>
+                                        <div class="share-wrapper">
+                                            <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                                Share <ion-icon name="share-social-outline"></ion-icon>
+                                            </button>
+                                            <div class="share-popover">
+                                                <a href="javascript:void(0)"
+                                                    onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
+                                                    <img src="assets/images/icons/icons8-copy-link-40.png"
+                                                        alt="Copy Link" title="Copy URL">
+                                                </a>
+                                                <a href="#" target="_blank" class="linkedin-link">
+                                                    <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                        title="Share on LinkedIn">
+                                                </a>
+                                                <a href="#" target="_blank" class="facebook-link">
+                                                    <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                        title="Share on Facebook">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- blog-card5 -->
+                        <div class="blog-card" id="blog-card-5">
+                            <div class="refactor-blog">
+                                <div class="card-content">
+                                    <div class="logo-blog">
+                                        <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                        <span class="blog-label blog">Blog</span>
+                                    </div>
+                                    <h3>Do I Really Need a Travel CRM or How to Choose One?</h3>
+                                    <p>
+                                        Running a travel business without the right tools is like working with one hand
+                                        tied
+                                        behind your back. It not only affects productivity but also drains your valuable
+                                        time.
+                                        A Travel CRM is the solution to staying organized, managing relationships, and
+                                        boosting efficiency.
+                                    </p>
+                                    <a class="read-more clickable-text" onclick="toggleBlogOverview('blog-overview-5')">
+                                        Read More
+                                        <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                    </a>
+                                    <hr class="line" />
+                                    <div class="blog-meta">
+                                        <p>March 1, 2025</p>
+                                        <div class="share-wrapper">
+                                            <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                                Share <ion-icon name="share-social-outline"></ion-icon>
+                                            </button>
+                                            <div class="share-popover">
+                                                <a href="javascript:void(0)"
+                                                    onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
+                                                    <img src="assets/images/icons/icons8-copy-link-40.png"
+                                                        alt="Copy Link" title="Copy URL">
+                                                </a>
+                                                <a href="#" target="_blank" class="linkedin-link">
+                                                    <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                        title="Share on LinkedIn">
+                                                </a>
+                                                <a href="#" target="_blank" class="facebook-link">
+                                                    <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                        title="Share on Facebook">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- blog-card6 -->
+                        <div class="blog-card" id="blog-card-6">
+                            <div class="refactor-blog">
+                                <div class="card-content">
+                                    <div class="logo-blog">
+                                        <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
+                                        <span class="blog-label blog">Blog</span>
+                                    </div>
+                                    <h3>Do I Really Need a Travel CRM or How to Choose One?</h3>
+                                    <p>
+                                        Running a travel business without the right tools is like working with one hand
+                                        tied
+                                        behind your back. It not only affects productivity but also drains your valuable
+                                        time.
+                                        A Travel CRM is the solution to staying organized, managing relationships, and
+                                        boosting efficiency.
+                                    </p>
+                                    <a class="read-more clickable-text" onclick="toggleBlogOverview('blog-overview-6')">
+                                        Read More
+                                        <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
+                                    </a>
+                                    <hr class="line" />
+                                    <div class="blog-meta">
+                                        <p>March 1, 2025</p>
+                                        <div class="share-wrapper">
+                                            <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
+                                                Share <ion-icon name="share-social-outline"></ion-icon>
+                                            </button>
+                                            <div class="share-popover">
+                                                <a href="javascript:void(0)"
+                                                    onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
+                                                    <img src="assets/images/icons/icons8-copy-link-40.png"
+                                                        alt="Copy Link" title="Copy URL">
+                                                </a>
+                                                <a href="#" target="_blank" class="linkedin-link">
+                                                    <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
+                                                        title="Share on LinkedIn">
+                                                </a>
+                                                <a href="#" target="_blank" class="facebook-link">
+                                                    <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
+                                                        title="Share on Facebook">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                                </p>
-                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
-                                    Read More
-                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
-                                </a>
-                                <hr class="line" />
-                                <div class="blog-meta">
-                                    <p>August 3, 2023</p>
+                    </div>
+
+                    <!-- Blog Overview (Right Side) -->
+                    <div>
+                        <!-- blog-card1 -->
+                        <div class="blog-overview-container" id="blog-overview-1">
+                            <div class="overview-card">
+                                <div class="card-image">
+                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                                </div>
+                                <div class="blog-details-paragraph">
+                                    <h2>1Why Do You Need a Travel CRM?</h2>
+                                    <p>
+                                        Managing client inquiries, bookings, and itineraries manually is time-consuming
+                                        and
+                                        error-prone.
+                                        A travel CRM takes the stress out of the equation and makes your life a whole
+                                        lot
+                                        easier.
+                                    </p>
+                                    <h2>1. Instant Quote Generation</h2>
+                                    <p>
+                                        With a travel CRM, you can whip up polished, professional quotes in seconds.
+                                    </p>
+                                    <h2>2. Custom Itinerary Builder</h2>
+                                    <p>
+                                        Create personalized itineraries tailored to your clients’ unique needs.
+                                    </p>
+                                    <h2>3. Centralized Communication Hub</h2>
+                                    <p>
+                                        All your communication in one place—no more lost messages.
+                                    </p>
+                                    <h2>4. AI-Powered Automation</h2>
+                                    <p>
+                                        Automate repetitive tasks like generating quotes and itineraries.
+                                    </p>
+                                    <h2>5. DMC & Partner Integrations</h2>
+                                    <p>
+                                        Access a global network of Destination Management Companies (DMCs) seamlessly.
+                                    </p>
+                                    <h2>6. Smart Inventory Management</h2>
+                                    <p>
+                                        Keep track of available rooms, tickets, or packages with ease.
+                                    </p>
+                                    <h2>7. On-Time Visa Updates</h2>
+                                    <p>
+                                        Get timely visa status updates to avoid last-minute surprises.
+                                    </p>
+
+                                    <h2>Endnote</h2>
+                                    <p>
+                                        If you’re in the travel industry, a CRM is essential. Ready to transform the way
+                                        you
+                                        work?
+                                        The perfect travel CRM is just a decision away.
+                                    </p>
+                                </div>
+                                <hr />
+                                <div class="blog-meta-overview">
+                                    <p>March 1, 2025</p>
                                     <div class="share-wrapper">
                                         <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
                                             Share <ion-icon name="share-social-outline"></ion-icon>
@@ -170,182 +486,73 @@
                                             </a>
                                             <a href="#" target="_blank" class="linkedin-link">
                                                 <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                    title="Share on LinkedIn" />
+                                                    title="Share on LinkedIn">
                                             </a>
                                             <a href="#" target="_blank" class="facebook-link">
                                                 <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                    title="Share on Facebook" />
+                                                    title="Share on Facebook">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Blog Overview (Initially Hidden) -->
-                        <div class="blog-overview-container">
+                        <!-- blog overview card2 -->
+                        <div class="blog-overview-container" id="blog-overview-2">
                             <div class="overview-card">
+                                <div class="card-image">
+                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                                </div>
                                 <div class="blog-details-paragraph">
+                                    <h2>2Why Do You Need a Travel CRM?</h2>
                                     <p>
-                                        Let’s dive deeper into why a Travel CRM is the perfect solution for your
-                                        business and why it’s so important.
-                                        <br />
-                                        Firstly,
+                                        Managing client inquiries, bookings, and itineraries manually is time-consuming
+                                        and
+                                        error-prone.
+                                        A travel CRM takes the stress out of the equation and makes your life a whole
+                                        lot
+                                        easier.
                                     </p>
-                                    <h2> Why Do You Need a Travel CRM?</h2>
-                                    <p> managing client inquiries, bookings, and itineraries manually is time-consuming
-                                        and error-prone. A travel CRM takes the stress out of the equation and makes
-                                        your life a whole lot easier. Here’s why: </p>
-
-                                    <h2>
-                                        1. Instant Quote Generation
-                                    </h2>
+                                    <h2>1. Instant Quote Generation</h2>
                                     <p>
-                                        First impressions matter. With a travel CRM, you can whip up polished,
-                                        professional quotes in seconds. Forget fumbling with spreadsheets—your clients
-                                        get speedy, tailored quotes that scream efficiency.
+                                        With a travel CRM, you can whip up polished, professional quotes in seconds.
                                     </p>
-                                    <h2>2. Custom Itinerary Builder </h2>
+                                    <h2>2. Custom Itinerary Builder</h2>
                                     <p>
-                                        Nobody wants cookie-cutter vacations. A travel CRM helps you craft personalized
-                                        itineraries that cater to your clients’ unique needs. Whether it’s a honeymoon
-                                        or an adventure-filled family trip, you’ll create something unforgettable.
+                                        Create personalized itineraries tailored to your clients’ unique needs.
                                     </p>
-                                    <h2>3. Centralized Communication Hub
-                                    </h2>
+                                    <h2>3. Centralized Communication Hub</h2>
                                     <p>
-                                        Keeping track of emails, calls, and messages can feel like herding cats. With a
-                                        travel CRM, all your communication is in one place. Never lose track of a client
-                                        conversation again!
+                                        All your communication in one place—no more lost messages.
                                     </p>
-                                    <h2>4. AI-Powered Automation
-                                    </h2>
+                                    <h2>4. AI-Powered Automation</h2>
                                     <p>
-                                        Let’s face it: repetitive tasks are boring and time-consuming. AI-powered
-                                        automation in your CRM can handle those for you. Need to generate quotes or
-                                        itineraries on the fly? Done.
+                                        Automate repetitive tasks like generating quotes and itineraries.
+                                    </p>
+                                    <h2>5. DMC & Partner Integrations</h2>
+                                    <p>
+                                        Access a global network of Destination Management Companies (DMCs) seamlessly.
+                                    </p>
+                                    <h2>6. Smart Inventory Management</h2>
+                                    <p>
+                                        Keep track of available rooms, tickets, or packages with ease.
+                                    </p>
+                                    <h2>7. On-Time Visa Updates</h2>
+                                    <p>
+                                        Get timely visa status updates to avoid last-minute surprises.
                                     </p>
 
-                                    <h2>5. DMC & Partner Integrations
-                                    </h2>
+                                    <h2>Endnote</h2>
                                     <p>
-                                        Imagine accessing a global network of Destination Management Companies (DMCs)
-                                        with a single click. A travel CRM integrates seamlessly, expanding your reach
-                                        and offering more options to your clients.
-
+                                        If you’re in the travel industry, a CRM is essential. Ready to transform the way
+                                        you
+                                        work?
+                                        The perfect travel CRM is just a decision away.
                                     </p>
-                                    <h2>6. Smart Inventory Management
-                                    </h2>
-                                    <p>
-                                        Keeping tabs on available rooms, tickets, or packages shouldn’t be a headache.
-                                        With smart inventory management, your CRM keeps you updated and organized,
-                                        ensuring you’re always one step ahead.
-
-                                    </p>
-                                    <h2>7. On-Time Visa Updates
-                                    </h2>
-                                    <p>
-                                        Visa delays can derail even the best-laid travel plans. A good travel CRM tracks
-                                        visa statuses and sends timely updates, saving you and your clients from
-                                        unnecessary stress.
-
-                                    </p>
-
-                                    <h2>How to Choose the Right Travel CRM
-                                    </h2>
-                                    <p> Okay, so now you’re convinced you need a CRM. But how do you pick the right one?
-                                        Here’s your cheat sheet: </p>
-
-                                    <h2>1. Understand Your Needs
-                                    </h2>
-                                    <ul>
-                                        <li>
-                                            <p> Do I need help generating instant quotes?</p>
-                                        </li>
-                                        <li>
-                                            <p> How important is custom itinerary creation? </p>
-                                        </li>
-                                        <li>
-                                            <p> Would a centralized communication hub improve my workflow? </p>
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        Knowing what you need narrows your choices and helps you focus on the best
-                                        options.
-                                    </p>
-
-                                    <h2>2. Prioritize Unique Selling Points (USPs)
-                                    </h2>
-                                    <p>
-                                        Look for features tailored to the travel industry. The USPs we covered—like AI
-                                        automation and smart inventory management—should be at the top of your list.
-                                    </p>
-                                    <h2>3. Choose Simplicity
-                                    </h2>
-                                    <p>
-                                        A travel CRM should simplify your life, not add extra layers of complexity. Look
-                                        for one with an intuitive interface that even a newbie can navigate.
-
-                                    </p>
-                                    <h2>4. Check Scalability
-                                    </h2>
-                                    <p>
-                                        Your business will grow and your CRM should grow with it. Opt for a solution
-                                        that scales easily and integrates with key platforms.
-                                    </p>
-                                    <h2>5. Stick to Your Budget
-                                    </h2>
-                                    <p>
-                                        Sure, a travel CRM is an investment, but it doesn’t have to drain your wallet.
-                                        Find a CRM that offers great value without skimping on essential features.
-                                    </p>
-                                    <h2>FAQs About Travel CRMs
-                                    </h2>
-                                    <h2>Q1: Do I need a travel CRM if I’m just starting out?
-                                    </h2>
-                                    <p>
-                                        Absolutely! A CRM helps you lay a strong foundation for your business, ensuring
-                                        you start off on the right foot.
-                                    </p>
-                                    <h2>Q2: What’s the biggest advantage of a travel CRM?
-                                    </h2>
-                                    <p>
-                                        Efficiency! From instant quotes to centralized communication, a CRM saves you
-                                        time and energy.
-
-                                    </p>
-                                    <h2>Q3: Are travel CRMs only for big agencies?
-                                    </h2>
-                                    <p>
-                                        Not at all. Solo agents and small businesses can benefit just as much, if not
-                                        more, from the streamlined processes a CRM provides.
-                                    </p>
-                                    <h2>Q4: How soon can I see results with a CRM?
-                                    </h2>
-                                    <p>
-                                        Most businesses see immediate improvements in organization, response time, and
-                                        client satisfaction.
-
-                                    </p>
-                                    <h2>
-                                        Endnote
-                                    </h2>
-                                    <p>
-                                        If you’re in the travel industry, a CRM is essential. From impressing clients
-                                        with instant quotes to keeping track of visa statuses, a travel CRM simplifies
-                                        your work and boosts your service.
-                                        <br />
-                                        So, <span class="highlighted">"Do I need a travel CRM or how to choose one?"
-                                        </span> The answer is yes, and the
-                                        choice is yours. Look for one with the USPs we’ve highlighted, and take your
-                                        travel business to the next level. Ready to transform the way you work? The
-                                        perfect travel CRM is just a decision away.
-
-                                    </p>
-
                                 </div>
                                 <hr />
                                 <div class="blog-meta-overview">
-                                    <p>August 3, 2023</p>
+                                    <p>March 1, 2025</p>
                                     <div class="share-wrapper">
                                         <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
                                             Share <ion-icon name="share-social-outline"></ion-icon>
@@ -369,163 +576,69 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Second Blog Card -->
-                <div class="blog-container-card" id="Travel-CRM-For-Tour-Operators">
-                    <!-- Blog Card -->
-                    <div class="blog-card">
-                        <!-- Close Button (Initially Hidden) -->
-                        <button class="close-btn" onclick="closeBlogOverview(this)">
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
-
-
-                        <div class="refactor-blog">
-                            <div class="card-image">
-                                <img src="assets/images/blogs/blog2.png" alt="CRM Blog Image" class="image-blog" />
-                            </div>
-                            <div class="card-content">
-                                <div class="logo-blog">
-                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                    <span class="blog-label blog">Blog</span>
-                                </div>
-                                <h3>Travel CRM For Tour Operators
-                                </h3>
-                                <p>
-                                    Nearly 70% of travelers prefer personalized experiences, yet many tour operators
-                                    still rely on outdated CRM systems. As the travel industry evolves, welcoming AI in
-                                    travel CRM has become essential for improving customer engagement and smoothening
-                                    operations. This article explores seven crucial trends that tour operators must
-                                    recognize to stay competitive.
-
-                                </p>
-                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
-                                    Read More
-                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
-                                </a>
-                                <hr class="line" />
-                                <div class="blog-meta">
-                                    <p>August 3, 2023</p>
-                                    <div class="share-wrapper">
-                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                            Share <ion-icon name="share-social-outline"></ion-icon>
-                                        </button>
-                                        <div class="share-popover">
-                                            <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=CRM-Technology-Redefine-Business-Strategies')">
-                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                    title="Copy URL">
-                                            </a>
-                                            <a href="#" target="_blank" class="linkedin-link">
-                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                    title="Share on LinkedIn">
-                                            </a>
-                                            <a href="#" target="_blank" class="facebook-link">
-                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                    title="Share on Facebook">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Blog Overview (Initially Hidden) -->
-                        <div class="blog-overview-container">
+                        <!-- blog  overview card3 -->
+                        <div class="blog-overview-container" id="blog-overview-3">
                             <div class="overview-card">
+                                <div class="card-image">
+                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                                </div>
                                 <div class="blog-details-paragraph">
+                                    <h2>3 Why Do You Need a Travel CRM?</h2>
                                     <p>
-                                        With AI integration, operators can offer personalized experiences and meet the
-                                        growing expectation of 80% of travelers who want brands to understand their
-                                        individual needs. Mobile-friendly CRM solutions also allow operators to remain
-                                        active. By understanding these trends, tour operators can enhance customer
-                                        satisfaction, boost business growth, and create lasting impressions, ensuring
-                                        they stay ahead in a rapidly changing market.
+                                        Managing client inquiries, bookings, and itineraries manually is time-consuming
+                                        and
+                                        error-prone.
+                                        A travel CRM takes the stress out of the equation and makes your life a whole
+                                        lot
+                                        easier.
+                                    </p>
+                                    <h2>1. Instant Quote Generation</h2>
+                                    <p>
+                                        With a travel CRM, you can whip up polished, professional quotes in seconds.
+                                    </p>
+                                    <h2>2. Custom Itinerary Builder</h2>
+                                    <p>
+                                        Create personalized itineraries tailored to your clients’ unique needs.
+                                    </p>
+                                    <h2>3. Centralized Communication Hub</h2>
+                                    <p>
+                                        All your communication in one place—no more lost messages.
+                                    </p>
+                                    <h2>4. AI-Powered Automation</h2>
+                                    <p>
+                                        Automate repetitive tasks like generating quotes and itineraries.
+                                    </p>
+                                    <h2>5. DMC & Partner Integrations</h2>
+                                    <p>
+                                        Access a global network of Destination Management Companies (DMCs) seamlessly.
+                                    </p>
+                                    <h2>6. Smart Inventory Management</h2>
+                                    <p>
+                                        Keep track of available rooms, tickets, or packages with ease.
+                                    </p>
+                                    <h2>7. On-Time Visa Updates</h2>
+                                    <p>
+                                        Get timely visa status updates to avoid last-minute surprises.
+                                    </p>
 
-                                    </p>
-                                    <h2> 5 Travel CRM Trends Tour Operators Can’t Ignore
-                                    </h2>
-                                    <p>Here are the 5 travel CRM trends tour operators can’t ignore: </p>
-                                    <h2>
-                                        1. AI Integration in Travel CRM
-                                    </h2>
+                                    <h2>Endnote</h2>
                                     <p>
-                                        AI is transforming travel CRM systems, enabling tour operators to anticipate
-                                        traveler needs and deliver personalized experiences. Machine learning algorithms
-                                        analyze past behaviors to tailor services, while AI-driven chatbots offer
-                                        instant support, enhancing customer service. Predictive analytics help optimize
-                                        pricing and marketing strategies, while automated tools streamline workflows,
-                                        improving efficiency. Embracing AI empowers operators to stay competitive,
-                                        enhance customer satisfaction, and innovate in the rapidly evolving travel
-                                        industry.
-
-                                    </p>
-                                    <h2>
-                                        2. Easy Interface To Use
-                                    </h2>
-                                    <p>
-                                        A user-friendly interface is a must for modern travel CRMs. Travel operators
-                                        seek tools that simplify daily operations, enabling them to manage bookings,
-                                        generate itineraries, and access client data with minimal training. An intuitive
-                                        design reduces onboarding time and improves overall efficiency.
-                                    </p>
-                                    <h2>
-                                        3. User Data Security
-                                    </h2>
-                                    <p>
-                                        With increased digital transactions, protecting sensitive customer data is
-                                        non-negotiable. travel CRMs are prioritizing compliance with data protection
-                                        laws, offering best encryption and secure servers to build trust with clients
-                                        and safeguard against potential breaches.
-                                    </p>
-                                    <h2>
-                                        4. Multi language & Multi currency support
-                                    </h2>
-                                    <p>
-                                        As travel businesses serve a global audience, travel CRMs with multi-language
-                                        and multi-currency capabilities are essential. These features allow seamless
-                                        interaction with international clients, ensuring smooth communication and
-                                        hassle-free payments across borders.
-
-                                    </p>
-                                    <h2>
-                                        5. Client Preferences Database
-                                    </h2>
-                                    <p>
-                                        Maintaining a detailed record of client preferences helps operators provide
-                                        custom experiences. Travel CRMs that capture and organize data such as travel
-                                        history, preferred destinations, and special requests enable personalized
-                                        service, building stronger customer loyalty and driving repeat business.
-                                    </p>
-                                    <h2>
-                                        Endnote
-                                    </h2>
-                                    <p>
-                                        The travel industry is evolving rapidly, and staying ahead requires leveraging
-                                        the latest CRM trends. From using AI for personalization to ensuring
-                                        user-friendly interfaces and data security, these advancements empower travel
-                                        agents to deliver exceptional and memorable travel management. By integrating
-                                        multi-language and multi-currency support and maintaining a comprehensive client
-                                        preferences database, businesses can build lasting relationships and thrive in
-                                        an increasingly competitive landscape.
-
-                                        <span class="highlighted">Don’t get left behind! Embrace the future of travel
-                                            CRM with Tripmeld!
-                                        </span>
-
+                                        If you’re in the travel industry, a CRM is essential. Ready to transform the way
+                                        you
+                                        work?
+                                        The perfect travel CRM is just a decision away.
                                     </p>
                                 </div>
                                 <hr />
                                 <div class="blog-meta-overview">
-                                    <p>August 3, 2023</p>
+                                    <p>March 1, 2025</p>
                                     <div class="share-wrapper">
                                         <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
                                             Share <ion-icon name="share-social-outline"></ion-icon>
                                         </button>
                                         <div class="share-popover">
                                             <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Travel-CRM-For-Tour-Operators')">
+                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
                                                 <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
                                                     title="Copy URL">
                                             </a>
@@ -542,102 +655,69 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- third blog card -->
-                <div class="blog-container-card" id="CRM-Technology-Enhances-Customer-Experience">
-                    <!-- Blog Card -->
-                    <div class="blog-card">
-                        <!-- Close Button (Initially Hidden) -->
-                        <button class="close-btn" onclick="closeBlogOverview(this)">
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
-
-
-                        <div class="refactor-blog">
-                            <div class="card-image">
-                                <img src="assets/images/blogs/blog3.png" alt="CRM Blog Image" class="image-blog" />
-                            </div>
-                            <div class="card-content">
-                                <div class="logo-blog">
-                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                    <span class="blog-label blog">Blog</span>
-                                </div>
-                                <h3>How CRM Technology Enhances Customer Experience in the Digital Era</h3>
-                                <p>
-                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                    strategic asset that empowers businesses to connect, engage, and nurture
-                                    relationships
-                                    with their clients
-                                    and personalize experiences. Discover how CRM technology is driving innovation and
-                                    unlocking new opportunities
-                                    for businesses to thrive.
-                                </p>
-                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
-                                    Read More
-                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
-                                </a>
-                                <hr class="line" />
-                                <div class="blog-meta">
-                                    <p>August 3, 2023</p>
-                                    <div class="share-wrapper">
-                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                            Share <ion-icon name="share-social-outline"></ion-icon>
-                                        </button>
-                                        <div class="share-popover">
-                                            <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=CRM-Technology-Enhances-Customer-Experience')">
-                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                    title="Copy URL">
-                                            </a>
-                                            <a href="#" target="_blank" class="linkedin-link">
-                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                    title="Share on LinkedIn">
-                                            </a>
-                                            <a href="#" target="_blank" class="facebook-link">
-                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                    title="Share on Facebook">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Blog Overview (Initially Hidden) -->
-                        <div class="blog-overview-container">
+                        <!-- blog overview card4 -->
+                        <div class="blog-overview-container" id="blog-overview-4">
                             <div class="overview-card">
+                                <div class="card-image">
+                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                                </div>
                                 <div class="blog-details-paragraph">
+                                    <h2>4 Why Do You Need a Travel CRM?</h2>
                                     <p>
-                                        CRM technology has become a cornerstone of modern business strategies, evolving
-                                        far
-                                        beyond its initial purpose of simply storing customer data.
+                                        Managing client inquiries, bookings, and itineraries manually is time-consuming
+                                        and
+                                        error-prone.
+                                        A travel CRM takes the stress out of the equation and makes your life a whole
+                                        lot
+                                        easier.
                                     </p>
+                                    <h2>1. Instant Quote Generation</h2>
                                     <p>
-                                        In today’s competitive landscape, CRM systems empower businesses to understand
-                                        their
-                                        customers more intimately,
-                                        enhance collaboration among teams, and build data-driven strategies that fuel
-                                        sustainable growth.
+                                        With a travel CRM, you can whip up polished, professional quotes in seconds.
                                     </p>
+                                    <h2>2. Custom Itinerary Builder</h2>
                                     <p>
-                                        In today’s competitive landscape, CRM systems empower businesses to understand
-                                        their
-                                        customers more intimately,
-                                        enhance collaboration among teams, and build data-driven strategies that fuel
-                                        sustainable growth.
+                                        Create personalized itineraries tailored to your clients’ unique needs.
+                                    </p>
+                                    <h2>3. Centralized Communication Hub</h2>
+                                    <p>
+                                        All your communication in one place—no more lost messages.
+                                    </p>
+                                    <h2>4. AI-Powered Automation</h2>
+                                    <p>
+                                        Automate repetitive tasks like generating quotes and itineraries.
+                                    </p>
+                                    <h2>5. DMC & Partner Integrations</h2>
+                                    <p>
+                                        Access a global network of Destination Management Companies (DMCs) seamlessly.
+                                    </p>
+                                    <h2>6. Smart Inventory Management</h2>
+                                    <p>
+                                        Keep track of available rooms, tickets, or packages with ease.
+                                    </p>
+                                    <h2>7. On-Time Visa Updates</h2>
+                                    <p>
+                                        Get timely visa status updates to avoid last-minute surprises.
+                                    </p>
+
+                                    <h2>Endnote</h2>
+                                    <p>
+                                        If you’re in the travel industry, a CRM is essential. Ready to transform the way
+                                        you
+                                        work?
+                                        The perfect travel CRM is just a decision away.
                                     </p>
                                 </div>
                                 <hr />
                                 <div class="blog-meta-overview">
-                                    <p>August 3, 2023</p>
+                                    <p>March 1, 2025</p>
                                     <div class="share-wrapper">
                                         <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
                                             Share <ion-icon name="share-social-outline"></ion-icon>
                                         </button>
                                         <div class="share-popover">
                                             <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=CRM-Technology-Enhances-Customer-Experience')">
+                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
                                                 <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
                                                     title="Copy URL">
                                             </a>
@@ -654,101 +734,69 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- fourth blog card -->
-                <div class="blog-container-card" id="CRM-Technology-Breakthrough">
-                    <!-- Blog Card -->
-                    <div class="blog-card">
-                        <!-- Close Button (Initially Hidden) -->
-                        <button class="close-btn" onclick="closeBlogOverview(this)">
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
-
-
-                        <div class="refactor-blog">
-                            <div class="card-image">
-                                <img src="assets/images/blogs/blog5.png" alt="CRM Blog Image" class="image-blog" />
-                            </div>
-                            <div class="card-content">
-                                <div class="logo-blog">
-                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                    <span class="blog-label blog">Blog</span>
-                                </div>
-                                <h3>CRM Technology Breakthrough: AI and Automation Lead the Way in 2025</h3>
-                                <p>
-                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                    strategic asset that empowers businesses to connect, engage, and nurture
-                                    relationships
-                                    with their clients
-                                    and personalize experiences. Discover how CRM technology is driving innovation and
-                                    unlocking new opportunities
-                                    for businesses to thrive.
-                                </p>
-                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
-                                    Read More
-                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
-                                </a>
-                                <hr class="line" />
-                                <div class="blog-meta">
-                                    <p>August 3, 2023</p>
-                                    <div class="share-wrapper">
-                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                            Share <ion-icon name="share-social-outline"></ion-icon>
-                                        </button>
-                                        <div class="share-popover">
-                                            <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=CRM-Technology-Breakthrough')">
-                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                    title="Copy URL">
-                                            </a>
-                                            <a href="#" target="_blank" class="linkedin-link">
-                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                    title="Share on LinkedIn">
-                                            </a>
-                                            <a href="#" target="_blank" class="facebook-link">
-                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                    title="Share on Facebook">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Blog Overview (Initially Hidden) -->
-                        <div class="blog-overview-container">
+                        <!-- blog overview card5 -->
+                        <div class="blog-overview-container" id="blog-overview-5">
                             <div class="overview-card">
+                                <div class="card-image">
+                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                                </div>
                                 <div class="blog-details-paragraph">
+                                    <h2>5 Why Do You Need a Travel CRM?</h2>
                                     <p>
-                                        CRM technology has become a cornerstone of modern business strategies, evolving
-                                        far
-                                        beyond its initial purpose of simply storing customer data.
+                                        Managing client inquiries, bookings, and itineraries manually is time-consuming
+                                        and
+                                        error-prone.
+                                        A travel CRM takes the stress out of the equation and makes your life a whole
+                                        lot
+                                        easier.
                                     </p>
+                                    <h2>1. Instant Quote Generation</h2>
                                     <p>
-                                        In today’s competitive landscape, CRM systems empower businesses to understand
-                                        their
-                                        customers more intimately,
-                                        enhance collaboration among teams, and build data-driven strategies that fuel
-                                        sustainable growth.
+                                        With a travel CRM, you can whip up polished, professional quotes in seconds.
                                     </p>
+                                    <h2>2. Custom Itinerary Builder</h2>
                                     <p>
-                                        In today’s competitive landscape, CRM systems empower businesses to understand
-                                        their
-                                        customers more intimately,
-                                        enhance collaboration among teams, and build data-driven strategies that fuel
-                                        sustainable growth.
+                                        Create personalized itineraries tailored to your clients’ unique needs.
+                                    </p>
+                                    <h2>3. Centralized Communication Hub</h2>
+                                    <p>
+                                        All your communication in one place—no more lost messages.
+                                    </p>
+                                    <h2>4. AI-Powered Automation</h2>
+                                    <p>
+                                        Automate repetitive tasks like generating quotes and itineraries.
+                                    </p>
+                                    <h2>5. DMC & Partner Integrations</h2>
+                                    <p>
+                                        Access a global network of Destination Management Companies (DMCs) seamlessly.
+                                    </p>
+                                    <h2>6. Smart Inventory Management</h2>
+                                    <p>
+                                        Keep track of available rooms, tickets, or packages with ease.
+                                    </p>
+                                    <h2>7. On-Time Visa Updates</h2>
+                                    <p>
+                                        Get timely visa status updates to avoid last-minute surprises.
+                                    </p>
+
+                                    <h2>Endnote</h2>
+                                    <p>
+                                        If you’re in the travel industry, a CRM is essential. Ready to transform the way
+                                        you
+                                        work?
+                                        The perfect travel CRM is just a decision away.
                                     </p>
                                 </div>
                                 <hr />
                                 <div class="blog-meta-overview">
-                                    <p>August 3, 2023</p>
+                                    <p>March 1, 2025</p>
                                     <div class="share-wrapper">
                                         <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
                                             Share <ion-icon name="share-social-outline"></ion-icon>
                                         </button>
                                         <div class="share-popover">
                                             <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=CRM-Technology-Breakthrough')">
+                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
                                                 <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
                                                     title="Copy URL">
                                             </a>
@@ -765,101 +813,69 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- fifth blog card  -->
-                <div class="blog-container-card" id="The-Future-CRM-Technology">
-                    <!-- Blog Card -->
-                    <div class="blog-card">
-                        <!-- Close Button (Initially Hidden) -->
-                        <button class="close-btn" onclick="closeBlogOverview(this)">
-                            <i class="fa-solid fa-caret-down"></i>
-                        </button>
-
-
-                        <div class="refactor-blog">
-                            <div class="card-image">
-                                <img src="assets/images/blogs/blog6.png" alt="CRM Blog Image" class="image-blog" />
-                            </div>
-                            <div class="card-content">
-                                <div class="logo-blog">
-                                    <img src="assets/images/blogs/profile-perseron-logo.svg" alt="person-image" />
-                                    <span class="blog-label blog">Blog</span>
-                                </div>
-                                <h3>The Future of CRM Technology: Trends That Will Shape 2025 and Beyond</h3>
-                                <p>
-                                    Customer Relationship Management (CRM) technology is no longer just a tool—it's a
-                                    strategic asset that empowers businesses to connect, engage, and nurture
-                                    relationships
-                                    with their clients
-                                    and personalize experiences. Discover how CRM technology is driving innovation and
-                                    unlocking new opportunities
-                                    for businesses to thrive.
-                                </p>
-                                <a class="read-more clickable-text" onclick="toggleBlogOverview(this)">
-                                    Read More
-                                    <img src="assets/images/icons/caret-forward.svg" alt="read-more-arrow" />
-                                </a>
-                                <hr class="line" />
-                                <div class="blog-meta">
-                                    <p>August 3, 2023</p>
-                                    <div class="share-wrapper">
-                                        <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
-                                            Share <ion-icon name="share-social-outline"></ion-icon>
-                                        </button>
-                                        <div class="share-popover">
-                                            <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=The-Future-CRM-Technology')">
-                                                <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
-                                                    title="Copy URL">
-                                            </a>
-                                            <a href="#" target="_blank" class="linkedin-link">
-                                                <img src="assets/images/icons/icons8-linkedin.svg" alt="LinkedIn"
-                                                    title="Share on LinkedIn">
-                                            </a>
-                                            <a href="#" target="_blank" class="facebook-link">
-                                                <img src="assets/images/icons/icons8-facebook.svg" alt="Facebook"
-                                                    title="Share on Facebook">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Blog Overview (Initially Hidden) -->
-                        <div class="blog-overview-container">
+                        <!-- blog overview card6 -->
+                        <div class="blog-overview-container" id="blog-overview-6">
                             <div class="overview-card">
+                                <div class="card-image">
+                                    <img src="assets/images/blogs/blog1.png" alt="CRM Blog Image" class="image-blog" />
+                                </div>
                                 <div class="blog-details-paragraph">
+                                    <h2>6Why Do You Need a Travel CRM?</h2>
                                     <p>
-                                        CRM technology has become a cornerstone of modern business strategies, evolving
-                                        far
-                                        beyond its initial purpose of simply storing customer data.
+                                        Managing client inquiries, bookings, and itineraries manually is time-consuming
+                                        and
+                                        error-prone.
+                                        A travel CRM takes the stress out of the equation and makes your life a whole
+                                        lot
+                                        easier.
                                     </p>
+                                    <h2>1. Instant Quote Generation</h2>
                                     <p>
-                                        In today’s competitive landscape, CRM systems empower businesses to understand
-                                        their
-                                        customers more intimately,
-                                        enhance collaboration among teams, and build data-driven strategies that fuel
-                                        sustainable growth.
+                                        With a travel CRM, you can whip up polished, professional quotes in seconds.
                                     </p>
+                                    <h2>2. Custom Itinerary Builder</h2>
                                     <p>
-                                        In today’s competitive landscape, CRM systems empower businesses to understand
-                                        their
-                                        customers more intimately,
-                                        enhance collaboration among teams, and build data-driven strategies that fuel
-                                        sustainable growth.
+                                        Create personalized itineraries tailored to your clients’ unique needs.
+                                    </p>
+                                    <h2>3. Centralized Communication Hub</h2>
+                                    <p>
+                                        All your communication in one place—no more lost messages.
+                                    </p>
+                                    <h2>4. AI-Powered Automation</h2>
+                                    <p>
+                                        Automate repetitive tasks like generating quotes and itineraries.
+                                    </p>
+                                    <h2>5. DMC & Partner Integrations</h2>
+                                    <p>
+                                        Access a global network of Destination Management Companies (DMCs) seamlessly.
+                                    </p>
+                                    <h2>6. Smart Inventory Management</h2>
+                                    <p>
+                                        Keep track of available rooms, tickets, or packages with ease.
+                                    </p>
+                                    <h2>7. On-Time Visa Updates</h2>
+                                    <p>
+                                        Get timely visa status updates to avoid last-minute surprises.
+                                    </p>
+
+                                    <h2>Endnote</h2>
+                                    <p>
+                                        If you’re in the travel industry, a CRM is essential. Ready to transform the way
+                                        you
+                                        work?
+                                        The perfect travel CRM is just a decision away.
                                     </p>
                                 </div>
                                 <hr />
                                 <div class="blog-meta-overview">
-                                    <p>August 3, 2023</p>
+                                    <p>March 1, 2025</p>
                                     <div class="share-wrapper">
                                         <button class="share-btn clickable-text" onclick="toggleSharePopover(this)">
                                             Share <ion-icon name="share-social-outline"></ion-icon>
                                         </button>
                                         <div class="share-popover">
                                             <a href="javascript:void(0)"
-                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=The-Future-CRM-Technology')">
+                                                onclick="copyLinkFromCard('https://dev.tripmeld.com/blogs?expandBlog=Revolutionizing-Business-Growth')">
                                                 <img src="assets/images/icons/icons8-copy-link-40.png" alt="Copy Link"
                                                     title="Copy URL">
                                             </a>
@@ -1081,24 +1097,21 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- blog overview function -->
     <script>
-        function toggleBlogOverview(button) {
-            const blogContainer = button.closest('.blog-container-card'); // Target blog-container-card
-            blogContainer.classList.add('active'); // Only add active class
+        function toggleBlogOverview(overviewId) {
+            // Hide all blog overviews
+            document.querySelectorAll(".blog-overview-container").forEach((overview) => {
+                overview.style.display = "none";
+            });
 
-            // Show blog overview
-            const blogOverview = blogContainer.querySelector('.blog-overview-container');
-            blogOverview.style.display = 'block';
+            // Find the selected blog overview
+            const selectedOverview = document.getElementById(overviewId);
+
+            if (selectedOverview) {
+                selectedOverview.style.display = "block"; // Show only the clicked one
+            } else {
+                console.error("Blog overview not found:", overviewId);
+            }
         }
-
-        function closeBlogOverview(button) {
-            const blogContainer = button.closest('.blog-container-card'); // Target blog-container-card
-            blogContainer.classList.remove('active'); // Remove active class
-
-            // Hide blog overview
-            const blogOverview = blogContainer.querySelector('.blog-overview-container');
-            blogOverview.style.display = 'none';
-        }
-
 
     </script>
 

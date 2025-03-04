@@ -1,6 +1,6 @@
 body {
     font-family: "DM sans";
-    
+
 }
 
 
@@ -26,7 +26,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -57,7 +57,7 @@ body {
 /* Card Image Area */
 .card-image {
     position: relative;
-    max-width:500px;
+    max-width: 500px;
     max-height: 700px;
     margin: auto;
     margin-left: 20px;
@@ -100,13 +100,13 @@ body {
 /* Card Content Area */
 .card-content {
     flex: 1 1 50%;
-    padding: 15px;
+    padding: 10px;
 }
 
 /* Title */
 .card-content h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 0px;
     /* line-height: 1.3; */
     color: var(--theme-color-dark);
     /* or #1d1c2b */
@@ -117,7 +117,7 @@ body {
 .card-content p {
     font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     color: var(--text-color-gray);
 }
 
@@ -176,7 +176,7 @@ body {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.2s ease;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     border: none;
     background: transparent;
 }
@@ -200,43 +200,37 @@ hr {
 .blog-list {
     display: flex;
     flex-direction: column;
-    height:100vh;
-    overflow-y: scroll;
+    height: 600px; /* Defines fixed height for the blog list */
+    overflow-y: auto; /* Enables vertical scrolling */
     overflow-x: hidden;
-
-    /* Custom Scrollbar for Webkit Browsers */
-    scrollbar-width: thin;
-    /* For Firefox */
-    scrollbar-color: var(--theme-color-orange) #f0f0f0;
-    /* Scrollbar thumb & track */
+    position: relative;
 }
 
-/* Scrollbar for Chrome, Edge, Safari */
+/* Custom Scrollbar */
 .blog-list::-webkit-scrollbar {
-    width: 8px;
-    /* Thin scrollbar */
+    width: 8px; /* Scrollbar width */
+    height: 200px; /* Fixed height for the scrollbar track */
 }
 
+/* Scrollbar Track */
 .blog-list::-webkit-scrollbar-track {
     background: #f0f0f0;
-    /* Light background */
     border-radius: 15px;
+    height: 200px; /* Fixed track height */
 }
 
+/* Scrollbar Thumb (Handle) */
 .blog-list::-webkit-scrollbar-thumb {
     background: var(--theme-color-orange);
-    /* Orange thumb */
     border-radius: 10px;
     border: 2px solid #f0f0f0;
-    /* Adds space around the thumb */
-    min-height: 50px;
+    min-height: 50px; /* Minimum height of the thumb */
 }
 
+/* Hover Effect */
 .blog-list::-webkit-scrollbar-thumb:hover {
     background: #c8631d;
-    /* Darker orange on hover */
 }
-
 
 
 .blog-card {
@@ -258,6 +252,7 @@ hr {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 123, 255, 0.1);
 }
 
 /* ------------------------------------- */
@@ -451,68 +446,92 @@ hr {
     /* Light blue highlight */
 }
 
-
-
-/* For responsiveness on smaller screens */
-@media (max-width: 768px) {
-    .overview-card {
-        flex-direction: column;
-    }
-
-    .blog-card {
-        flex-direction: column;
-    }
+.button-align {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-    .close-btn {
-        top: 2px;
-        right: 15px;
-        font-size: 18px;
-        z-index: 9999;
-        font-size: 25px;
-    }
-
-    /* Stack the image-content vertically on mobile */
-    .overview-card .image-content {
+@media screen and (max-width: 768px) {
+    /* Stack blog list and overview vertically */
+    .blog-container-flex {
         flex-direction: column;
-        gap: 20px;
-        margin: 10px;
+        gap: 0;
+        padding: 10px;
+        height: auto;
     }
 
-    /* Make the overview image full width and auto height */
+    /* Make blog list full width */
+    .blog-list {
+        width: 100%;
+        height: 400px; /* Adjust for smaller screens */
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    /* Make blog cards take full width */
+    .blog-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-content h3{
+        font-size: 16px;
+    }
+    .recent-blogs h2{
+        font-size: 16px;
+    }
+    .read-more{
+        font-size: 14px;
+    }
+    /* Blog overview section */
+    .blog-overview-container {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+        display: block;
+    }
+
+    /* Ensure overview content adapts */
+    .overview-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+
     .overview-image {
         width: 100%;
         height: auto;
-        border-radius: 8px;
-        margin-top: 5px;
     }
 
-    /* Adjust the overview text padding and font sizes for smaller screens */
+    .overview-image img {
+        width: 100%;
+        height: auto;
+    }
+
     .overview-text {
         padding: 10px;
+        text-align: left;
     }
 
     .overview-text h1 {
-        font-size: 22px;
-        margin-bottom: 10px;
+        font-size: 16px;
     }
 
     .overview-text p {
         font-size: 14px;
-        line-height: 1.4;
     }
 
-    /* Adjust additional details paragraph */
+    /* Adjust scrollbar on mobile */
+    .blog-list::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .blog-list::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        border: 1px solid #f0f0f0;
+    }
+
+    /* Reduce padding on smaller screens */
     .blog-details-paragraph {
-        padding: 15px;
-        font-size: 14px;
-    }
-
-    /* Center the meta info and reduce its font size */
-    .blog-meta-overview {
-        text-align: center;
-        font-size: 14px;
-        margin-top: 10px;
+        padding: 10px;
     }
 }

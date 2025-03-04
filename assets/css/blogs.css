@@ -1,5 +1,6 @@
 body {
     font-family: "DM sans";
+    
 }
 
 
@@ -8,11 +9,17 @@ body {
      you can remove the .container wrapper below, or keep it if you want 
      a narrower width (like max-width: 1200px). */
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     width: 100%;
+    overflow: hidden;
 }
 
+@media screen and (min-width:1450px) {
+    .container {
+        max-width: 1600px;
+    }
+}
 
 /* person logo */
 .logo-blog {
@@ -50,7 +57,7 @@ body {
 /* Card Image Area */
 .card-image {
     position: relative;
-    min-width: 300px;
+    max-width:500px;
     max-height: 700px;
     margin: auto;
     margin-left: 20px;
@@ -72,17 +79,6 @@ body {
     }
 }
 
-/* Label/Tag in the corner */
-.refactor-blog {
-    display: flex;
-    flex-direction: row;
-}
-
-@media screen and (max-width:768px) {
-    .refactor-blog {
-        flex-direction: column;
-    }
-}
 
 .blog-label {
     top: 16px;
@@ -104,7 +100,7 @@ body {
 /* Card Content Area */
 .card-content {
     flex: 1 1 50%;
-    padding: 20px;
+    padding: 15px;
 }
 
 /* Title */
@@ -181,6 +177,8 @@ body {
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.2s ease;
     margin-bottom: 10px;
+    border: none;
+    background: transparent;
 }
 
 .read-more:hover {
@@ -192,6 +190,75 @@ hr {
     margin-bottom: 2px;
 }
 
+/* blog cad and overview container */
+.blog-container-flex {
+    display: flex;
+    gap: 5%;
+    padding: 20px;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* Custom Scrollbar for Webkit Browsers */
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: var(--theme-color-orange) #f0f0f0;
+    /* Scrollbar thumb & track */
+}
+
+/* Scrollbar for Chrome, Edge, Safari */
+.blog-list::-webkit-scrollbar {
+    width: 8px;
+    /* Thin scrollbar */
+}
+
+.blog-list::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    /* Light background */
+    border-radius: 15px;
+}
+
+.blog-list::-webkit-scrollbar-thumb {
+    background: var(--theme-color-orange);
+    /* Orange thumb */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+    /* Adds space around the thumb */
+    min-height: 50px;
+}
+
+.blog-list::-webkit-scrollbar-thumb:hover {
+    background: #c8631d;
+    /* Darker orange on hover */
+}
+
+
+
+.blog-card {
+    background-color: #fff;
+    width: fit-content;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-overview-container {
+    display: none;
+    /* Hidden by default */
+    width: fit-content;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 /* ------------------------------------- */
 /* BLOG OVERVIEW (displayed on "Read More") */
@@ -203,6 +270,7 @@ hr {
 
 .blog-overview-container {
     display: none;
+    width: 50vw;
 }
 
 .blog-container-card.active .blog-overview-container {
@@ -376,41 +444,12 @@ hr {
     height: 24px;
 }
 
-.blog-container-flex {
-    display: flex;
-    gap: 5%;
-    padding: 20px;
+.active-blog {
+    border: 2px solid var(--theme-color-light-blue);
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 123, 255, 0.1);
+    /* Light blue highlight */
 }
-
-.blog-list {
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-
-.blog-card {
-    background-color: #fff;
-    width: 400px;
-    border-radius: 16px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.blog-overview-container {
-    display: none;
-    /* Hidden by default */
-    width: 100%;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 
 
 

@@ -488,8 +488,9 @@ hr {
         width: 100%;
         padding: 15px;
         box-shadow: none;
-        display: block;
+        display: none;
     }
+    
 
     /* Ensure overview content adapts */
     .overview-card {

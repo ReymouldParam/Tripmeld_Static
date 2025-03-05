@@ -615,7 +615,7 @@
 
 .whatsapp-container i {
     font-size: 40px;
-    color: lawngreen;
+    color:#25D366;
     display: inline-block;
     animation: whatsappbeat 1.5s infinite;
 }

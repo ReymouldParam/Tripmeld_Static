@@ -128,6 +128,10 @@
                                     Trial</button>
                                 <button class="unfilled-orange-btn show-contactForm"
                                     (click)="openSignUpModal()">Demo</button>
+                                <button class="filled-orange-btn me-2 show-contactForm" style="margin-left: 10px;"
+                                    onclick="downloadBrochure()">
+                                    Download Brochure
+                                </button>
                             </div>
                             <!-- <div *ngIf="userLoggedIn">
                                 <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -166,6 +170,7 @@
                                     Trial</button>
                                 <button class="unfilled-orange-btn show-contactForm"
                                     (click)="openSignUpModal()">Demo</button>
+
                             </div>
                             <!-- <div *ngIf="userLoggedIn">
                                 <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
@@ -1006,7 +1011,16 @@
             return true; // To proceed with form submission
         }
     </script>
-
+    <script>
+        function downloadBrochure() {
+            const link = document.createElement("a");
+            link.href = "assets/images/blogs/TripMeld%20Boucher%20Final.pdf"; // Corrected path
+            link.download = "Brochure.pdf"; // Downloaded file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 
 </html>

@@ -207,7 +207,11 @@ hr {
     overflow-x: hidden;
     position: relative;
 }
-
+@media screen and (min-width:1450px){
+    .blog-list{
+        height: 100vh;
+    }
+}
 /* Custom Scrollbar */
 .blog-list::-webkit-scrollbar {
     width: 8px;

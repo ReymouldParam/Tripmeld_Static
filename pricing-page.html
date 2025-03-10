@@ -25,7 +25,7 @@
         <h1>TripMeld CRM Pricing Model</h1>
         <button class="filled-orange-btn" onclick="downloadBrochure()">Download</button>
     </div>
-    
+
     <!-- Pricing Table -->
     <div class="pricing-container">
         <table>
@@ -214,13 +214,20 @@
     <!-- download of Tripmeld Pricing -->
     <script>
         function downloadBrochure() {
+            const filePath = "assets/images/blogs/TripMeld%20CRM%20Pricing.pdf"; // Encode spaces as %20
+            const fileName = "TripMeld_Pricing.pdf"; // Use underscores for better cross-platform support
+
+            // Create an anchor element
             const link = document.createElement("a");
-            link.href = "assets/images/blogs/TripMeld%20Brochure-2.pdf"; // Use forward slashes and encode spaces as %20
-            link.download = "TripMeld Brochure.pdf"; // Downloaded file name
+            link.href = filePath;
+            link.setAttribute("download", fileName); // Set the download attribute
+
+            // Append to body, trigger download, and remove the element
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         }
+
     </script>
 </body>
 

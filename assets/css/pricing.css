@@ -1,15 +1,25 @@
 :root {
-    --header-bg: #e07527;         /* Burnt Orange */
-    --header-text: #ffffff;        /* White */
-    --border-color: #d0d0d0;       /* Light Gray */
-    --text-color: #333333;         /* Dark Gray */
-    --bg-light-gray: #f8f8f8;      /* Light Gray Background */
-    --essential-bg: #253d8d;       /* Deep Blue */
-    --enhanced-bg: #4a6fc0;        /* Bright Blue */
-    --professional-bg: #1d1c2b;    /* Dark Navy */
-    --white-bg: #ffffff;           /* Pure White */
+    --header-bg: #e07527;
+    /* Burnt Orange */
+    --header-text: #ffffff;
+    /* White */
+    --border-color: #d0d0d0;
+    /* Light Gray */
+    --text-color: #333333;
+    /* Dark Gray */
+    --bg-light-gray: #f8f8f8;
+    /* Light Gray Background */
+    --essential-bg: #253d8d;
+    /* Deep Blue */
+    --enhanced-bg: #4a6fc0;
+    /* Bright Blue */
+    --professional-bg: #1d1c2b;
+    /* Dark Navy */
+    --white-bg: #ffffff;
+    /* Pure White */
 }
-h1{
+
+h1 {
     color: var(--essential-bg);
 }
 
@@ -27,26 +37,83 @@ body {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    /* Change from collapse to separate */
+    border-spacing: 0;
+    /* Ensures no unwanted gaps */
     background: var(--white-bg);
     border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+    /* Ensures rounded corners clip properly */
 }
 
+
 th {
-    background-color: var(--header-bg); /* Burnt Orange */
+    background-color: var(--header-bg);
+    /* Burnt Orange */
     color: var(--header-text);
     padding: 12px;
-    text-align: left;
+
     font-size: 18px;
+    text-align: center;
 }
 
 td {
     border: 1px solid var(--border-color);
     padding: 12px;
-    text-align: left;
+    text-align: center !important;
     font-size: 14px;
+    font-weight: 600;
     color: var(--text-color);
     background-color: white;
+}
+
+ul {
+    text-align: left;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background: #ffffff;
+    /* White background */
+    position: relative;
+}
+
+/* Orange Lines */
+.header-line {
+    flex-grow: 1;
+    height: 8px;
+    /* Adjust height to match */
+    background: #f7941d;
+    /* Orange color */
+    position: relative;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0% 50%);
+    /* Creates the triangular cut */
+}
+
+/* Space between lines and logo */
+.header-line.left {
+    margin-right: 15px;
+}
+
+.header-line.right {
+    margin-left: 15px;
+}
+
+/* Logo Styling */
+.logo-container img {
+    height: 50px;
+    /* Adjust size to match exactly */
+    display: block;
+}
+
+.all-features {
+    color: var(--essential-bg);
 }
 
 /* Plan Section Background Colors */
@@ -57,30 +124,299 @@ td {
 }
 
 .essential {
-    background-color:var(--essential-bg); /* Deep Blue */
+    background-color: var(--essential-bg);
+    /* Deep Blue */
     color: #e07527;
 }
 
 .enhanced {
-    background-color: var(--header-bg); /* Bright Blue */
+    background-color: var(--header-bg);
+    /* Bright Blue */
     color: var(--essential-bg);
 }
 
-.professional {
-    background-color: var(--professional-bg); /* Dark Navy */
-}
+
 
 /* Feature List Cells */
 .feature-list {
-    background-color: var(--white-bg); /* White */
+    background-color: var(--white-bg);
+    /* White */
 }
 
 /* Users, Per User, Annual Cost Column */
 .light-bg {
-    background-color: var(--bg-light-gray); /* Light Gray */
+    background-color: var(--bg-light-gray);
+    /* Light Gray */
 }
 
 .small-text {
     font-size: 12px;
     color: #555;
+}
+
+/* Note Row */
+.note-row {
+    background-color: #f8f8f8;
+    /* Light Gray Background */
+    border-top: 2px solid #253d8d;
+    /* Blue Border at Top */
+    border-bottom-left-radius: 8px;
+    /* Rounded Corners */
+    border-bottom-right-radius: 8px;
+}
+
+/* Text Styling */
+.note-row td {
+    padding: 10px;
+    text-align: left !important;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    /* Default text color */
+}
+
+/* Red Text for Prices Mentioned */
+.red-text {
+    color: red;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* footer */
+/* Footer Container */
+.footer {
+    background: linear-gradient(to right, #1d3b8b, #0f2a67);
+    /* Dark Blue Gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+/* Header Section */
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.footer-header p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Plane Decorators */
+.plane-decorator {
+    background: url('plane-icon.png') no-repeat center;
+    background-size: contain;
+    width: 80px;
+    height: 40px;
+}
+
+.left {
+    transform: rotateY(180deg);
+}
+
+.right {
+    transform: rotateY(0);
+}
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #1d3b8b, #0f2a67);
+    /* Dark Blue Gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Section */
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Header Text */
+.header-text {
+    text-align: center;
+}
+
+.header-text h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Plane Icons */
+.plane-decorator {
+    background: #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.plane-decorator i {
+    font-size: 18px;
+    color: #1d3b8b;
+}
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #1d3b8b, #0f2a67);
+    /* Dark Blue Gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 15px solid #f7941d;
+    margin-top: 2%;
+    /* Orange bottom border */
+}
+
+/* Header Section */
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* Header Text */
+.header-text {
+    text-align: center;
+    flex: 1;
+}
+
+.header-text h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Plane Decorators */
+.plane-decorator {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+
+.plane-decorator.left {
+    flex-direction: row-reverse;
+}
+
+.plane-decorator.right {
+    flex-direction: row;
+}
+
+.plane-decorator i {
+    font-size: 18px;
+    color: #1d3b8b;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.plane-line {
+    flex-grow: 1;
+    height: 2px;
+    border-top: 2px dashed black;
+    margin: 0 10px;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Contact & Address Sections */
+.contact-info,
+.address-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.contact-info h3,
+.address-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* FontAwesome Icons */
+.contact-info p i,
+.address-info p i {
+    margin-right: 8px;
+    color: #ffffff;
+    line-height: 30px;
+    /* Yellow for icons */
+}
+
+/* Vertical Divider */
+.divider {
+    width: 2px;
+    height: 80px;
+    background: #ffffff;
+    opacity: 0.5;
+}
+
+/* Container for Heading & Button */
+.pricing-header {
+    display: flex;
+    justify-content: space-around; /* Pushes button to right */
+    align-items: center; /* Aligns items in center */
+    width: 100%; /* Takes full width */
+    gap: 10%;
+}
+
+/* Button Styling */
+.filled-orange-btn {
+    text-align: center;
+    border: 0.08em solid var(--theme-color-orange);
+    background-color: #e07527;
+    padding: 8px 20px; /* Increased padding for better appearance */
+    font-weight: 400;
+    color: #fff;
+    border-radius: 50em;
+    font-size: 16px;
+    cursor: pointer; /* Ensures proper clickable effect */
+}
+
+/* Responsive Fix: Ensure Button Stays Aligned */
+@media (max-width: 768px) {
+    .pricing-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filled-orange-btn {
+        margin-top: 10px; /* Adds spacing in smaller screens */
+    }
 }

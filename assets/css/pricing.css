@@ -1,0 +1,86 @@
+:root {
+    --header-bg: #e07527;         /* Burnt Orange */
+    --header-text: #ffffff;        /* White */
+    --border-color: #d0d0d0;       /* Light Gray */
+    --text-color: #333333;         /* Dark Gray */
+    --bg-light-gray: #f8f8f8;      /* Light Gray Background */
+    --essential-bg: #253d8d;       /* Deep Blue */
+    --enhanced-bg: #4a6fc0;        /* Bright Blue */
+    --professional-bg: #1d1c2b;    /* Dark Navy */
+    --white-bg: #ffffff;           /* Pure White */
+}
+h1{
+    color: var(--essential-bg);
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--white-bg);
+    text-align: center;
+    margin: 40px;
+}
+
+.pricing-container {
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white-bg);
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--header-bg); /* Burnt Orange */
+    color: var(--header-text);
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+}
+
+td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: var(--text-color);
+    background-color: white;
+}
+
+/* Plan Section Background Colors */
+.plan-row {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.essential {
+    background-color:var(--essential-bg); /* Deep Blue */
+    color: #e07527;
+}
+
+.enhanced {
+    background-color: var(--header-bg); /* Bright Blue */
+    color: var(--essential-bg);
+}
+
+.professional {
+    background-color: var(--professional-bg); /* Dark Navy */
+}
+
+/* Feature List Cells */
+.feature-list {
+    background-color: var(--white-bg); /* White */
+}
+
+/* Users, Per User, Annual Cost Column */
+.light-bg {
+    background-color: var(--bg-light-gray); /* Light Gray */
+}
+
+.small-text {
+    font-size: 12px;
+    color: #555;
+}

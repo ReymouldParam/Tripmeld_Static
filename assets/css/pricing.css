@@ -64,9 +64,10 @@ td {
     padding: 12px;
     text-align: center !important;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-color);
     background-color: white;
+    line-height: 20px;
 }
 
 ul {

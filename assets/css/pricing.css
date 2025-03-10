@@ -84,6 +84,7 @@ ul {
     position: relative;
 }
 
+
 /* Orange Lines */
 .header-line {
     flex-grow: 1;
@@ -238,6 +239,7 @@ ul {
     padding: 30px 20px;
     position: relative;
     font-family: 'Arial', sans-serif;
+    border-radius: 10px;
 }
 
 /* Header Section */
@@ -284,7 +286,7 @@ ul {
     /* Dark Blue Gradient */
     color: #ffffff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 15px;
     font-family: 'Arial', sans-serif;
     border-bottom: 15px solid #f7941d;
     margin-top: 2%;
@@ -390,10 +392,18 @@ ul {
 /* Container for Heading & Button */
 .pricing-header {
     display: flex;
-    justify-content: space-around; /* Pushes button to right */
-    align-items: center; /* Aligns items in center */
-    width: 100%; /* Takes full width */
+    justify-content: space-around;
+    /* Pushes button to right */
+    align-items: center;
+    /* Aligns items in center */
+    width: 100%;
+    /* Takes full width */
     gap: 10%;
+}
+@media screen and (min-width:1024px) and (max-width:1280px){
+    .pricing-header{
+        gap: 5%;
+    }
 }
 
 /* Button Styling */
@@ -401,12 +411,14 @@ ul {
     text-align: center;
     border: 0.08em solid var(--theme-color-orange);
     background-color: #e07527;
-    padding: 8px 20px; /* Increased padding for better appearance */
+    padding: 8px 20px;
+    /* Increased padding for better appearance */
     font-weight: 400;
     color: #fff;
     border-radius: 50em;
     font-size: 16px;
-    cursor: pointer; /* Ensures proper clickable effect */
+    cursor: pointer;
+    /* Ensures proper clickable effect */
 }
 
 /* Responsive Fix: Ensure Button Stays Aligned */
@@ -415,8 +427,102 @@ ul {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .filled-orange-btn {
-        margin-top: 10px; /* Adds spacing in smaller screens */
+        margin-top: 10px;
+        /* Adds spacing in smaller screens */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        margin-top: 5px;
+    }
+    .plane-decorator {
+        width: 12%;
+    }
+
+    .pricing-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .pricing-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    h1 {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    /* Compress table layout */
+    table {
+        width: 100%;
+        display: table;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    th,
+    td {
+        font-size: 11px;
+        /* Reduce text size */
+        padding: 5px;
+        /* Reduce padding */
+        word-wrap: break-word;
+        white-space: normal;
+        /* Allow text wrapping */
+    }
+
+    /* Reduce spacing in feature list */
+    .features-list ul {
+        padding-left: 10px;
+        font-size: 10px;
+        /* Smaller text for mobile */
+    }
+
+    /* Stack rows to save space */
+    .plan-row {
+        font-size: 12px;
+    }
+
+    /* Optimize buttons */
+    .filled-orange-btn {
+        width: 100%;
+        max-width: 200px;
+        font-size: 12px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    /* Reduce image size */
+    .logo-container img {
+        height: 35px;
+    }
+
+    /* Hide extra spaces in header */
+    .header-line {
+        display: none;
+    }
+
+    /* Footer adjustments */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divider {
+        display: none;
     }
 }

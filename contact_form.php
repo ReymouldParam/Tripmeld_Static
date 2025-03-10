@@ -1,31 +1,27 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $secretKey = "6LdCO94qAAAAAFbFtmcUcHKD_bDljiIumHTNLU_T"; // Replace with your actual secret key
-    $captchaResponse = $_POST["g-recaptcha-response"];
-
-    // Verify reCAPTCHA with Google
-    $verifyURL = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captchaResponse";
-    $response = file_get_contents($verifyURL);
-    $responseKeys = json_decode($response, true);
-
-    if (intval($responseKeys["success"]) !== 1) {
-        header("Location: .?emailSuccess=false&captchaFailed=true");
-        exit;
-    }
-
-    // Proceed with email sending
-    $to = "contact@tripmeld.com";
-    $subject = "Enquiry From Tripmeld Website";
-    $message = "Name : " . $_POST["fullName"].
-                "\nEmail : " . $_POST["email"].
-                "\nPhone number : " . $_POST["phone"].
-                "\nCompany Name : " . $_POST["companyName"].
-                "\nCompany size : " . $_POST["companySize"];
-
-    mail('contact@reymould.com', $subject, $message);
-    mail('reymould.social@gmail.com', $subject, $message);
-
-    if (mail($to, $subject, $message)) {
+    $apiUrl = 'rmcrm-stage-commonnotifications.azurewebsites.net/api/SendEmail';
+    
+    $postData = [
+        "name" => $_POST["fullName"],
+        "email" => $_POST["email"],
+        "phone" => $_POST["phone"],
+        "message" => "Following are company details: <br>"
+                    . "Company Name: " . $_POST["companyName"] . "<br>"
+                    . "Company Size: " . $_POST["companySize"]
+    ];
+    
+    $ch = curl_init($apiUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+    
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    
+    if ($httpCode == 200) {
         header("Location: .?emailSuccess=true");
     } else {
         header("Location: .?emailSuccess=false");

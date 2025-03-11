@@ -297,7 +297,8 @@
 
                 <div class="address-info">
                     <h3>Address</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> 2nd Floor, Plot no 151, Green Park Avenue,
+                    <p style="line-height: 25px;"><i class="fa-solid fa-location-dot"></i> 2nd Floor, Plot no 151, Green
+                        Park Avenue,
                         Jeedimetla Village, Hyderabad, India, Telangana</p>
                 </div>
             </div>
@@ -309,53 +310,55 @@
         function downloadBrochure() {
             const { jsPDF } = window.jspdf;
             const element = document.body;
+            const downloadButton = document.querySelector('.filled-orange-btn');
+
+            if (!downloadButton) {
+                console.error('Download button not found!');
+                return;
+            }
 
             // Backup original styles
             const originalBorderCollapse = element.style.borderCollapse;
             const originalOverflow = element.style.overflow;
 
+            // Hide the download button before capturing the screenshot
+            downloadButton.style.display = 'none';
+
             // Temporarily adjust styles to avoid clipping issues
             element.style.borderCollapse = 'separate';
             element.style.overflow = 'visible';
 
-            // Capture full page
             html2canvas(element, {
                 scale: 3, // Increase resolution for better quality
-                useCORS: true, // Load cross-origin resources
+                useCORS: true,
                 scrollX: 0,
                 scrollY: 0,
-                windowWidth: document.documentElement.scrollWidth, // Ensure full width capture
-                windowHeight: document.documentElement.scrollHeight, // Ensure full height capture
-                backgroundColor: '#ffffff' // White background to avoid transparency
+                width: element.scrollWidth,
+                height: element.scrollHeight,
+                backgroundColor: '#ffffff'
             }).then(canvas => {
                 const imgData = canvas.toDataURL('image/png');
+
                 const imgWidth = 210; // A4 width in mm
                 const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-                const doc = new jsPDF('p', 'mm', 'a4');
-                let heightLeft = imgHeight;
-                let position = 0;
+                // 🎯 Dynamically calculate the PDF height to avoid extra space
+                const pdfHeight = imgHeight > 297 ? 297 : imgHeight;
 
-                // Add first page
-                doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                heightLeft -= 297; // A4 height in mm
+                const doc = new jsPDF('p', 'mm', [imgWidth, pdfHeight]); // Dynamically set PDF height
 
-                // If content exceeds one page, add more pages
-                while (heightLeft > 0) {
-                    position = heightLeft - imgHeight;
-                    doc.addPage();
-                    doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-                    heightLeft -= 297;
-                }
+                // Add the image to the PDF
+                doc.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
 
                 doc.save('TripMeld_CRM_Pricing.pdf'); // Download PDF
             }).catch(error => {
                 console.error('Error generating PDF:', error);
                 alert('Failed to generate PDF. Please try again.');
             }).finally(() => {
-                // Restore original styles after capture
+                // Restore original styles and button
                 element.style.borderCollapse = originalBorderCollapse;
                 element.style.overflow = originalOverflow;
+                downloadButton.style.display = 'inline-block';
             });
         }
 

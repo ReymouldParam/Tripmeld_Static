@@ -1,3 +1,13 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--white-bg);
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 :root {
     --header-bg: #e07527;
     /* Burnt Orange */
@@ -21,13 +31,6 @@
 
 h1 {
     color: var(--essential-bg);
-}
-
-body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: var(--white-bg);
-    text-align: center;
-    margin: 40px;
 }
 
 .pricing-container {
@@ -191,9 +194,22 @@ ul {
     /* Dark Blue Gradient */
     color: #ffffff;
     text-align: center;
-    padding: 30px 20px;
-    position: relative;
+    width:97.8%;
+    margin: auto;
 }
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width:850px;
+    margin:auto;
+    text-align:left;
+    overflow-x: hidden;
+}
+
+
 
 /* Header Section */
 .footer-header {
@@ -231,42 +247,7 @@ ul {
     transform: rotateY(0);
 }
 
-/* Footer Styling */
-.footer {
-    background: linear-gradient(to right, #1d3b8b, #0f2a67);
-    /* Dark Blue Gradient */
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-    font-family: 'Arial', sans-serif;
-    border-radius: 10px;
-}
 
-/* Header Section */
-.footer-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-/* Header Text */
-.header-text {
-    text-align: center;
-}
-
-.header-text h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.header-text p {
-    font-size: 14px;
-    margin-top: 5px;
-}
 
 /* Plane Icons */
 .plane-decorator {
@@ -290,7 +271,7 @@ ul {
     padding: 20px 15px;
     font-family: 'Arial', sans-serif;
     border-bottom: 15px solid #f7941d;
-    margin-top: 2%;
+    /* margin-top: 2%; */
     /* Orange bottom border */
 }
 
@@ -298,7 +279,7 @@ ul {
 .footer-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
@@ -309,13 +290,13 @@ ul {
 }
 
 .header-text h2 {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0;
 }
 
 .header-text p {
-    font-size: 14px;
+    font-size: 18px;
     margin-top: 5px;
 }
 
@@ -323,7 +304,7 @@ ul {
 .plane-decorator {
     display: flex;
     align-items: center;
-    width: 35%;
+    width: 20%;
 }
 
 .plane-decorator.left {
@@ -357,15 +338,6 @@ ul {
     /* Rotate the icon to face right */
 }
 
-/* Footer Content */
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-}
 
 /* Contact & Address Sections */
 .contact-info,
@@ -376,9 +348,9 @@ ul {
 
 .contact-info h3,
 .address-info h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* FontAwesome Icons */
@@ -386,7 +358,7 @@ ul {
 .address-info p i {
     margin-right: 8px;
     color: #ffffff;
-    line-height: 30px;
+    line-height: 10px;
     /* Yellow for icons */
 }
 
@@ -439,7 +411,6 @@ ul {
     font-weight: 500;
     color: #000;
     background: transparent;
-    padding: 2%;
     width: 80%;
     margin: auto;
 }

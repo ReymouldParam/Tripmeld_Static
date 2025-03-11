@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="assets/css/pricing.css">
     <!-- font aswesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
@@ -43,69 +46,81 @@
             </thead>
             <tbody>
                 <!-- Essential Plan -->
-                <tr class="plan-row essential">
+                <tr class="plan-row professional">
                     <td rowspan="4" class="essential"><strong>Essential</strong></td>
                     <td rowspan="4" class="features-list">
                         <ul>
-                            <li><strong class="all-features">Feature</strong></li>
-                            <li>Dashboard</li>
-                            <li>Lead Management</li>
-                            <li>Quote & Itinerary Management</li>
-                            <li>Manual Route Crafter</li>
-                            <li>Itinerary Inventory</li>
-                            <li>Task Management</li>
-                            <li>Default Itinerary Template</li>
-                            <li>Contacts Management</li>
+                            <li style="list-style-type: none; margin-left: -15px;"><strong class="all-features">Features
+                                    of Essential</strong></li>
+                            <li> Dashboard</li>
+                            <li> Lead Management</li>
+                            <li> Quote & Itinerary Management</li>
+                            <li>
+                                Manual Route Crafter
+                            </li>
+                            <li>
+                                Itinerary Inventory
+                            </li>
+                            <li>
+                                Task Management
+                            </li>
+                            <li>
+                                Default Itinerary Template
+                            </li>
+                            <li>
+                                Contacts Management
+                            </li>
                         </ul>
                     </td>
                     <td>Up to 2</td>
                     <td>₹ 500/-</td>
                     <td>₹ 6,000/-</td>
                 </tr>
-                <tr class="essential">
+                <tr class="professional">
                     <td>Up to 4</td>
                     <td>₹ 450/-</td>
                     <td>₹ 5,400/-</td>
                 </tr>
-                <tr class="essential">
+                <tr class="professional">
                     <td>5 & Above Users</td>
                     <td>₹ 400/- </td>
                     <td>₹ 4,800/-</td>
                 </tr>
-                <tr class="essential">
+                <tr class="professional">
                     <td>Unlimited Users</td>
                     <td>--</td>
                     <td>₹ 59,999/-</td>
                 </tr>
-
                 <!-- Enhanced Plan -->
-                <tr class="plan-row enhanced">
+                <tr class="plan-row professional">
                     <td rowspan="4" class="enhanced"><strong>Enhanced</strong></td>
                     <td rowspan="4" class="features-list">
                         <ul>
-                            <li><strong class="all-features">All features of Package 1</strong></li>
-                            <li>AI Route Crafter</li>
+                            <li style="list-style-type: none; margin-left: -15px;"><strong class="all-features">All
+                                    features of Essential</strong></li>
+                            <li>AL Route Crafter</li>
                             <li>Voucher Management</li>
                             <li>Invoice Management</li>
-                            <!-- <li>Meetings</li> -->
-                            <li>Chats</li>
+                            <li>
+                                Chats
+                            </li>
                         </ul>
                     </td>
                     <td>Up to 2</td>
                     <td>₹ 600/-</td>
                     <td>₹ 7,200/-</td>
                 </tr>
-                <tr class="enhanced">
+                <tr class="professional">
                     <td>Up to 4</td>
                     <td>₹ 550/-</td>
                     <td>₹ 6,600/-</td>
                 </tr>
-                <tr class="enhanced">
+                <tr class="professional">
                     <td>5 & Above Users</td>
                     <td>₹ 500/- </td>
-                    <td>₹ 6,000/-</td>
+                    <td>₹ 6,000/- </td>
                 </tr>
-                <tr class="enhanced">
+                <tr class="professional">
                     <td>Unlimited Users</td>
                     <td>--</td>
                     <td>₹ 69,999/-</td>
@@ -116,7 +131,8 @@
                     <td rowspan="4" class="essential"><strong>Professional</strong></td>
                     <td rowspan="4" class="features-list">
                         <ul>
-                            <li><strong class="all-features">All features of Package 2</strong></li>
+                            <li style="list-style-type: none; margin-left: -15px;"><strong class="all-features">All
+                                    features of Enhanced</strong></li>
                             <li>Advanced Call Management</li>
                             <li>1 Customized Itinerary Template</li>
                             <li>DMC Offers (Future)</li>
@@ -146,9 +162,10 @@
                     <td rowspan="4" class="enhanced"><strong>Enterprise</strong></td>
                     <td rowspan="4" class="features-list">
                         <ul>
-                            <li><strong class="all-features">All features of Package 3</strong></li>
+                            <li style="list-style-type: none; margin-left: -15px;"><strong class="all-features">All
+                                    features of Professional</strong></li>
                             <li>Visa Module</li>
-                            <li>2 Customized Itinerary <Template></Template></li>
+                            <li>2 Customized Itinerary Template </li>
                         </ul>
                     </td>
                     <td>Up to 2</td>
@@ -175,7 +192,8 @@
                     <td rowspan="4" class="essential"><strong>Visa Module</strong></td>
                     <td rowspan="4" class="features-list">
                         <ul>
-                            <li><strong class="all-features">Feature</strong></li>
+                            <li style="list-style-type: none; margin-left: -15px;"><strong class="all-features">Features
+                                    of visa Module</strong></li>
                             <li>Dashboard</li>
                             <li>Lead Management</li>
                             <li>Task Management</li>
@@ -210,20 +228,60 @@
             </tbody>
         </table>
     </div>
+    <!-- our services -->
+    <div class="services-section">
+        <h3><strong>Our Services :</strong></h3>
+        <div class="services-list">
+            <div class="services-row">
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    WhatsApp's Marketing
+                </span>
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    HRMs
+                </span>
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    CRM
+                </span>
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    Web Development
+                </span>
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    Software Development
+                </span>
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    Digital Marketing
+                </span>
+            </div>
+            <div class="services-row">
+                <span>
+                    <img src="assets/images/icons/airplane-logo.png" alt="airplane-logo" class="plane-icon" />
+                    Strategy Consulting
+                </span>
+            </div>
+        </div>
+    </div>
+
+
     <!-- footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-header">
                 <div class="plane-decorator left">
                     <div class="plane-line"></div>
-                    <i class="fa-solid fa-plane"></i>
+                    <img src="assets/images/icons/airplane-logo.png" at="airplane-logo" class="plane-img" />
                 </div>
                 <div class="header-text">
                     <h2>Want to know more?</h2>
                     <p>We're just a call away!</p>
                 </div>
                 <div class="plane-decorator right">
-                    <i class="fa-solid fa-plane"></i>
+                    <img src="assets/images/icons/airplane-logo.png" at="airplane-logo" class="plane-img" />
                     <div class="plane-line"></div>
                 </div>
             </div>
@@ -245,24 +303,65 @@
             </div>
         </div>
     </footer>
-    <!-- download of Tripmeld Pricing -->
+
+    <!-- download table pricing -->
     <script>
         function downloadBrochure() {
-            const filePath = "assets/images/blogs/TripMeld%20CRM%20Pricing.pdf"; // Encode spaces as %20
-            const fileName = "TripMeld_Pricing.pdf"; // Use underscores for better cross-platform support
+            const { jsPDF } = window.jspdf;
+            const element = document.body;
 
-            // Create an anchor element
-            const link = document.createElement("a");
-            link.href = filePath;
-            link.setAttribute("download", fileName); // Set the download attribute
+            // Backup original styles
+            const originalBorderCollapse = element.style.borderCollapse;
+            const originalOverflow = element.style.overflow;
 
-            // Append to body, trigger download, and remove the element
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // Temporarily adjust styles to avoid clipping issues
+            element.style.borderCollapse = 'separate';
+            element.style.overflow = 'visible';
+
+            // Capture full page
+            html2canvas(element, {
+                scale: 3, // Increase resolution for better quality
+                useCORS: true, // Load cross-origin resources
+                scrollX: 0,
+                scrollY: 0,
+                windowWidth: document.documentElement.scrollWidth, // Ensure full width capture
+                windowHeight: document.documentElement.scrollHeight, // Ensure full height capture
+                backgroundColor: '#ffffff' // White background to avoid transparency
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const imgWidth = 210; // A4 width in mm
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+                const doc = new jsPDF('p', 'mm', 'a4');
+                let heightLeft = imgHeight;
+                let position = 0;
+
+                // Add first page
+                doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= 297; // A4 height in mm
+
+                // If content exceeds one page, add more pages
+                while (heightLeft > 0) {
+                    position = heightLeft - imgHeight;
+                    doc.addPage();
+                    doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= 297;
+                }
+
+                doc.save('TripMeld_CRM_Pricing.pdf'); // Download PDF
+            }).catch(error => {
+                console.error('Error generating PDF:', error);
+                alert('Failed to generate PDF. Please try again.');
+            }).finally(() => {
+                // Restore original styles after capture
+                element.style.borderCollapse = originalBorderCollapse;
+                element.style.overflow = originalOverflow;
+            });
         }
 
     </script>
+
+
 </body>
 
 </html>

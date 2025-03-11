@@ -54,7 +54,7 @@ th {
     /* Burnt Orange */
     color: var(--header-text);
     padding: 12px;
-
+    border-left: 2px solid var(--border-color);
     font-size: 18px;
     text-align: center;
 }
@@ -63,7 +63,7 @@ td {
     border: 1px solid var(--border-color);
     padding: 12px;
     text-align: center !important;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--text-color);
     background-color: white;
@@ -328,7 +328,9 @@ ul {
 
 .plane-decorator.left {
     flex-direction: row-reverse;
+    /* Aligns the plane icon to the right */
 }
+
 
 .plane-decorator.right {
     flex-direction: row;
@@ -338,7 +340,7 @@ ul {
     font-size: 18px;
     color: #1d3b8b;
     background: white;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-radius: 5px;
 }
 
@@ -347,6 +349,12 @@ ul {
     height: 2px;
     border-top: 2px dashed black;
     margin: 0 10px;
+}
+
+.plane-img {
+    height: 40px;
+    transform: rotate(180deg);
+    /* Rotate the icon to face right */
 }
 
 /* Footer Content */
@@ -401,8 +409,9 @@ ul {
     /* Takes full width */
     gap: 10%;
 }
-@media screen and (min-width:1024px) and (max-width:1280px){
-    .pricing-header{
+
+@media screen and (min-width:1024px) and (max-width:1280px) {
+    .pricing-header {
         gap: 5%;
     }
 }
@@ -420,6 +429,53 @@ ul {
     font-size: 16px;
     cursor: pointer;
     /* Ensures proper clickable effect */
+}
+
+/* our services */
+
+.services-section {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    background: transparent;
+    padding: 2%;
+    width: 80%;
+    margin: auto;
+}
+
+.services-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.services-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.services-row span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 1%;
+}
+
+.plane-icon {
+    height: 14px;
+    width: 14px;
+
+    /* Ensure plane faces right */
 }
 
 /* Responsive Fix: Ensure Button Stays Aligned */
@@ -440,6 +496,7 @@ ul {
     .header {
         margin-top: 5px;
     }
+
     .plane-decorator {
         width: 12%;
     }
@@ -461,6 +518,7 @@ ul {
         padding: 0;
         margin-top: 0;
         margin-bottom: 0px;
+        font-size: 20px;
     }
 
     body {
@@ -525,5 +583,9 @@ ul {
 
     .divider {
         display: none;
+    }
+
+    .services-section {
+        width: 90%;
     }
 }

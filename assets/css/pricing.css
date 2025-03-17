@@ -552,6 +552,9 @@ ul {
         text-align: center;
         font-size: 12px;
     }
+    .footer-container{
+        width: 95%;
+    }
 
     .contact-info h3,
     .address-info h3 {

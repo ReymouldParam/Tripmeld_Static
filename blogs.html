@@ -1410,92 +1410,90 @@
         }
 
     </script>
+ <!-- blog share functinality -->
+ <script>
+    function toggleSharePopover(el) {
+        var wrapper = el.closest('.share-wrapper');
+        if (!wrapper) return;
 
-    <!-- blog share functinality -->
-    <script>
-        function toggleSharePopover(el) {
-            var wrapper = el.closest('.share-wrapper');
-            if (!wrapper) return;
+        var popover = wrapper.querySelector('.share-popover');
+        if (!popover) return console.error("❌ Share popover not found.");
 
-            var popover = wrapper.querySelector('.share-popover');
-            if (!popover) return console.error("❌ Share popover not found.");
+        // Toggle the visibility of the popover
+        popover.classList.toggle('active');
 
-            // Toggle the visibility of the popover
-            popover.classList.toggle('active');
+        // ✅ Find the closest blog card OR blog overview container
+        var blogCard = el.closest('.blog-card');
+        var blogOverview = el.closest('.blog-overview-container');
 
-            // ✅ Find the closest blog card OR blog overview container
-            var blogCard = el.closest('.blog-card');
-            var blogOverview = el.closest('.blog-overview-container');
-
-            if (!blogCard && !blogOverview) {
-                return console.error("❌ Blog card or blog overview container not found.");
-            }
-
-            // ✅ Determine whether it's from a blog card or blog overview
-            var isBlogOverview = !!blogOverview;
-            var blogContainer = isBlogOverview ? blogOverview : blogCard;
-
-            // ✅ Get the unique ID of the blog (from either blog card or overview)
-            var blogId = blogContainer.id;
-            if (!blogId) return console.error("❌ Blog ID not found.");
-
-            // ✅ Generate the correct shareable URL
-            var blogUrl = isBlogOverview
-                ? `${window.location.origin}/blogs?expandBlogOverview=${blogId}`  // Sharing from blog overview
-                : `${window.location.origin}/blogs?expandBlog=${blogId}`;  // Sharing from blog card
-
-            // ✅ Get Dynamic Blog Data
-            var blogTitle = blogContainer.querySelector("h3")?.innerText || "TripMeld Blog";
-            var blogDescription = blogContainer.querySelector("p")?.innerText || "Read the latest insights on TripMeld.";
-            var blogImage = blogContainer.querySelector("img")?.src || "https://dev.tripmeld.com/assets/images/blogs/tripmeld-blogs-thumbnail.png";
-
-            // ✅ Update Open Graph Meta Tags dynamically
-            updateOpenGraphTags(blogTitle, blogDescription, blogImage, blogUrl);
-
-            // ✅ Update LinkedIn share link dynamically within this popover
-            var linkedinLink = popover.querySelector('.linkedin-link');
-            if (linkedinLink) {
-                var linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogUrl)}`;
-                linkedinLink.setAttribute("href", linkedInShareUrl);
-                linkedinLink.setAttribute("target", "_blank");
-                linkedinLink.setAttribute("rel", "noopener noreferrer");
-            }
-
-            // ✅ Update Facebook share link dynamically within this popover
-            var facebookLink = popover.querySelector('.facebook-link');
-            if (facebookLink) {
-                var facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blogUrl)}`;
-                facebookLink.setAttribute("href", facebookShareUrl);
-                facebookLink.setAttribute("target", "_blank");
-                facebookLink.setAttribute("rel", "noopener noreferrer");
-            }
-
-            // ✅ Update "Copy Link" button dynamically
-            var copyButton = popover.querySelector('.copy-link');
-            if (copyButton) {
-                copyButton.setAttribute("onclick", `copyLinkFromCard('${blogUrl}')`);
-            }
+        if (!blogCard && !blogOverview) {
+            return console.error("❌ Blog card or blog overview container not found.");
         }
 
-        // ✅ Function to Copy Blog Overview URL to Clipboard
-        function copyLinkFromCard(url) {
-            navigator.clipboard.writeText(url)
-                .then(() => {
-                    alert('✅ Link copied to clipboard: ' + url);
-                })
-                .catch(err => console.error('❌ Failed to copy text: ', err));
+        // ✅ Determine whether it's from a blog card or blog overview
+        var isBlogOverview = !!blogOverview;
+        var blogContainer = isBlogOverview ? blogOverview : blogCard;
+
+        // ✅ Get the unique ID of the blog (from either blog card or overview)
+        var blogId = blogContainer.id;
+        if (!blogId) return console.error("❌ Blog ID not found.");
+
+        // ✅ Generate the correct shareable URL
+        var blogUrl = isBlogOverview
+            ? `${window.location.origin}/blogs?expandBlogOverview=${blogId}`  // Sharing from blog overview
+            : `${window.location.origin}/blogs?expandBlog=${blogId}`;  // Sharing from blog card
+
+        // ✅ Get Dynamic Blog Data
+        var blogTitle = blogContainer.querySelector("h3")?.innerText || "TripMeld Blog";
+        var blogDescription = blogContainer.querySelector("p")?.innerText || "Read the latest insights on TripMeld.";
+        var blogImage = blogContainer.querySelector("img")?.src || "https://dev.tripmeld.com/assets/images/blogs/tripmeld-blogs-thumbnail.png";
+
+        // ✅ Update Open Graph Meta Tags dynamically
+        updateOpenGraphTags(blogTitle, blogDescription, blogImage, blogUrl);
+
+        // ✅ Update LinkedIn share link dynamically within this popover
+        var linkedinLink = popover.querySelector('.linkedin-link');
+        if (linkedinLink) {
+            var linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(blogUrl)}`;
+            linkedinLink.setAttribute("href", linkedInShareUrl);
+            linkedinLink.setAttribute("target", "_blank");
+            linkedinLink.setAttribute("rel", "noopener noreferrer");
         }
 
-        // ✅ Function to Update Open Graph Meta Tags (DYNAMIC for each blog)
-        function updateOpenGraphTags(title, description, image, url) {
-            document.querySelector("meta[property='og:title']").setAttribute("content", title);
-            document.querySelector("meta[property='og:description']").setAttribute("content", description);
-            document.querySelector("meta[property='og:image']").setAttribute("content", image);
-            document.querySelector("meta[property='og:url']").setAttribute("content", url);
+        // ✅ Update Facebook share link dynamically within this popover
+        var facebookLink = popover.querySelector('.facebook-link');
+        if (facebookLink) {
+            var facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(blogUrl)}`;
+            facebookLink.setAttribute("href", facebookShareUrl);
+            facebookLink.setAttribute("target", "_blank");
+            facebookLink.setAttribute("rel", "noopener noreferrer");
         }
 
-    </script>
+        // ✅ Update "Copy Link" button dynamically
+        var copyButton = popover.querySelector('.copy-link');
+        if (copyButton) {
+            copyButton.setAttribute("onclick", `copyLinkFromCard('${blogUrl}')`);
+        }
+    }
 
+    // ✅ Function to Copy Blog Overview URL to Clipboard
+    function copyLinkFromCard(url) {
+        navigator.clipboard.writeText(url)
+            .then(() => {
+                alert('✅ Link copied to clipboard: ' + url);
+            })
+            .catch(err => console.error('❌ Failed to copy text: ', err));
+    }
+
+    // ✅ Function to Update Open Graph Meta Tags (DYNAMIC for each blog)
+    function updateOpenGraphTags(title, description, image, url) {
+        document.querySelector("meta[property='og:title']").setAttribute("content", title);
+        document.querySelector("meta[property='og:description']").setAttribute("content", description);
+        document.querySelector("meta[property='og:image']").setAttribute("content", image);
+        document.querySelector("meta[property='og:url']").setAttribute("content", url);
+    }
+
+</script>
     <!-- scroll to blog-card -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {

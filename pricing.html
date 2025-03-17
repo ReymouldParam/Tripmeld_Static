@@ -29,7 +29,8 @@
     <!-- Title -->
     <div class="pricing-header">
         <h1>TripMeld CRM Pricing Model</h1>
-        <button class="filled-orange-btn" onclick="downloadBrochure()">Download</button>
+        <button class="filled-orange-btn"
+            onclick="window.innerWidth <= 768 ? downloadPricingMobile() : downloadPricing()">Download</button>
     </div>
 
     <!-- Pricing Table -->
@@ -307,7 +308,7 @@
 
     <!-- download table pricing -->
     <script>
-        function downloadBrochure() {
+        function downloadPricing() {
             const { jsPDF } = window.jspdf;
             const element = document.body;
             const downloadButton = document.querySelector('.filled-orange-btn');
@@ -358,6 +359,73 @@
                 // Restore original styles and button
                 element.style.borderCollapse = originalBorderCollapse;
                 element.style.overflow = originalOverflow;
+                downloadButton.style.display = 'inline-block';
+            });
+        }
+
+    </script>
+
+    <!-- download for mobile view -->
+    <script>
+        function downloadPricingMobile() {
+            const { jsPDF } = window.jspdf;
+            const element = document.body; // Capture the whole page
+            const downloadButton = document.querySelector('.filled-orange-btn');
+            const table = element.querySelector('table');
+
+            if (!downloadButton || !element || !table) {
+                console.error('Required elements not found!');
+                return;
+            }
+
+            // ✅ Backup original styles
+            const originalOverflow = element.style.overflow;
+            const originalTableOverflow = table.style.overflow;
+            const originalWhiteSpace = table.style.whiteSpace;
+            const originalWidth = table.style.width;
+            const originalPosition = table.style.position;
+
+            // ✅ Hide download button during capture
+            downloadButton.style.display = 'none';
+
+            // ✅ Fix table overflow issues for mobile
+            element.style.overflow = 'visible';
+            table.style.overflow = 'visible';
+            table.style.whiteSpace = 'normal';
+            table.style.width = `${table.scrollWidth}px`;
+            table.style.position = 'static';
+
+            // ✅ Increase scale for better quality in mobile
+            const scale = 2;
+
+            html2canvas(element, {
+                scale: scale,
+                useCORS: true,
+                scrollX: 0,
+                scrollY: 0,
+                width: element.scrollWidth,
+                height: element.scrollHeight,
+                backgroundColor: '#ffffff'
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+
+                const imgWidth = 210; // A4 width in mm
+                const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+                const pdf = new jsPDF('p', 'mm', [imgWidth, imgHeight]);
+                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+                pdf.save('TripMeld_CRM_Pricing.pdf');
+            }).catch(error => {
+                console.error('Error generating PDF:', error);
+                alert('Failed to generate PDF. Please try again.');
+            }).finally(() => {
+                // ✅ Restore original styles
+                element.style.overflow = originalOverflow;
+                table.style.overflow = originalTableOverflow;
+                table.style.whiteSpace = originalWhiteSpace;
+                table.style.width = originalWidth;
+                table.style.position = originalPosition;
+
                 downloadButton.style.display = 'inline-block';
             });
         }

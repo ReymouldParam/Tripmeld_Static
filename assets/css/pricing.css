@@ -194,7 +194,7 @@ ul {
     /* Dark Blue Gradient */
     color: #ffffff;
     text-align: center;
-    width:97.8%;
+    width: 97.8%;
     margin: auto;
 }
 
@@ -203,9 +203,9 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width:850px;
-    margin:auto;
-    text-align:left;
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
     overflow-x: hidden;
 }
 
@@ -290,13 +290,13 @@ ul {
 }
 
 .header-text h2 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
 }
 
 .header-text p {
-    font-size: 18px;
+    font-size: 12px;
     margin-top: 5px;
 }
 
@@ -550,6 +550,17 @@ ul {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        font-size: 12px;
+    }
+
+    .contact-info h3,
+    .address-info h3 {
+        font-size: 20px;
+        font-weight: bold;
+        /* margin-bottom: 5px; */
+        padding: 0px;
+        margin: 0px;
+
     }
 
     .divider {
@@ -557,6 +568,11 @@ ul {
     }
 
     .services-section {
-        width: 90%;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000;
+        background: transparent;
+        width: 80%;
+        margin: auto;
     }
 }

@@ -1,0 +1,1 @@
+Assets placed in this directory may also be used for other purpose than website. (for ex - Email template/quote template/ etc). So be carful before replacing or deleting any assets.

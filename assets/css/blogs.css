@@ -34,13 +34,13 @@ body {
 .recent-blogs {
     background-color: #f3f5fb;
     /* Light background to match the screenshot */
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 
 /* Heading Styles */
 .recent-blogs h2 {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     /* Use your dark-blue color variable or keep as is */
     color: var(--theme-color-dark-blue);
 }
@@ -101,6 +101,8 @@ body {
 .card-content {
     flex: 1 1 50%;
     padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+
 }
 
 /* Title */
@@ -200,47 +202,23 @@ hr {
 .blog-list {
     display: flex;
     flex-direction: column;
-    height: 600px;
-    /* Defines fixed height for the blog list */
     overflow-y: auto;
-    /* Enables vertical scrolling */
+    /* Only shows scrollbar when needed */
     overflow-x: hidden;
-    position: relative;
+    height: 600px;
+    /* Shorter scroll by default */
 }
-@media screen and (min-width:1450px){
-    .blog-list{
-        height: 100vh;
+
+/* For larger screens */
+@media screen and (min-width: 1450px) {
+    .blog-list {
+        height: 900px;
+        /* Prevent full page height scroll */
     }
 }
+
+
 /* Custom Scrollbar */
-.blog-list::-webkit-scrollbar {
-    width: 8px;
-    /* Scrollbar width */
-    height: 200px;
-    /* Fixed height for the scrollbar track */
-}
-
-/* Scrollbar Track */
-.blog-list::-webkit-scrollbar-track {
-    background: #f0f0f0;
-    border-radius: 15px;
-    height: 200px;
-    /* Fixed track height */
-}
-
-/* Scrollbar Thumb (Handle) */
-.blog-list::-webkit-scrollbar-thumb {
-    background: var(--theme-color-orange);
-    border-radius: 10px;
-    border: 2px solid #f0f0f0;
-    min-height: 50px;
-    /* Minimum height of the thumb */
-}
-
-/* Hover Effect */
-.blog-list::-webkit-scrollbar-thumb:hover {
-    background: #c8631d;
-}
 
 
 .blog-card {
@@ -248,8 +226,7 @@ hr {
     width: fit-content;
     border-radius: 16px;
     margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    /* overflow: hidden; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
 }
@@ -263,6 +240,9 @@ hr {
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 123, 255, 0.1);
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 /* ------------------------------------- */

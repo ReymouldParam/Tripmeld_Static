@@ -411,14 +411,21 @@
     flex-direction: column;
 }
 
-.left-main-container .logo-container {
+.my-modal-component-css .logo-container {
     height: 40px;
     width: auto;
 }
 
-.left-main-container .logo-container .logo {
+.my-modal-component-css .logo-container .logo {
     height: 100%;
     width: auto;
+}
+
+.my-modal-component-css .company-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--theme-color-orange);
 }
 
 .left-main-container .form-main-container {
@@ -513,6 +520,7 @@
     width: 100%;
     padding: 50px;
     position: relative;
+    padding-top: 0;
 }
 
 .right-main-container .img-container .img {

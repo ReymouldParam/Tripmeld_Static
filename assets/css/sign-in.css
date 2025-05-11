@@ -1,118 +1,124 @@
-
-body{
-    font-family: 'DM sans', sans-serif;
+body {
+   font-family: 'DM Sans', sans-serif;
 }
-    .container {
-      display: flex;
-      flex: 1;
-    }
 
-    .left-section {
-      flex: 1;
-      padding: 60px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-image: linear-gradient(150deg, #fff 60%, #fdfcff);
-    }
+.container {
+  display: flex;
+  /* flex: 1; */
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
 
-    .left-section h2 {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
+.left-section {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(150deg, #fff 60%, #fdfcff);
+}
 
-    .left-section p {
-      font-size: 14px;
-      margin-bottom: 24px;
-      color: #333;
-    }
+.left-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+.left-section p {
+  font-size: 14px;
+  margin-bottom:4px;
+  color: #333;
+  margin-top: 10px;
+}
 
-    .form-group input {
-      width: 100%;
-      padding: 16px 12px;
-      border: none;
-      border-radius: 8px;
-      background-color: #f7f7fc;
-      font-size: 16px;
-    }
+.form-group {
+  margin-bottom: 30px;
+}
 
-    .options {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-    }
+.form-group input {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f7f7fc;
+  font-size: 16px;
+}
 
-    .options a {
-      color: #1e50ff;
-      text-decoration: none;
-    }
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
 
-    .remember-me {
-      display: flex;
-      align-items: center;
-    }
+.options a {
+  color: #1e50ff;
+  text-decoration: none;
+}
 
-    .remember-me input {
-      margin-right: 6px;
-    }
+.remember-me {
+  display: flex;
+  align-items: center;
+}
 
-    .sign-in-btn {
-      background-color: #243a96;
-      color: white;
-      width: 100%;
-      padding: 18px;
-      border-radius: 32px;
-      border: none;
-      font-size: 16px;
-      margin-top: 20px;
-      cursor: pointer;
-    }
+.remember-me input {
+  margin-right: 6px;
+}
 
-    .right-section {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 40px;
-    }
+.sign-in-btn {
+  background-color: #243a96;
+  color: white;
+  width: 100%;
+  padding: 18px;
+  border-radius: 32px;
+  border: none;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
 
-    .right-section img {
-      max-width: 100%;
-      height: auto;
-    }
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding:0px;
+}
 
-    .right-section h2 {
-      color: #243a96;
-      font-size: 24px;
-      margin-top: 30px;
-    }
+.right-section img {
+  max-width: 100%;
+  height: auto;
+}
 
-    .right-section p {
-      font-size: 14px;
-      margin-top: 10px;
-      max-width: 360px;
-      color: #333;
-    }
+.right-section h2 {
+  color: #243a96;
+  font-size: 24px;
+  margin-top:-20px;
+}
 
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+.right-section p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top:5px;
+  max-width: 360px;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

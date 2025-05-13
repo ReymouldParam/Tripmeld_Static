@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TripMeld Sign Up</title>
     <!-- global css -->
+    <!-- input library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css" />
+    <!-- Choices.js CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/sign-up.css" />
 </head>
@@ -26,24 +31,33 @@
                 <input type="email" placeholder="Official Email" />
 
                 <div class="phone-input">
-                    <span class="flag">🇮🇳</span>
-                    <span class="code">+91</span>
-                    <input type="text" placeholder="8553434243" />
+                    <input type="tel" id="phone" />
                 </div>
-
                 <div class="row">
-                    <input type="text" placeholder="Country" />
-                    <input type="text" placeholder="State" />
+                    <select id="country-select">
+                        <option value="">Select Country</option>
+                    </select>
+                    <select id="state-select" class="state">
+                        <option value="">Select State</option>
+                    </select>
                 </div>
 
                 <input type="text" placeholder="Company Name" />
 
                 <select>
-                    <option>Company Size</option>
+                    <option disabled selected>Company Size</option>
+                    <option>1-10</option>
+                    <option>11-50</option>
+                    <option>51-200</option>
+                    <option>201-500</option>
+                    <option>500+</option>
                 </select>
 
                 <select>
-                    <option>Select Package</option>
+                    <option disabled selected>Select Package</option>
+                    <option>Basic</option>
+                    <option>Standard</option>
+                    <option>Premium</option>
                 </select>
 
                 <div class="checkbox">
@@ -68,6 +82,9 @@
             <p>📧 contact@tripmeld.com</p>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="assets/js/paymentflow.js"></script>
 </body>
 
 </html>

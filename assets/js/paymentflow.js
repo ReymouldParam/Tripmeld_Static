@@ -83,3 +83,93 @@ function loadStates(countryName) {
             }
         });
 }
+
+
+
+// Modal pop-up
+const openModalBtn = document.getElementById('openModal');
+const closeModalBtn = document.getElementById('closeModal');
+const modalOverlay = document.getElementById('modalOverlay');
+
+openModalBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // prevent navigation
+    modalOverlay.style.display = 'flex';
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modalOverlay.style.display = 'none';
+});
+
+// Optional: close when clicking outside the modal
+window.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+        modalOverlay.style.display = 'none';
+    }
+});
+
+//  download button
+async function inlineCSS(doc) {
+    const styles = [];
+
+    // Handle <link rel="stylesheet">
+    const links = doc.querySelectorAll('link[rel="stylesheet"]');
+    for (const link of links) {
+      const href = link.href;
+      try {
+        const cssText = await fetch(href).then(res => res.text());
+        styles.push(`<style>${cssText}</style>`);
+      } catch (e) {
+        console.warn('Failed to load stylesheet:', href, e);
+      }
+    }
+
+    // Handle <style> tags
+    const inlineStyles = doc.querySelectorAll('style');
+    inlineStyles.forEach(style => styles.push(`<style>${style.innerHTML}</style>`));
+
+    return styles.join('\n');
+  }
+
+  document.getElementById('downloadPolicy').addEventListener('click', async () => {
+    const iframe = document.getElementById('policyFrame');
+
+    try {
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+      const htmlClone = doc.documentElement.cloneNode(true);
+      const header = htmlClone.querySelector('header');
+      const footer = htmlClone.querySelector('footer');
+      if (header) header.remove();
+      if (footer) footer.remove();
+
+      const cssText = await inlineCSS(doc);
+
+      const finalHTML = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>Privacy Policy</title>
+          ${cssText}
+        </head>
+        <body>
+          ${htmlClone.querySelector('body').innerHTML}
+        </body>
+        </html>
+      `;
+
+      const blob = new Blob([finalHTML], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'privacy-policy.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+    } catch (err) {
+      console.error('Failed to download:', err);
+      alert('Unable to access iframe. Make sure this is running on localhost or a deployed server.');
+    }
+  });

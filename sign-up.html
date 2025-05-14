@@ -5,12 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TripMeld Sign Up</title>
-    <!-- global css -->
+    <!-- font awesomw CDN -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- input library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css" />
     <!-- Choices.js CSS & JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-
+    <!-- global css -->
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/sign-up.css" />
 </head>
@@ -55,15 +58,16 @@
 
                 <select>
                     <option disabled selected>Select Package</option>
-                    <option>Basic</option>
-                    <option>Standard</option>
-                    <option>Premium</option>
+                    <option>Essential</option>
+                    <option>Enhanced</option>
+                    <option>Professional</option>
+                    <option>Enterprise</option>
                 </select>
 
                 <div class="checkbox">
                     <input type="checkbox" id="terms" />
                     <label for="terms">
-                        I agree to the <a href="./privacy-policy.html">Privacy Policy</a>.
+                        I agree to the <a href="#" id="openModal">Privacy Policy</a>.
                     </label>
                 </div>
 
@@ -77,13 +81,26 @@
 
         <div class="assistance">
             <h4>Need Assistance</h4>
-            <p><a href="#">Contact us for more details</a></p>
-            <p>📞 +91- 9121 111 7175</p>
-            <p>📧 contact@tripmeld.com</p>
+            <p class="contact">Contact us for more details</p>
+            <p><i class="fas fa-phone"></i> +91-9121 111 7175</p>
+            <p><i class="fas fa-envelope"></i> contact@tripmeld.com</p>
         </div>
+        <!-- Modal -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal">
+                <div class="modal-header-buttons">
+                    <button class="close-btn" id="closeModal">&times;</button>
+                    <button class="download-btn" id="downloadPolicy">Download</button>
+                </div>
+                <iframe id="policyFrame" src="./privacy-policy.html"></iframe>
+            </div>
+        </div>
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="assets/js/paymentflow.js"></script>
 </body>
 

@@ -53,33 +53,36 @@
     text-align: center;
     border: 0.08em solid var(--theme-color-orange);
     background-color: transparent;
-    padding: 3px 20px;
+    padding: 3px 15px;
     font-weight: 400;
     color: var(--theme-color-orange);
     border-radius: 50em;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .filled-orange-btn {
     text-align: center;
     border: 0.08em solid var(--theme-color-orange);
     background-color: var(--theme-color-orange);
-    padding: 3px 20px;
+    padding: 3px 15px;
     font-weight: 400;
     color: #fff;
     border-radius: 50em;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .clear-black-btn {
     text-align: center;
     border: 0.08em solid transparent;
     background-color: transparent;
-    padding: 3px 20px;
+    padding: 3px 15px;
     font-weight: 400;
     color: #000;
     border-radius: 50em;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .header-container {

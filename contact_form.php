@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $apiUrl = 'rmcrm-stage-commonnotifications.azurewebsites.net/api/SendEmail';
+    $apiUrl = 'tripmeldcrm-stg-commonnotifications.azurewebsites.net/api/SendEmail';
     
     $postData = [
         "name" => $_POST["fullName"],

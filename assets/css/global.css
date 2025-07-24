@@ -614,20 +614,30 @@
 
 
 /********************* whatsapp container */
-.whatsapp-container {
+.whatsapp-container, .call-now-abs-container {
     position: fixed;
     z-index: 99;
     bottom: 0;
-    right: 3%;
+    right: 20px;
     width: 50px;
     height: 50px;
     background-color: transparent;
+}
+
+.call-now-abs-container{
+    right: 100px;
+    width: auto;
+    height: 45px;
 }
 
 .whatsapp-container i {
     font-size: 40px;
     color:#25D366;
     display: inline-block;
+    animation: whatsappbeat 1.5s infinite;
+}
+
+.call-now-abs-container .call-now-btn{
     animation: whatsappbeat 1.5s infinite;
 }
 

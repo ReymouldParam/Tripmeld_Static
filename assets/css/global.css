@@ -385,8 +385,6 @@
 }
 
 
-
-
 /* Contact form Styles */
 
 .extension-modal {
@@ -424,7 +422,7 @@
     width: auto;
 }
 
-.my-modal-component-css .company-title{
+.my-modal-component-css .company-title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 0;
@@ -624,7 +622,7 @@
     background-color: transparent;
 }
 
-.call-now-abs-container{
+.call-now-abs-container {
     position: fixed;
     z-index: 99;
     right: 0px;
@@ -637,22 +635,24 @@
 
 .whatsapp-container i {
     font-size: 40px;
-    color:#25D366;
+    color: #25D366;
     display: inline-block;
     animation: whatsappbeat 1.5s infinite;
 }
 
-.call-now-abs-container .call-now-btn{
+.call-now-abs-container .call-now-btn {
     border-radius: 3px;
     padding: 2px 10px;
     transition: all 0.5s;
     font-size: 16px;
 }
-.call-now-abs-container .call-now-btn a{
+
+.call-now-abs-container .call-now-btn a {
     color: inherit;
     text-decoration: none;
 }
-.call-now-abs-container:hover{
+
+.call-now-abs-container:hover {
     right: 0;
 }
 

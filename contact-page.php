@@ -20,9 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Send email to primary recipient
     $mailStatus = mail($to, $subject, $body, $headers);
 
-    // Also send copy for testing/logging
-    $mailTest = mail("naresh.narnapati@reymould.com", $subject, $body, $headers);
-
     // Redirect based on success or failure
     if ($mailStatus) {
         header("Location: contact.html?emailSuccess=true");

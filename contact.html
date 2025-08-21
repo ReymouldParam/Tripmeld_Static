@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TripMeld</title>
+    <!-- Canonical tag -->
+    <link rel="canonical" href="https://tripmeld.com/" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/TripMeld_Icon.png" />
+    <!-- Boostrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- font awsome -->
+    <!---fontawesome links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body class="main-page">
+    <header>
+        <div class="header-container padding-x">
+            <div>
+                <div class="logo-container">
+                    <a href=".">
+                        <img src="assets/images/TM_Logo.png" class="h-100" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-main-container">
+                <div class="navbar-container">
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                    </div>
+                    <div class="nav-item">
+                        <a style="text-decoration: none;" href="blogs">
+                            <p class="nav-link">Blogs</p>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <!-- navigation to crm application -->
+                <button class="clear-black-btn me-2 sign-in-btn"> <a style="text-decoration: none; color: black;"
+                        href="https://crm.tripmeld.com/sign-up">Sign Up</a>
+                </button>
+                <button class="unfilled-orange-btn show-contactForm">Demo</button>
+                <div class="toggle-btn-container ms-2">
+                    <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-navbar-container">
+                <div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                    </div>
+                    <div class="nav-item">
+                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                    </div>
+                    <div class="nav-item">
+                        <a style="text-decoration: none; color: inherit;" href="./blogs">
+                            <p class="nav-link">Blogs</p>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link show-contactForm">Contact</p>
+                    </div>
+                    <div class="nav-item">
+                        <p class="nav-link" onclick="openUrl('https://crm.tripmeld.com/sign-up')">Sign
+                            In</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-body">
+        <div class="contact-container-modern">
+            <!-- Left Side: Info Cards -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Address</h3>
+                    <p>Tripmeld Technologies Private Limited
+                        2nd Floor, Plot no 151, Green Park Avenue, Jeedimetla Village, Hyderabad, India, Telangana/p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Phone Number</h3>
+                    <p>+91 9281412020<br>+91 9281412030</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:contact@tripmeld.com">contact@tripmeld.com</a></p>
+                </div>
+                <div class="info-card">
+                    <a href="https://wa.me/919281172020" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/919281172020" target="_blank">Chat Now</a></p>
+                </div>
+            </div>
+            <!-- Right Side: Form -->
+            <div class="contact-form">
+                <h1>Let’s Connect </h1>
+                <!-- <p>We’d love to hear from you! Fill out the form and our team will get back to you quickly.</p> -->
+                <form action="contact.php" method="POST">
+                    <input type="text" name="name" placeholder="Full Name*" required>
+                    <input type="email" name="email" placeholder="Work Email*" required>
+                    <input type="number" name="number" placeholder="Phone Number*" required>
+                    <input type="text" name="organization" placeholder="Company Name">
+                    <select name="company_size">
+                        <option value="">Company Size</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-50">11-50</option>
+                        <option value="51-200">51-200</option>
+                        <option value="201-500">201-500</option>
+                        <option value="500+">500+</option>
+                    </select>
+                    <div>
+                        <textarea id="message" name="dropMessage" placeholder="Your Message..." rows="4"
+                            maxlength="300"></textarea>
+                        <small id="charCount" style="display:block; text-align:right;">0 / 300 characters</small>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="padding-x py-2 footer-section" id="footerSection">
+            <div class="main-container">
+                <div class="content-container">
+                    <div class="text-center w-75 m-auto pt-2 text-container">
+                        <h2 class="title white-color">Accelerate Your Business with TripMeld</h2>
+                        <p class="page-text white-color w-75 m-auto">Your success is just a click away! Sign up now and
+                            experience the power of our
+                            AI-powered CRM to manage leads smarter and faster, helping your travel business grow
+                            rapidly.</p>
+                    </div>
+
+                    <div class="email-container" *ngIf="!userLoggedIn">
+                        <form action="subscribe_form.php" method="post" onsubmit="changeSubscribeButtonText()">
+                            <div class="form-input">
+                                <input type="email" class="email-input" name="email" placeholder="Your Email Address"
+                                    required>
+                                <button class="filled-orange-btn" type="submit" id="subscribeSubmitBtn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-inner-container">
+
+                    <div class="grid-container">
+                        <div class=" p-2">
+                            <div class="item">
+                                <p class="label"><b>About TripMeld Technologies Private Limited</b></p>
+                                <p class="content mb-0">Tripmeld Technologies Private Limited isn’t just a powerful CRM
+                                    tool but with its smart
+                                    features and easy integration,
+                                    it simplifies your lead management and sales tracking. The AI-powered system
+                                    generates custom itineraries
+                                    in minutes, boosting efficiency and productivity every step of the way.</p>
+                            </div>
+                        </div>
+                        <div class=" p-2">
+                            <div class="item">
+                                <p class="label">Contact Us On</p>
+                                <p class="content">+91 9281412020 / +91 9281412030 or contact@tripmeld.com</p>
+                            </div>
+
+                            <div class="item">
+                                <p class="label">Address</p>
+                                <p class="content mb-0"><b>Tripmeld Technologies Private Limited</b></p>
+                                <p class="content mb-0">2nd Floor, Plot no 151, Green Park Avenue, Jeedimetla Village,
+                                    Hyderabad, India,
+                                    Telangana</p>
+                            </div>
+                        </div>
+                        <div class=" p-2">
+
+                            <div class="item">
+                                <p class="label">Social Media</p>
+                                <p class="btn-container d-flex">
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.facebook.com/share/1Ay6rToAD5/?mibextid=wwXIfr')"><ion-icon
+                                            name="logo-facebook"></ion-icon></button>
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.instagram.com/tripmeld?igsh=c3lmZG15ZW1zODc5')"><ion-icon
+                                            name="logo-instagram"></ion-icon></button>
+                                    <button class="social-media-btn"
+                                        onclick="openInNewTab('https://www.linkedin.com/company/tripmeld')"><ion-icon
+                                            name="logo-linkedin"></ion-icon></button>
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <p class="content"><a style="color: inherit;" href="privacy-policy">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- bg-line -->
+                <span class="bg-line one"></span>
+                <span class="bg-line two"></span>
+                <span class="bg-line three"></span>
+                <span class="bg-line four"></span>
+                <span class="bg-line five"></span>
+            </div>
+
+            <div class="disclamer-container">
+                <p class="disclamer mb-0">© Copyright 2024, All Rights Reserved. TripMeld Technologies Private Limited
+                </p>
+            </div>
+            <!-- whats app Number -->
+            <a href="https://wa.me/" class="whatsapp-container" target="_blank">
+                <i class="fa-brands fa-square-whatsapp"></i>
+            </a>
+            <a href="tel:+919281117175" class="call-now-abs-container">
+                <button class="call-now-btn filled-orange-btn"><i class="fa-solid fa-phone"></i> Call Now</button>
+            </a>
+
+        </div>
+    </footer>
+    <script>
+        const message = document.getElementById("message");
+        const charCount = document.getElementById("charCount");
+
+        message.addEventListener("input", () => {
+            charCount.textContent = `${message.value.length} / 300 characters`;
+        });
+    </script>
+</body>
+
+</html>

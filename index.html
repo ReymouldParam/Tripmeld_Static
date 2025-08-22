@@ -68,16 +68,22 @@
             <div class="navbar-main-container">
                 <div class="navbar-container">
                     <div class="nav-item">
-                        <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                        <a href="./#featuesSection" style="text-decoration: none;">
+                            <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
+                        </a>
                     </div>
                     <div class="nav-item">
-                        <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                        <a href="./#pricingSection" style="text-decoration: none;">
+                            <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
+                        </a>
                     </div>
                     <div class="nav-item">
-                        <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                        <a href="./#faqsSection" style="text-decoration: none;">
+                            <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
+                        </a>
                     </div>
                     <div class="nav-item">
-                        <a style="text-decoration: none;" href="blogs">
+                        <a style="text-decoration: none;" href="./blogs">
                             <p class="nav-link">Blogs</p>
                         </a>
                     </div>
@@ -93,7 +99,8 @@
                 <button class="clear-black-btn me-2 sign-in-btn"> <a style="text-decoration: none; color: black;"
                         href="https://crm.tripmeld.com/sign-up">Sign Up</a>
                 </button>
-                <button class="unfilled-orange-btn show-contactForm">Demo</button>
+                <a style="text-decoration: none;" href="contact"> <button class="unfilled-orange-btn">Demo</button>
+                </a>
                 <div class="toggle-btn-container ms-2">
                     <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
                         <ion-icon name="menu-outline"></ion-icon>
@@ -914,7 +921,7 @@
     </footer>
 
     <!-- Modal popup container -->
-<!-- 
+    <!-- 
     <section class="contact-form-container" id="contactFormModal">
         <div class="w-100 h-100 d-flex justify-content-center align-items-center">
             <div class="my-modal-component-css">

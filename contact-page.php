@@ -13,12 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $subject = "Enquiry from Website";
     $body = "Name: $name\nEmail: $email\nNumber: $number\nOrganization: $organization\nCompany Size: $companySize\nMessage:\n$dropMessage";
 
-    // Headers for better email formatting
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Send email to primary recipient
-    $mailStatus = mail($to, $subject, $body, $headers);
+    // Send email (no headers)
+    $mailStatus = mail($to, $subject, $body);
 
     // Redirect based on success or failure
     if ($mailStatus) {

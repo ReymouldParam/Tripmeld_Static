@@ -268,7 +268,6 @@
         </div>
     </div>
 
-
     <!-- footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -378,24 +377,24 @@
                 return;
             }
 
-            // ✅ Backup original styles
+            //  Backup original styles
             const originalOverflow = element.style.overflow;
             const originalTableOverflow = table.style.overflow;
             const originalWhiteSpace = table.style.whiteSpace;
             const originalWidth = table.style.width;
             const originalPosition = table.style.position;
 
-            // ✅ Hide download button during capture
+            //  Hide download button during capture
             downloadButton.style.display = 'none';
 
-            // ✅ Fix table overflow issues for mobile
+            //  Fix table overflow issues for mobile
             element.style.overflow = 'visible';
             table.style.overflow = 'visible';
             table.style.whiteSpace = 'normal';
             table.style.width = `${table.scrollWidth}px`;
             table.style.position = 'static';
 
-            // ✅ Increase scale for better quality in mobile
+            //  Increase scale for better quality in mobile
             const scale = 2;
 
             html2canvas(element, {
@@ -419,7 +418,7 @@
                 console.error('Error generating PDF:', error);
                 alert('Failed to generate PDF. Please try again.');
             }).finally(() => {
-                // ✅ Restore original styles
+                //  Restore original styles
                 element.style.overflow = originalOverflow;
                 table.style.overflow = originalTableOverflow;
                 table.style.whiteSpace = originalWhiteSpace;

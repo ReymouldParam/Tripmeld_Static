@@ -159,14 +159,14 @@
                         <div class="pb-3">
                             <div class="d-flex flex-wrap mb-1" *ngIf="!userLoggedIn">
                                 <a href="./contact">
-                                    <button class="filled-orange-btn me-2 show-contactForm mb-1"
+                                    <button class="filled-orange-btn me-2  mb-1"
                                         (click)="openSignUpModal()">Free
                                         Trial</button>
                                 </a>
                                 <a href="./contact">
-                                    <button class="unfilled-orange-btn me-2 show-contactForm mb-1">Demo</button>
+                                    <button class="unfilled-orange-btn me-2  mb-1">Demo</button>
                                 </a>
-                                <button class="filled-orange-btn me-2  show-contactForm mb-1"
+                                <button class="filled-orange-btn me-2   mb-1"
                                     onclick="downloadBrochure()">
                                     Download Brochure
                                 </button>
@@ -205,11 +205,11 @@
                         <div>
                             <div class="d-flex mb-1" *ngIf="!userLoggedIn">
                                 <a href="./contact">
-                                    <button class="filled-orange-btn me-2 show-contactForm">Free
+                                    <button class="filled-orange-btn me-2 ">Free
                                         Trial</button>
                                 </a>
                                 <a href="./contact">
-                                    <button class="unfilled-orange-btn show-contactForm">Demo</button>
+                                    <button class="unfilled-orange-btn ">Demo</button>
                                 </a>
 
                             </div>
@@ -595,7 +595,7 @@
                                 </div>
                                 <div class="mt-4" *ngIf="!userLoggedIn">
                                     <a href="./contact">
-                                        <button class="filled-orange-btn show-contactForm">Free
+                                        <button class="filled-orange-btn ">Free
                                             Trial</button>
                                     </a>
                                 </div>
@@ -720,11 +720,11 @@
                     <div class="mt-2 d-flex justify-content-center">
                         <div class="d-flex mb-1" *ngIf="!userLoggedIn">
                             <a href="./contact">
-                                <button class="filled-orange-btn me-2 show-contactForm">Free
+                                <button class="filled-orange-btn me-2 ">Free
                                     Trial</button>
                             </a>
                             <a href="./contact">
-                                <button class="unfilled-orange-btn show-contactForm">Demo</button>
+                                <button class="unfilled-orange-btn ">Demo</button>
                             </a>
                         </div>
                         <!-- <div *ngIf="userLoggedIn">
@@ -816,10 +816,10 @@
                             <div class="d-flex justify-content-between align-items-center h-100">
                                 <div class="d-flex mb-1" *ngIf="!userLoggedIn">
                                     <a href="./contact">
-                                        <button class="filled-orange-btn me-2 show-contactForm">Free Trial</button>
+                                        <button class="filled-orange-btn me-2 ">Free Trial</button>
                                     </a>
                                     <a href="./contact">
-                                        <button class="unfilled-orange-btn show-contactForm">Demo</button>
+                                        <button class="unfilled-orange-btn ">Demo</button>
                                     </a>
                                 </div>
                                 <!-- <div *ngIf="userLoggedIn">
@@ -936,93 +936,6 @@
         </div>
     </footer>
 
-    <!-- Modal popup container -->
-    <!-- 
-    <section class="contact-form-container" id="contactFormModal">
-        <div class="w-100 h-100 d-flex justify-content-center align-items-center">
-            <div class="my-modal-component-css">
-                <div class="extension-modal position-relative">
-                    <div class="main-container">
-
-                        <div class="h-100 contact-modal-grid-container">
-
-                            <div class=" p-0">
-                                <div class="px-5 pt-3 d-flex align-items-center">
-                                    <div>
-                                        <p class="company-title mb-0 ms-2">TripMeld Technologies Private Limited</p>
-                                    </div>
-                                </div>
-                                <div class="right-main-container bg-cover">
-                                    <div class="img-container">
-                                        <img src="assets/images/extensions/desktop-person.svg" alt="" class="img">
-
-                                        <img src="assets/images/extensions/circles-cylinder.gif" alt=""
-                                            class="circles-1-gif">
-                                        <img src="assets/images/extensions/circles-cylinder.gif" alt=""
-                                            class="circles-2-gif">
-                                        <img src="assets/images/extensions/arrow-tick.gif" alt="" class="arrow-gif">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class=" p-0">
-                                <div class="left-main-container">
-                                    <div class="logo-container">
-                                        <img src="/assets/images/TM_Logo.png" alt="" class="logo">
-                                    </div>
-                                    <div class="form-main-container">
-                                        <div class="form-container w-100">
-                                            <p class="form-title">Contact Us</p>
-                                            <form action="contact_form.php" method="post"
-                                                onsubmit="changeContactButtonText()">
-                                                <div class="form-input">
-                                                    <input type="text" class="input" placeholder="Full Name*"
-                                                        name="fullName" required>
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <input type="email" class="input" placeholder="Work Email"
-                                                        name="email">
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <input type="tel" class="input" placeholder="Phone Number*"
-                                                        name="phone" pattern="[0-9]{10}" required>
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <input type="text" class="input" placeholder="Company Name"
-                                                        name="companyName">
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <select id="" class="input" name="companySize">
-                                                        <option value="" hidden>Company Size</option>
-                                                        <option value="Above 100">Above 100</option>
-                                                        <option value="51 - 100">51 - 100</option>
-                                                        <option value="21 - 50">21 - 50</option>
-                                                        <option value="06 - 20">06 - 20</option>
-                                                        <option value="0 - 05">0 - 05</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-input">
-                                                    <button class="submit-btn" type="submit"
-                                                        id="contactSubmitBtn">Send</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="modal-close-btn" onclick="hideContactFormModal()">x</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Response popup -->
     <section class="response-popup-container" id="responseMessageModal">
         <div class="d-flex justify-content-center align-items-center w-100 h-100">
@@ -1088,6 +1001,13 @@
             document.body.removeChild(link);
         }
     </script>
+
+    <!-- 1SPOC chatbot -->
+     <script>
+        window.TubuluWeb = { token: "1b937eec-d055-4c59-9f87-435452777512",
+        color: "#1b1b1b", icon: "OUTLINED" }
+        </script>
+    <script src = "https://webchat.1spoc.ai/tubulu.embed.js"></script>
 </body>
 
 </html>

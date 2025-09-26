@@ -1,12 +1,5 @@
 $(document).ready(function () {
-    $(".show-contactForm").on("click", function () {
-        $("#contactFormModal").show(); // Show the element with the specified id
-        $('body').css('overflow', 'hidden');
-    });
-
     // features caorusel
-
-
     $('.feature-titles-carousel').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -76,11 +69,6 @@ $(document).ready(function () {
         ]
     });
 });
-
-function hideContactFormModal() {
-    $("#contactFormModal").hide();
-    $('body').css('overflow', 'auto');
-}
 
 // FAQS funtions
 const faqsData = {

@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u6goukenpc5k/public_html/tripmeld.com
+    - export DEPLOYPATH=/home/u6goukenpc5k/public_html/
     - /bin/cp -R * $DEPLOYPATH

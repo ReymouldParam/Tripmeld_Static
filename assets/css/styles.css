@@ -149,6 +149,14 @@
     font-weight: 600;
     padding: 4px 6px;
 }
+.plans-section .notes-container .notes{
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: gray;
+    font-weight: 500;
+    text-align: center;
+}
 .ai-features-banner {
     background: linear-gradient(109.99deg, #0057ff -7.67%, rgba(10, 52, 149, 0.9) 32.84%, #ffc8a0 79.91%, #fbceae 103.13%, #0a3495 108.06%);
     width: 100%;

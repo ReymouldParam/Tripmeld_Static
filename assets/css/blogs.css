@@ -368,6 +368,10 @@ hr {
     line-height: 1.6;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
 /* Additional paragraph below the overview card */
 .blog-details-paragraph {
     background-color: #fff;

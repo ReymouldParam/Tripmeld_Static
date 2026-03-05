@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Set email recipients
     $to = "contact@tripmeld.com";
-    $subject = "Enquiry from Website";
+    $subject = "Enquiry from Tripmeld Website";
     $body = "Name: $name\nEmail: $email\nNumber: $number\nOrganization: $organization\nCompany Size: $companySize\nMessage:\n$dropMessage";
 
     // Send email (no headers)

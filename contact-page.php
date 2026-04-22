@@ -42,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $response = curl_exec($ch);
 
     if(curl_errno($ch)){
-        header("Location: ./emailStatus=true");
+        header("Location: .?emailStatus=true");
     } else {
-        header("Location: ./emailStatus-false");
+        header("Location: .?emailStatus-false");
     }
 
     curl_close($ch);

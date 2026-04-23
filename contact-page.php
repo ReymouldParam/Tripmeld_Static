@@ -8,10 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $number = $_POST['number'];
     $organization = $_POST['organization'];
     $company_size = $_POST['company_size'];
+    $serviceTpe = $_POST['serviceTpe'];
     $dropMessage = $_POST['dropMessage'];
-
-    // Handle checkbox array
-    $serviceTpe = isset($_POST['serviceTpe']) ? implode(", ", $_POST['serviceTpe']) : "";
 
     // Prepare data
     $data = [

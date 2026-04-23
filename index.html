@@ -52,16 +52,16 @@
                 <form action="contact-page.php" method="POST" onsubmit="changeButtonText()">
                     <div class="d-flex justify-content-start mb-2">
                         <div class="checkbox-container">
-                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="crm" value="CRM">
+                            <input class="checkbox" type="radio" name="serviceTpe" id="crm" value="CRM">
                             <label for="crm" class="checkbox-label">CRM</label>
                         </div>
                         <div class="checkbox-container">
-                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="websiteBuilder"
+                            <input class="checkbox" type="radio" name="serviceTpe" id="websiteBuilder"
                                 value="Website Builder">
                             <label for="websiteBuilder" class="checkbox-label">Website Builder</label>
                         </div>
                         <div class="checkbox-container">
-                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="both"
+                            <input class="checkbox" type="radio" name="serviceTpe" id="both"
                                 value="CRM & Website Builder">
                             <label for="both" class="checkbox-label">Both</label>
                         </div>
@@ -71,9 +71,10 @@
                     <input type="number" name="number" placeholder="Phone Number*" required>
                     <input type="text" name="organization" placeholder="Company Name">
                     <select name="company_size">
-                        <option value="" hidden>Company Size</option>
-                        <option value="1-10">1-10</option>
-                        <option value="11-50">11-50</option>
+                        <option value="" hidden>No Of Users</option>
+                        <option value="1-5">1-5</option>
+                        <option value="5-20">6-20</option>
+                        <option value="20-50">21-50</option>
                         <option value="51-200">51-200</option>
                         <option value="201-500">201-500</option>
                         <option value="500+">500+</option>

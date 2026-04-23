@@ -49,18 +49,20 @@
             <div class="contact-form">
                 <h1>We’re Just One Message Away</h1>
                 <!-- <p>We’d love to hear from you! Fill out the form and our team will get back to you quickly.</p> -->
-                <form action="contact-page.php" method="POST">
+                <form action="contact-page.php" method="POST" onsubmit="changeButtonText()">
                     <div class="d-flex justify-content-start mb-2">
                         <div class="checkbox-container">
                             <input class="checkbox" type="checkbox" name="serviceTpe[]" id="crm" value="CRM">
                             <label for="crm" class="checkbox-label">CRM</label>
                         </div>
                         <div class="checkbox-container">
-                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="websiteBuilder" value="Website Builder">
+                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="websiteBuilder"
+                                value="Website Builder">
                             <label for="websiteBuilder" class="checkbox-label">Website Builder</label>
                         </div>
                         <div class="checkbox-container">
-                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="both" value="CRM & Website Builder">
+                            <input class="checkbox" type="checkbox" name="serviceTpe[]" id="both"
+                                value="CRM & Website Builder">
                             <label for="both" class="checkbox-label">Both</label>
                         </div>
                     </div>
@@ -81,7 +83,7 @@
                             maxlength="300"></textarea>
                         <small id="charCount" style="display:block; text-align:right;">0 / 300 characters</small>
                     </div>
-                    <button type="submit">Send Message</button>
+                    <button type="submit" id="submitButton">Send Message</button>
                 </form>
             </div>
             <!-- Right Side: Form -->
@@ -119,6 +121,16 @@
     </div>
 
     <script>
+        function changeButtonText() {
+            var button = document.getElementById('submitButton');
+            button.innerHTML = '<span class="btn-title">Sending...</span>';
+            button.style.backgroundColor = "#f57c00bf";
+            button.disabled = true;
+            return true; // To proceed with form submission
+        }
+    </script>
+
+    <script>
         const message = document.getElementById("message");
         const charCount = document.getElementById("charCount");
 
@@ -145,13 +157,13 @@
             if (popupMessage && popupHeading && popupOverlay) {
                 if (mailStatus === "true") {
                     // Mail sent successfully
-                    popupHeading.innerText = "EMAIL SENT SUCCESSFULLY";
+                    popupHeading.innerText = "MESSAGE SENT SUCCESSFULLY";
                     popupPara.innerText = "Thank you for reaching out! We will get back to you shortly.";
                     popupMessage.style.display = "block";
                     popupOverlay.style.display = "block";
                 } else if (mailStatus === "false") {
                     // Mail sending failed
-                    popupHeading.innerText = "EMAIL NOT SENT";
+                    popupHeading.innerText = "MESSAGE NOT SENT";
                     popupPara.innerText = "Oops! Something went wrong. Please try again later.";
                     popupMessage.style.display = "block";
                     popupOverlay.style.display = "block";

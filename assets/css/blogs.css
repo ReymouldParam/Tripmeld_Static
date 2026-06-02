@@ -57,8 +57,8 @@ body {
 /* Card Image Area */
 .card-image {
     position: relative;
-    max-width: 500px;
-    max-height: 700px;
+    max-width: 94%;
+    max-height:400px;
     margin: auto;
     margin-left: 20px;
     margin-top: 20px;

@@ -31,6 +31,7 @@
     }
     </script>
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -100,6 +101,25 @@ customizable templates, and seamless invoice management">
 
         gtag('config', 'AW-17860898506');
     </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1363772658082149');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1363772658082149&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="main-page">
@@ -150,7 +170,8 @@ customizable templates, and seamless invoice management">
                 <button class="clear-black-btn me-2 sign-in-btn"> <a style="text-decoration: none; color: black;"
                         href="https://crm.tripmeld.com/sign-up">Sign Up</a>
                 </button>
-                <a style="text-decoration: none;" href="contact"> <button class="unfilled-orange-btn">Demo</button>
+                <a style="text-decoration: none;" href="contact"> <button class="unfilled-orange-btn" onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Demo</button>
                 </a>
                 <div class="toggle-btn-container ms-2">
                     <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
@@ -215,7 +236,8 @@ customizable templates, and seamless invoice management">
                                         Trial</button>
                                 </a> -->
                                 <a href="./contact">
-                                    <button class="unfilled-orange-btn me-2  mb-1">Get Demo</button>
+                                    <button class="unfilled-orange-btn me-2  mb-1" onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Get Demo</button>
                                 </a>
                                 <button class="filled-orange-btn me-2   mb-1" onclick="downloadBrochure()">
                                     Download Brochure
@@ -259,7 +281,8 @@ customizable templates, and seamless invoice management">
                                         Trial</button>
                                 </a> -->
                                 <a href="./contact">
-                                    <button class="filled-orange-btn ">Get Demo</button>
+                                    <button class="filled-orange-btn " onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Get Demo</button>
                                 </a>
 
                             </div>
@@ -648,7 +671,8 @@ customizable templates, and seamless invoice management">
                                 </div>
                                 <div class="mt-4" *ngIf="!userLoggedIn">
                                     <a href="./contact">
-                                        <button class="filled-orange-btn ">Get
+                                        <button class="filled-orange-btn " onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Get
                                             Demo</button>
                                     </a>
                                 </div>
@@ -780,7 +804,8 @@ customizable templates, and seamless invoice management">
                                     Trial</button>
                             </a> -->
                             <a href="./contact">
-                                <button class="unfilled-orange-btn ">Get Demo</button>
+                                <button class="unfilled-orange-btn" onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Get Demo</button>
                             </a>
                         </div>
                         <!-- <div *ngIf="userLoggedIn">
@@ -875,7 +900,8 @@ customizable templates, and seamless invoice management">
                                         <button class="filled-orange-btn me-2 ">Free Trial</button>
                                     </a> -->
                                     <a href="./contact">
-                                        <button class="unfilled-orange-btn ">Get Demo</button>
+                                        <button class="unfilled-orange-btn" onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Get Demo</button>
                                     </a>
                                 </div>
                                 <!-- <div *ngIf="userLoggedIn">
@@ -982,7 +1008,8 @@ customizable templates, and seamless invoice management">
                 </p>
             </div>
             <!-- whats app Number -->
-            <a href="https://wa.me/9281117175" class="whatsapp-container" target="_blank">
+            <a href="https://wa.me/9281117175" class="whatsapp-container" onclick="fbq('track', 'Contact');
+gtag('event', 'whatsapp_click');" target="_blank">
                 <i class="fa-brands fa-square-whatsapp"></i>
             </a>
             <a href="tel:+919281117175" class="call-now-abs-container">

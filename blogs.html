@@ -110,6 +110,25 @@ customizable templates, and seamless invoice management">
         gtag('config', 'AW-17860898506');
     </script>
 
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1363772658082149');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1363772658082149&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body class="main-page">
@@ -160,7 +179,8 @@ customizable templates, and seamless invoice management">
                 <button class="clear-black-btn me-2 sign-in-btn"> <a style="text-decoration: none; color: black;"
                         href="https://crm.tripmeld.com/sign-up">Sign Up</a>
                 </button>
-                <a style="text-decoration: none;" href="contact"> <button class="unfilled-orange-btn">Demo</button>
+                <a style="text-decoration: none;" href="contact"> <button class="unfilled-orange-btn" onclick="fbq('track', 'Lead');
+gtag('event', 'generate_lead');">Demo</button>
                 </a>
                 <div class="toggle-btn-container ms-2">
                     <button class="toggle-btn d-flex" onclick="toggleMobileNavBar()">
@@ -842,7 +862,8 @@ customizable templates, and seamless invoice management">
                                 <div class="blog-meta">
                                     <p> Nov 15, 2025</p>
                                 </div>
-                                <h2> Boost Bookings with the <a href="https://www.tripmeld.com" style="text-decoration: none;"> Best Travel CRM Software </a> </h2>
+                                <h2> Boost Bookings with the <a href="https://www.tripmeld.com"
+                                        style="text-decoration: none;"> Best Travel CRM Software </a> </h2>
                                 <p>
                                     Running a travel agency isn't easy. Between balancing customer inquiries, managing
                                     bookings, and keeping track of countless itineraries, things can quickly get
@@ -5132,7 +5153,8 @@ customizable templates, and seamless invoice management">
                                         responds first with the best offer. If you're still managing everything through
                                         spreadsheets and notebooks, you're already behind.
                                     </p>
-                                    <h2> How the <a href="." style="text-decoration: none;"> Best Travel CRM Software </a> Changes the Game </h2>
+                                    <h2> How the <a href="." style="text-decoration: none;"> Best Travel CRM Software
+                                        </a> Changes the Game </h2>
                                     <p>
                                         Imagine having every customer detail, inquiry, and interaction stored in one
                                         place. That's what the best travel CRM software does for your business. Instead
@@ -11277,7 +11299,8 @@ customizable templates, and seamless invoice management">
                 </p>
             </div>
             <!-- whats app -->
-            <a href="https://wa.me/9281117175" class="whatsapp-container" target="_blank">
+            <a href="https://wa.me/9281117175" class="whatsapp-container" onclick="fbq('track', 'Contact');
+gtag('event', 'whatsapp_click');" target="_blank">
                 <i class="fa-brands fa-square-whatsapp"></i>
             </a>
 

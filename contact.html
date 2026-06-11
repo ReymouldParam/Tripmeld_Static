@@ -465,17 +465,16 @@ gtag('event', 'generate_lead');">Demo</button>
     </script>
 
     <script>
-        document.getElementById("contact-form")
-            .addEventListener("submit", function () {
+        document
+            .getElementById("contact-form")
+            .addEventListener(
+                "submit",
+                function () {
 
-                fbq('track', 'Lead');
+                    fbq('track', 'Lead');
 
-                gtag('event', 'generate_lead', {
-                    event_category: 'Contact Form',
-                    event_label: 'Contact Page'
-                });
-
-            });
+                }
+            );
     </script>
 </body>
 

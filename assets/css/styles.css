@@ -1,3 +1,7 @@
+#pricingSection{
+    display: none !important;
+}
+
 .landing-section {
     width: 100%;
     background-image: url('/assets/images/home/landing-section-bg.png');

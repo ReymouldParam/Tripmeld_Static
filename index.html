@@ -101,21 +101,41 @@ customizable templates, and seamless invoice management">
 
         gtag('config', 'AW-17860898506');
     </script>
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel -->
     <script>
         !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
+            if (f.fbq) return;
+            n = f.fbq = function () {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1363772658082149');
+
+            if (!f._fbq) f._fbq = n;
+
+            n.push = n;
+
+            n.loaded = !0;
+
+            n.version = '2.0';
+
+            n.queue = [];
+
+            t = b.createElement(e);
+
+            t.async = !0;
+
+            t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+
+            s = b.getElementsByTagName(e)[0];
+
+            s.parentNode.insertBefore(t, s);
+
+        }(window, document, 'script');
+
+        fbq('init', '1300574055118885');
+
         fbq('track', 'PageView');
+
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1363772658082149&ev=PageView&noscript=1" /></noscript>
@@ -236,8 +256,7 @@ gtag('event', 'generate_lead');">Demo</button>
                                         Trial</button>
                                 </a> -->
                                 <a href="./contact">
-                                    <button class="unfilled-orange-btn me-2  mb-1" onclick="fbq('track', 'Lead');
-gtag('event', 'generate_lead');">Get Demo</button>
+                                    <button class="unfilled-orange-btn me-2  mb-1" id="bookDemo">Get Demo</button>
                                 </a>
                                 <button class="filled-orange-btn me-2   mb-1" onclick="downloadBrochure()">
                                     Download Brochure
@@ -1093,6 +1112,14 @@ gtag('event', 'whatsapp_click');" target="_blank">
         }
     </script>
     <script src="https://webchat.1spoc.ai/tubulu.embed.js"></script>
+    <script>
+        document
+            .getElementById("bookDemo")
+            .addEventListener("click", function () {
+                fbq('trackCustom', 'BookDemo');
+
+            });
+    </script>
 </body>
 
 </html>

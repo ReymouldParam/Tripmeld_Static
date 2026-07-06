@@ -36,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Meta content -->
-    <title>TripMeld | AI-Powered Best Travel CRM for Agents & DMCs</title>
+    <title>TripMeld | Travel CRM</title>
     <meta name="title" content="TripMeld | AI-Powered Best Travel CRM for Agents & DMCs" />
     <meta name="description"
         content="TripMeld - The Best Travel CRM for Agents & DMCs! AI-powered quotes, DMC integrations & visa tracking to boost sales & client engagement." />
@@ -80,6 +80,7 @@ customizable templates, and seamless invoice management">
 
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/travel-crm.css">
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -142,7 +143,7 @@ customizable templates, and seamless invoice management">
     <!-- End Meta Pixel Code -->
 </head>
 
-<body class="main-page">
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT36RN2Q" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -230,453 +231,35 @@ gtag('event', 'generate_lead');">Demo</button>
     </header>
     <div class="main-body">
         <div>
-            <!-- landing section start -->
-            <section class="landing-section padding-x py-2">
-                <div class="d-flex h-100 main-container">
-                    <div class="inner-container-1 py-3">
-                        <div class="heading-container">
-                            <h1 class="landing-main-title text-capitilize">Discover Our All-In-One <span
-                                    class="orange-color">Travel CRM </span>
-                            </h1>
-                            <p class="page-text mb-2">
-                                Transform your travel business with our smart, AI-Powered platform designed especially
-                                for
-                                the travel
-                                industry. Effortlessly connect your data, improve team collaboration, and
-                                enhance customer
-                                relationships on a powerful CRM that scales with your growth.
-                            </p>
-                        </div>
+            <section class="crm-hero">
 
-                        <div class="pb-3">
-                            <div class="d-flex flex-wrap mb-1" *ngIf="!userLoggedIn">
-                                <!-- <a href="./contact">
-                                    <button class="filled-orange-btn me-2  mb-1"
-                                        (click)="openSignUpModal()">Free
-                                        Trial</button>
-                                </a> -->
-                                <a href="./contact">
-                                    <button class="unfilled-orange-btn me-2  mb-1" id="bookDemo">Get Demo</button>
-                                </a>
-                                <button class="filled-orange-btn me-2   mb-1" onclick="downloadBrochure()">
-                                    Download Brochure
-                                </button>
-                            </div>
-                            <!-- <div *ngIf="userLoggedIn">
-                                <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
-                                    Apps</button>
-                            </div> -->
-                            <div>
-                                <p class="page-text">
-                                    Try our premium travel CRM for free. Get Started Today!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="crm-hero-inner">
 
-                    <div class="inner-container-2">
-                        <div class="w-100 h-100">
-                            <img class="w-100" src="assets/images/home/landing-section-img.png" alt="landing-section">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Landing section end -->
+                    <div class="crm-hero-left">
 
-            <!-- Features section start -->
-            <section id="featuesSection">
-                <div class="features-section padding-x py-2">
-                    <div class="d-flex justify-content-between align-items-center features-title-flex-container">
-                        <div>
-                            <p class="page-text white-color">
-                                Satisfied Clients, Motivated Teams - Success That Always Speaks
-                            </p>
-                            <h3 class="section-heading white-color">TripMeld Features</h3>
-                        </div>
-                        <div>
-                            <div class="d-flex mb-1" *ngIf="!userLoggedIn">
-                                <!-- <a href="./contact">
-                                    <button class="filled-orange-btn me-2 ">Free
-                                        Trial</button>
-                                </a> -->
-                                <a href="./contact">
-                                    <button class="filled-orange-btn " onclick="fbq('track', 'Lead');
-gtag('event', 'generate_lead');">Get Demo</button>
-                                </a>
+                        <h1 class="crm-hero-title">
+                            Streamline Itineraries & Client
+                            Management With Our <span>Travel CRM</span>
+                        </h1>
 
-                            </div>
-                            <!-- <div *ngIf="userLoggedIn">
-                                <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
-                                    Apps</button>
-                            </div> -->
-                        </div>
-                    </div>
+                        <p class="crm-hero-desc">
+                            Transform your travel business with our smart, AI-driven platform designed specially for the
+                            travel industry.
+                            You can effortlessly connect your data, improve team collaboration, and enhance customer
+                            relationships on
+                            a powerful CRM that scales with your growth.
+                        </p>
 
-                    <div class="mt-3">
-                        <div class="d-flex justify-content-between features-flex-container">
-                            <div class="features-headings-main-container">
-                                <div class="feature-titles-carousel">
-                                    <div class="single-feature-container">
-                                        <div>
-                                            <p class="title">Instant Lead Generation</p>
-                                            <p class="sub-text">Efficient Lead Management with Smart Automation</p>
-                                        </div>
-                                    </div>
+                        <a href="#" class="crm-demo-btn">Demo</a>
 
-                                    <div class="single-feature-container">
-                                        <div>
-                                            <p class="title">AI-Integrated Quote Creation</p>
-                                            <p class="sub-text">Get Smarter & Custom Itineraries Within Minutes</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-feature-container">
-                                        <div>
-                                            <p class="title">Seamless Communication</p>
-                                            <p class="sub-text">Effortless Chats and Calls All at One Place</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-feature-container">
-                                        <div>
-                                            <p class="title">Top DMC Integration</p>
-                                            <p class="sub-text">Get Instant Access To 200+ Destination Experts</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-feature-container">
-                                        <div>
-                                            <p class="title">Real-Time Visa Tracking </p>
-                                            <p class="sub-text">Quick And hassle-free visa processing updates</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="single-feature-container">
-                                        <div>
-                                            <p class="title">Inventory Pool </p>
-                                            <p class="sub-text">Central Hub For Ready-Made Itineraries</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="feature-details-main-container">
-                                <div class="feature-details-carousel w-100">
-                                    <div class="carousel-item">
-                                        <div class="img-container">
-                                            <img class="img" src="assets/images/home/features/lead.webp" alt="lead">
-                                        </div>
-                                        <div>
-                                            <p class="page-text mt-2">Streamlined lead capturing and tracking process
-                                                from inquiry to conversion. Automated status updates for leads based on
-                                                quote and voucher actions.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <div class="img-container">
-                                            <img class="img" src="assets/images/home/features/route-craft.webp"
-                                                alt="route-craft">
-                                        </div>
-                                        <div>
-                                            <p class="page-text mt-2">Automatically generates optimized day-to-day
-                                                travel plans.Reduces manual effort in crafting itineraries while
-                                                ensuring personalized experiences for clients.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <div class="img-container">
-                                            <img class="img" src="assets/images/home/features/chat.webp" alt="chat">
-                                        </div>
-                                        <div>
-                                            <p class="page-text mt-2">Enables real-time
-                                                communication between internal teams, external DMCs, and vendors for
-                                                better collaboration. Call Recording and Lead Integration: Automatically
-                                                records calls, links them to leads, and maintains detailed records for
-                                                easy reference.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <div class="img-container">
-                                            <img class="img" src="assets/images/home/features/dmc.webp" alt="dmc">
-                                        </div>
-                                        <div>
-                                            <p class="page-text mt-2">Seamless communication and collaboration between
-                                                travel agents, DMCs, and vendors.Enables efficient sharing of
-                                                itineraries, quotes, and service details.</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <div class="img-container">
-                                            <img class="img" src="assets/images/home/features/visa.webp" alt="Visa">
-                                        </div>
-                                        <div>
-                                            <p class="page-text mt-2">Captures lead information and tracks visa
-                                                application statuses. Allows leads to download their visas directly from
-                                                the portal, providing a seamless customer experience.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <div class="img-container">
-                                            <img class="img" src="assets/images/home/features/inventory.webp"
-                                                alt="inventory">
-                                        </div>
-                                        <div>
-                                            <p class="page-text mt-2">Centralized repository of pre-designed itineraries
-                                                for quick use.Customizable templates for creating professional and
-                                                detailed day-to-day itineraries.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Website Builder Section -->
-            <section class="travel-showcase-section">
-
-                <div class="bg-pattern bg-left"></div>
-                <div class="bg-pattern bg-right"></div>
-
-                <div>
-                    <div class="travel-showcase-wrapper">
-
-                        <!-- Left -->
-                        <div class="showcase-left">
-
-                            <div class="template-frame">
-
-                                <div class="template-scroll">
-
-                                    <div class="template-scroll-inner">
-
-                                        <img src="./assets/images/home/website-builder-template.png"
-                                            alt="Website Template" class="template-image">
-
-                                        <!-- Duplicate image -->
-                                        <img src="./assets/images/home/website-builder-template.png"
-                                            alt="Website Template" class="template-image">
-
-                                    </div>
-
-                                </div>
-
-                                <div class="template-fade"></div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Right -->
-                        <div class="showcase-right">
-                            <h2 class="website-builder-heading">
-                                Launch Your Dream
-                                <span>Travel Website</span>
-                                Faster Than Ever
-                            </h2>
-
-                            <p class="section-description">
-                                Everything you need to showcase tours, collect inquiries,
-                                and grow your travel business online.
-                            </p>
-
-                            <ul class="feature-list">
-
-                                <li>
-                                    <div class="feature-icon">
-                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                            class="rocket-icon">
-                                    </div>
-                                    <span>Dynamic Website</span>
-                                </li>
-
-                                <li>
-                                    <div class="feature-icon">
-                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                            class="rocket-icon">
-                                    </div>
-                                    <span>Customizable Templates</span>
-                                </li>
-
-                                <li>
-                                    <div class="feature-icon">
-                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                            class="rocket-icon">
-                                    </div>
-                                    <span>Lead Capturing</span>
-                                </li>
-
-                                <li>
-                                    <div class="feature-icon">
-                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                            class="rocket-icon">
-                                    </div>
-                                    <span>Real-Time Visa Updates</span>
-                                </li>
-
-                                <li>
-                                    <div class="feature-icon">
-                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                            class="rocket-icon">
-                                    </div>
-                                    <span>Promote Discounts & Offers</span>
-                                </li>
-
-                            </ul>
-
-                            <a href="#" class="quote-btn">
-
-                                <span>Get Quote</span>
-
-                                <div class="btn-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- Pricing Section -->
-            <section class="pricing-section">
-
-                <div class="pricing-header">
-                    <p class="pricing-subtitle">No Surprises. Everything is Fair</p>
-                    <h2 class="pricing-title">Start With The Plan That's<br><span>Right</span> For You</h2>
-                </div>
-
-                <div class="pricing-main-cards">
-
-                    <!-- CRM Packages -->
-                    <div class="pricing-card active" data-plan="crm">
-
-                        <!-- <span class="popular-badge">Most Popular</span> -->
-
-                        <div class="pricing-card-header">
-                            <div class="pricing-icon">
-                                <i class="fa-solid fa-gear"></i>
-                            </div>
-                            <div class="pricing-card-title">
-                                <h3>CRM Packages</h3>
-                                <p>Core Management</p>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <h4 class="feature-heading">Included Feature</h4>
-
-                        <ul class="feature-grid">
-                            <li><i class="fa-solid fa-circle-check"></i> Dashboard</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Task Management</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Lead Management</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Itinerary Inventory</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Quote & Itinerary Management</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Standard Itinerary Format</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Custom Route Builder</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Calendar</li>
-                        </ul>
-
-                        <!-- Footer group stays pinned to bottom -->
-                        <div class="card-footer">
-                            <div class="card-buttons">
-                                <a href="#" class="btn-primary">Get Inquiry</a>
-                                <a href="#" class="btn-secondary">View Demo</a>
-                            </div>
-                            <hr class="note-divider">
-                            <p class="custom-note">Need Custom Package? <a href="#">Contact Sales</a></p>
-                        </div>
+                        <p class="crm-hero-note">Try our premium travel CRM for free: Get Started Today!</p>
 
                     </div>
 
-                    <!-- Website Builder -->
-                    <div class="pricing-card" data-plan="website">
-
-                        <!-- <span class="popular-badge">Most Popular</span> -->
-
-                        <div class="pricing-card-header">
-                            <div class="pricing-icon">
-                                <i class="fa-solid fa-globe"></i>
-                            </div>
-                            <div class="pricing-card-title">
-                                <h3>Website Builder</h3>
-                                <p>Online Presence</p>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <h4 class="feature-heading">Included Feature</h4>
-
-                        <ul class="feature-grid single-col">
-                            <li><i class="fa-solid fa-circle-check"></i> Drag & Drop Builder</li>
-                            <li><i class="fa-solid fa-circle-check"></i> One CRM User Free</li>
-                            <li><i class="fa-solid fa-circle-check"></i> 24/7 Support</li>
-                        </ul>
-
-                        <!-- Footer group stays pinned to bottom -->
-                        <div class="card-footer">
-                            <div class="card-buttons">
-                                <a href="#" class="btn-primary">Get Inquiry</a>
-                                <a href="#" class="btn-secondary">View Demo</a>
-                            </div>
-                            <hr class="note-divider">
-                            <p class="custom-note">Need Custom Package? <a href="#">Contact Sales</a></p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="pricing-addon-cards">
-
-                    <div class="addon-card">
-                        <h4><i class="fa-solid fa-bullhorn"></i> Digital Marketing</h4>
-                        <ul>
-                            <li><i class="fa-solid fa-circle-check"></i> Email Campaigns</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Social Media Marketing</li>
-                            <li><i class="fa-solid fa-circle-check"></i> SEO</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Google Ads</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Campaign Marketing</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Branding Strategy</li>
-                        </ul>
-                        <a href="#" class="btn-primary full">Get Inquiry</a>
-                    </div>
-
-                    <div class="addon-card">
-                        <h4><i class="fa-brands fa-whatsapp"></i> WhatsApp Integration</h4>
-                        <ul>
-                            <li><i class="fa-solid fa-circle-check"></i> Automated messages</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Broadcast Campaigns</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Chatbot</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Customer Support Automation</li>
-                        </ul>
-                        <a href="#" class="btn-primary full">Get Inquiry</a>
-                    </div>
-
-                    <div class="addon-card">
-                        <h4><i class="fa-solid fa-rocket"></i> Services Growth Package</h4>
-                        <ul>
-                            <li><i class="fa-solid fa-circle-check"></i> CRM Package Included</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Website Builder Included</li>
-                            <li><i class="fa-solid fa-circle-check"></i> Digital Marketing</li>
-                            <li><i class="fa-solid fa-circle-check"></i> WhatsApp Integration</li>
-                        </ul>
-                        <a href="#" class="btn-primary full">Get Inquiry</a>
+                    <div class="crm-hero-right">
+                        <div class="crm-mockup-glow"></div>
+                        <img src="./assets/images/home/travel-crm-banner.png" alt="Travel CRM Dashboard"
+                            class="crm-mockup-img">
                     </div>
 
                 </div>
@@ -717,7 +300,6 @@ gtag('event', 'generate_lead');">Get Demo</button>
 
                 </div>
             </section>
-
             <!-- Growth Faster  -->
             <section class="impact-section">
 
@@ -1054,7 +636,7 @@ gtag('event', 'generate_lead');">Get Demo</button>
             </section>
 
             <!-- Banner container start -->
-            <section>
+            <!-- <section>
                 <div class="ai-features-banner padding-x">
                     <div class="padding-x">
                         <div class="grid-container">
@@ -1083,7 +665,7 @@ gtag('event', 'generate_lead');">Get
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Services section start -->
             <section>
@@ -1310,7 +892,6 @@ gtag('event', 'generate_lead');">Get Demo</button>
                     </div>
                 </div>
             </section>
-
         </div>
     </div>
     <footer>
@@ -1413,7 +994,6 @@ gtag('event', 'whatsapp_click');" target="_blank">
 
         </div>
     </footer>
-
     <!-- Response popup -->
     <section class="response-popup-container" id="responseMessageModal">
         <div class="d-flex justify-content-center align-items-center w-100 h-100">
@@ -1428,7 +1008,6 @@ gtag('event', 'whatsapp_click');" target="_blank">
             </div>
         </div>
     </section>
-
     <!-- Load reCAPTCHA script -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Jquory CDN -->

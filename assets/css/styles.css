@@ -700,9 +700,690 @@ Background Pattern
 
 }
 
+/* ************* Package Details Section */
+.pricing-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+
+.pricing-subtitle {
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 0 6px;
+}
+
+.pricing-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.1;
+    margin: 0 0 20px;
+}
+
+.pricing-title span {
+    color: #f2711c;
+}
+
+/* ---------- Main two cards ---------- */
+.pricing-main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 22px;
+    padding: 20px 20px 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-card.active {
+    border-color: #f2711c;
+    box-shadow: 0 8px 24px rgba(242, 113, 28, 0.14);
+}
+
+/* Corner tag badge — flush with card's top-left corner */
+.popular-badge {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #17181c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px 8px 14px;
+    border-radius: 22px 0 12px 0;
+    z-index: 5;
+}
+
+.pricing-card.active .popular-badge {
+    display: inline-block;
+}
+
+.pricing-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    margin-top: 6px;
+}
+
+.pricing-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6C63FF;
+    color: #fff;
+    font-size: 18px;
+}
+
+.pricing-card-title h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.pricing-card-title p {
+    font-size: 12.5px;
+    color: #9ca3af;
+    margin: 2px 0 0;
+}
+
+.pricing-card hr {
+    border: none;
+    border-top: 1px solid #eef0f2;
+    margin: 16px 0;
+}
+
+.feature-heading {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 14px;
+}
+
+.feature-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 16px;
+}
+
+.feature-grid.single-col {
+    grid-template-columns: 1fr;
+}
+
+.feature-grid li {
+    font-size: 13.5px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature-grid i {
+    color: #f2711c;
+    font-size: 13px;
+}
+
+/* This is the key fix: pushes buttons + divider + note to the same
+   bottom line in both cards, no matter how many features each has */
+.card-footer {
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    padding: 11px 0;
+    border-radius: 30px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+.btn-primary {
+    background: #f2711c;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #fbe4cf;
+    color: #c05a1d;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.85;
+}
+
+.note-divider {
+    margin: 0 0 12px !important;
+}
+
+.custom-note {
+    text-align: center;
+    font-size: 12.5px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.custom-note a {
+    color: #2f6fed;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .pricing-main-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ribbon-style badge with a folded notch, hidden unless active */
+.popular-badge {
+    display: none;
+    position: absolute;
+    top: -14px;
+    left: 28px;
+    background: #17181c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 16px 6px 14px;
+    border-radius: 6px 6px 6px 0;
+}
+
+.popular-badge::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 0;
+    border-color: #000 transparent transparent transparent;
+    filter: brightness(0.6);
+}
+
+.pricing-card.active .popular-badge {
+    display: inline-block;
+}
+
+.pricing-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 0;
+}
+
+.pricing-icon {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6C63FF;
+    color: #fff;
+    font-size: 18px;
+}
+
+.pricing-card-title h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.pricing-card-title p {
+    font-size: 12.5px;
+    color: #9ca3af;
+    margin: 2px 0 0;
+}
+
+.pricing-card hr {
+    border: none;
+    border-top: 1px solid #eef0f2;
+    margin: 16px 0;
+}
+
+.feature-heading {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 14px;
+}
+
+.feature-grid {
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 16px;
+}
+
+.feature-grid.single-col {
+    grid-template-columns: 1fr;
+}
+
+.feature-grid li {
+    font-size: 13.5px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature-grid i {
+    color: #f2711c;
+    font-size: 13px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.btn-primary,
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    padding: 11px 0;
+    border-radius: 30px;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+}
+
+.btn-primary {
+    background: #E17F29;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #fbe4cf;
+    color: #c05a1d;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.85;
+}
+
+.note-divider {
+    margin: 0 0 12px !important;
+}
+
+.custom-note {
+    text-align: center;
+    font-size: 12.5px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.custom-note a {
+    color: #2f6fed;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ---------- Bottom addon cards ---------- */
+
+.pricing-addon-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.addon-card {
+    position: relative;
+    background: #FCE5D1;
+    border: 1px solid #f6d7b3;
+    border-radius: 20px;
+    padding: 22px 24px 40px;
+    text-align: left;
+    overflow: visible;
+}
+
+.addon-card h4 {
+    color: #E17F29;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.addon-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.addon-card li {
+    font-size: 13.5px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 9px;
+}
+
+.btn-primary.full {
+    position: absolute;
+    left: 1px;
+    /* right: 24px; */
+    bottom: -12%;
+    transform: translateY(50%);
+    display: block;
+    width: auto;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(242, 113, 28, 0.35);
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    .pricing-main-cards,
+    .pricing-addon-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ****************AI DRIVEN FEATURES**************** */
+.ai-features-section {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.ai-features-section .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+}
+
+.ai-features-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    /* min-height: 420px; */
+    padding: 60px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+
+    background-color: #eef2fd;
+    background-image: url("../images/home/ai-fram-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Left */
+
+.ai-content {
+    flex: 0 0 42%;
+    z-index: 2;
+}
+
+.ai-content h2 {
+    font-size: 40px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 22px;
+}
+
+.ai-content h2 span {
+    display: block;
+}
+
+.ai-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 35px;
+    max-width: 470px;
+}
+
+.ai-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 34px;
+    background: #ef7b31;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.ai-btn:hover {
+    background: #dd6a22;
+}
+
+/* Right */
+
+.ai-image {
+    flex: 0 0 58%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.ai-image img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ********************* Growth Faster  */
+
+.impact-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* Heading — full width, top of section */
+.impact-heading {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.impact-subtitle {
+    font-size: 12.5px;
+    color: #6b7280;
+    margin: 0 0 6px;
+}
+
+.impact-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+/* Body row — cards on the left, paragraph + wave on the right */
+.impact-body {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.impact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.impact-card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 15px;
+    overflow: hidden;
+    border: 1px solid #eef0f3;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.impact-card:hover {
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    transform: translateY(-2px);
+}
+
+.impact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to right,
+            #1d4ed8 0%,
+            #3b82f6 22%,
+            #93c5fd 50%,
+            rgba(147, 197, 253, 0) 85%);
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.35);
+}
+
+.impact-card h3 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px;
+}
+
+.impact-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    margin: 0 0 24px;
+}
+
+.impact-card p {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: #94a3b8;
+    max-width: 250px;
+    margin: 0;
+}
+
+/* Right column: paragraph + wave */
+.impact-side {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.impact-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6b7280;
+    margin: 0;
+}
+
+.wave-wrapper {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    margin-left: -45px;
+    overflow: hidden;
+}
+
+.wave-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    animation: waveFlow 14s linear infinite;
+}
+
+.wave-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wave-line {
+    vector-effect: non-scaling-stroke;
+}
+
+@keyframes waveFlow {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 900px) {
+    .impact-body {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-cards {
+        order: 1;
+    }
+
+    .impact-side {
+        order: 2;
+    }
+}
+
 /*==========================
-Responsive
+Responsive website builder section
 ===========================*/
+
 
 @media(max-width:991px) {
 

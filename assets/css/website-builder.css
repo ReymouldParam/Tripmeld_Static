@@ -1,0 +1,180 @@
+/* ===========================
+   Travel Demo Section
+=========================== */
+
+.travel-demo-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.travel-demo-section .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.travel-demo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    background: #eef2fd;
+    border-radius: 22px;
+    overflow: hidden;
+    padding: 55px 0 55px 70px;
+    min-height: 420px;
+    position: relative;
+}
+
+/* ===========================
+   Left Content
+=========================== */
+
+.travel-demo-content {
+    flex: 0 0 42%;
+    max-width: 460px;
+}
+
+.travel-demo-content h2 {
+    font-size: 46px;
+    line-height: 1.18;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 24px;
+}
+
+.travel-demo-content h2 span {
+    color: #ff8a00;
+}
+
+.travel-demo-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #5b5b5b;
+    margin-bottom: 42px;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.travel-demo-btn {
+    margin-bottom: 16px;
+}
+
+.travel-demo-btn a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 44px;
+    border: 1.5px solid #ff8a00;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ff8a00;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.travel-demo-btn a:hover {
+    background: #ff8a00;
+    color: #fff;
+}
+
+.travel-demo-content small {
+    display: block;
+    font-size: 13px;
+    color: #666;
+}
+
+/* ===========================
+   Right Image
+=========================== */
+
+.travel-demo-image {
+    flex: 0 0 58%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.travel-demo-image img {
+    width: 100%;
+    max-width: 760px;
+    display: block;
+    object-fit: contain;
+    transform: translateX(30px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1199px) {
+
+    .travel-demo-wrapper {
+        gap: 40px;
+        padding: 50px;
+    }
+
+    .travel-demo-content h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .travel-demo-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 35px;
+    }
+
+    .travel-demo-content {
+        max-width: 100%;
+        flex: 100%;
+    }
+
+    .travel-demo-image {
+        justify-content: center;
+    }
+
+    .travel-demo-image img {
+        transform: none;
+        max-width: 100%;
+    }
+
+    .travel-demo-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .travel-demo-section {
+        padding: 60px 0;
+    }
+
+    .travel-demo-wrapper {
+        padding: 35px 20px;
+        border-radius: 16px;
+    }
+
+    .travel-demo-content h2 {
+        font-size: 30px;
+    }
+
+    .travel-demo-content p {
+        font-size: 14px;
+    }
+
+    .travel-demo-btn a {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

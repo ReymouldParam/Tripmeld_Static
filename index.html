@@ -442,6 +442,114 @@ gtag('event', 'generate_lead');">Get Demo</button>
                 </div>
             </section>
 
+            <!-- Website Builder Section -->
+            <section class="travel-showcase-section">
+
+                <div class="bg-pattern bg-left"></div>
+                <div class="bg-pattern bg-right"></div>
+
+                <div>
+                    <div class="travel-showcase-wrapper">
+
+                        <!-- Left -->
+                        <div class="showcase-left">
+
+                            <div class="template-frame">
+
+                                <div class="template-scroll">
+
+                                    <div class="template-scroll-inner">
+
+                                        <img src="./assets/images/home/website-builder-template.png"
+                                            alt="Website Template" class="template-image">
+
+                                        <!-- Duplicate image -->
+                                        <img src="./assets/images/home/website-builder-template.png"
+                                            alt="Website Template" class="template-image">
+
+                                    </div>
+
+                                </div>
+
+                                <div class="template-fade"></div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Right -->
+                        <div class="showcase-right">
+                            <h2 class="website-builder-heading">
+                                Launch Your Dream
+                                <span>Travel Website</span>
+                                Faster Than Ever
+                            </h2>
+
+                            <p class="section-description">
+                                Everything you need to showcase tours, collect inquiries,
+                                and grow your travel business online.
+                            </p>
+
+                            <ul class="feature-list">
+
+                                <li>
+                                    <div class="feature-icon">
+                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                            class="rocket-icon">
+                                    </div>
+                                    <span>Dynamic Website</span>
+                                </li>
+
+                                <li>
+                                    <div class="feature-icon">
+                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                            class="rocket-icon">
+                                    </div>
+                                    <span>Customizable Templates</span>
+                                </li>
+
+                                <li>
+                                    <div class="feature-icon">
+                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                            class="rocket-icon">
+                                    </div>
+                                    <span>Lead Capturing</span>
+                                </li>
+
+                                <li>
+                                    <div class="feature-icon">
+                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                            class="rocket-icon">
+                                    </div>
+                                    <span>Real-Time Visa Updates</span>
+                                </li>
+
+                                <li>
+                                    <div class="feature-icon">
+                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                            class="rocket-icon">
+                                    </div>
+                                    <span>Promote Discounts & Offers</span>
+                                </li>
+
+                            </ul>
+
+                            <a href="#" class="quote-btn">
+
+                                <span>Get Quote</span>
+
+                                <div class="btn-icon">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
             <!-- Subscribe plan section start -->
             <section id="pricingSection">
                 <div class="plans-section padding-x py-3 bg-cover">
@@ -933,8 +1041,6 @@ gtag('event', 'generate_lead');">Get Demo</button>
                 </div>
             </section>
 
-
-
         </div>
     </div>
     <footer>
@@ -1074,7 +1180,47 @@ gtag('event', 'whatsapp_click');" target="_blank">
     <!-- Custom JS files -->
     <script src="assets/js/global.js"></script>
     <script src="assets/js/home.js"></script>
+    <!-- Website Builder Section -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const frame = document.querySelector(".template-frame");
+            const scrollInner = document.querySelector(".template-scroll-inner");
+            if (!frame || !scrollInner) return;
+            const images = scrollInner.querySelectorAll(".template-image");
+            let imageHeight = 0;
+            let currentY = 0;
+            let isPaused = false;
+            function init() {
+                imageHeight = images[0].offsetHeight;
+            }
+            function animate() {
 
+                if (!isPaused) {
+
+                    currentY += 0.6;
+
+                    if (currentY >= imageHeight) {
+                        currentY = 0;
+                    }
+
+                    scrollInner.style.transform = `translateY(-${currentY}px)`;
+                }
+                requestAnimationFrame(animate);
+            }
+            frame.addEventListener("mouseenter", () => {
+                isPaused = true;
+            });
+            frame.addEventListener("mouseleave", () => {
+                isPaused = false;
+            });
+            window.addEventListener("load", () => {
+                init();
+                animate();
+            });
+            window.addEventListener("resize", init);
+
+        });
+    </script>
     <script>
         function changeContactButtonText() {
             var button = document.getElementById('contactSubmitBtn');

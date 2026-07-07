@@ -178,6 +178,87 @@
     position: relative;
 }
 
+/* ************* Products Page *************** */
+.products-dropdown {
+    position: relative;
+}
+
+.products-menu {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 486px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .18);
+    padding: 0px 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    height: auto;
+}
+
+.products-dropdown.active .products-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 55px;
+}
+
+.products-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-arrow {
+    margin-left: 5px;
+    transition: .3s;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 13px;
+    text-decoration: none;
+    color: #000;
+}
+
+.product-item:hover {
+    background: #f8f8f8;
+}
+
+.product-content h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.product-content p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666;
+    font-size: 14px;
+    /* line-height: 1.4; */
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+.products-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.new-tag {
+    color: #ff7a00;
+}
+
 .profile-container .user-profile-btn {
     height: 40px;
     width: 40px;

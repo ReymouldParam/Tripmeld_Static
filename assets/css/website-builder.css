@@ -1,180 +1,102 @@
-/* ===========================
-   Travel Demo Section
-=========================== */
-
-.travel-demo-section {
-    padding: 80px 0;
-    background: #ffffff;
-}
-
-.travel-demo-section .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.travel-demo-wrapper {
+.hero-section {
+    position: relative;
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    background:
+        radial-gradient(circle at 78% 50%, #c9d3f7 0%, #dbe1f8 35%, rgba(219, 225, 248, 0) 70%),
+        linear-gradient(90deg, #fbfbfe 0%, #f2f3fb 40%, #e6e9f7 100%);
+    border-radius: 28px;
+    overflow: hidden;
+    padding: 40px 40px 40px;
+    margin-bottom: 2%;
+    margin-top: 7%;
+    /* added for the two-column layout */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 70px;
-    background: #eef2fd;
-    border-radius: 22px;
-    overflow: hidden;
-    padding: 55px 0 55px 70px;
-    min-height: 420px;
-    position: relative;
+    gap: 40px;
 }
 
-/* ===========================
-   Left Content
-=========================== */
-
-.travel-demo-content {
-    flex: 0 0 42%;
-    max-width: 460px;
+/* ---------- LEFT CONTENT ---------- */
+.hero-content {
+    flex: 1 1 44%;
+    min-width: 320px;
 }
 
-.travel-demo-content h2 {
-    font-size: 46px;
-    line-height: 1.18;
-    font-weight: 700;
-    color: #1c1c1c;
-    margin-bottom: 24px;
-}
-
-.travel-demo-content h2 span {
-    color: #ff8a00;
-}
-
-.travel-demo-content p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #5b5b5b;
-    margin-bottom: 42px;
-}
-
-/* ===========================
-   Button
-=========================== */
-
-.travel-demo-btn {
-    margin-bottom: 16px;
-}
-
-.travel-demo-btn a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 110px;
-    height: 44px;
-    border: 1.5px solid #ff8a00;
-    border-radius: 30px;
-    text-decoration: none;
-    color: #ff8a00;
-    font-size: 15px;
+.hero-content h1 {
+    font-size: 50px;
     font-weight: 600;
-    transition: .3s ease;
+    color: #111827;
+    /* line-height: 1.35; */
+    margin: 0 0 16px;
 }
 
-.travel-demo-btn a:hover {
-    background: #ff8a00;
+.hero-content h1 .accent {
+    color: var(--orange);
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--gray-text);
+    max-width: 440px;
+    margin-bottom: 34px;
+}
+
+.demo-btn {
+    display: inline-block;
+    padding: 11px 34px;
+    border: 1.5px solid #f2711c;
+    border-radius: 30px;
+    color: #f2711c;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.demo-btn:hover {
+    background: #f2711c;
     color: #fff;
 }
 
-.travel-demo-content small {
-    display: block;
-    font-size: 13px;
-    color: #666;
+.hero-content .subtext {
+    font-size: 12.5px;
+    color: #6b7280;
+    margin: 0;
 }
 
-/* ===========================
-   Right Image
-=========================== */
+.hero-content .subtext strong {
+    color: var(--orange);
+    font-weight: 600;
+    cursor: pointer;
+}
 
-.travel-demo-image {
-    flex: 0 0 58%;
-    height: 100%;
+/* ---------- RIGHT IMAGE ---------- */
+.hero-image {
+    flex: 1 1 56%;
+    min-width: 340px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
+    justify-content: center;
 }
 
-.travel-demo-image img {
+.hero-image img {
     width: 100%;
-    max-width: 760px;
+    max-width: 460px;
+    height: auto;
     display: block;
-    object-fit: contain;
-    transform: translateX(30px);
+    border-radius: 16px;
+    box-shadow: 0 30px 60px -20px rgba(28, 35, 64, 0.35);
 }
 
-/* ===========================
-   Responsive
-=========================== */
-
-@media (max-width: 1199px) {
-
-    .travel-demo-wrapper {
-        gap: 40px;
-        padding: 50px;
-    }
-
-    .travel-demo-content h2 {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 991px) {
-
-    .travel-demo-wrapper {
+@media (max-width: 900px) {
+    .hero-section {
         flex-direction: column;
-        text-align: center;
-        padding: 50px 35px;
+        padding: 40px 28px;
     }
 
-    .travel-demo-content {
-        max-width: 100%;
-        flex: 100%;
-    }
-
-    .travel-demo-image {
-        justify-content: center;
-    }
-
-    .travel-demo-image img {
-        transform: none;
-        max-width: 100%;
-    }
-
-    .travel-demo-btn {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .travel-demo-section {
-        padding: 60px 0;
-    }
-
-    .travel-demo-wrapper {
-        padding: 35px 20px;
-        border-radius: 16px;
-    }
-
-    .travel-demo-content h2 {
-        font-size: 30px;
-    }
-
-    .travel-demo-content p {
-        font-size: 14px;
-    }
-
-    .travel-demo-btn a {
-        width: 100px;
-        height: 40px;
-        font-size: 14px;
+    .hero-image {
+        width: 100%;
     }
 }

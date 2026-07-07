@@ -438,8 +438,8 @@ Website Builder
     display: flex;
     justify-content: space-between;
     gap: 5px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 /*==========================
@@ -703,8 +703,8 @@ Background Pattern
 /* ************* Package Details Section */
 .pricing-section {
     max-width: 1600px;
-    margin: 0 auto;
-    padding: 30px 20px 60px;
+    margin: 0px auto;
+    padding: 0px 58px 60px;
     text-align: center;
 }
 
@@ -719,7 +719,7 @@ Background Pattern
     font-size: 50px;
     font-weight: 600;
     color: #111827;
-    line-height: 1.1;
+    line-height: 1;
     margin: 0 0 20px;
 }
 
@@ -1144,7 +1144,7 @@ Background Pattern
     justify-content: space-between;
     gap: 60px;
     /* min-height: 420px; */
-    padding: 60px;
+    padding: 25px;
     border-radius: 24px;
     overflow: hidden;
     position: relative;
@@ -1231,7 +1231,7 @@ Background Pattern
 /* Heading — full width, top of section */
 .impact-heading {
     text-align: center;
-    margin-bottom: 44px;
+    margin-bottom: 30px;
 }
 
 .impact-subtitle {

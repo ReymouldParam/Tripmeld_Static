@@ -620,9 +620,9 @@ Right
 }
 
 .feature-list span {
-    font-size: 24px;
+    font-size: 18px;
     color: #222;
-    font-weight: 600;
+    font-weight: 400;
 
 }
 
@@ -1128,7 +1128,7 @@ Background Pattern
 
 /* ****************AI DRIVEN FEATURES**************** */
 .ai-features-section {
-    padding: 40px 0;
+    padding: 20px 0;
     background: #ffffff;
 }
 
@@ -1184,16 +1184,16 @@ Background Pattern
 }
 
 .ai-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 34px;
+    color: #fff;
+    border-radius: 50em;
+    font-size: 16px;
+    white-space: nowrap;
     background: #ef7b31;
     color: #fff;
     text-decoration: none;
     border-radius: 50px;
     font-size: 16px;
-    font-weight: 600;
+    padding: 8px 20px;
     transition: .3s ease;
 }
 
@@ -1265,7 +1265,7 @@ Background Pattern
     position: relative;
     background: #fff;
     border-radius: 20px;
-    padding: 28px 15px;
+    padding: 15px 15px;
     overflow: hidden;
     border: 1px solid #eef0f3;
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
@@ -1283,7 +1283,7 @@ Background Pattern
     top: 0;
     left: 0;
     right: 0;
-    height: 10px;
+    height: 5px;
     background: linear-gradient(to right,
             #1d4ed8 0%,
             #3b82f6 22%,
@@ -1297,14 +1297,13 @@ Background Pattern
     font-weight: 800;
     color: #0f172a;
     letter-spacing: -0.5px;
-    margin: 0 0 10px;
 }
 
 .impact-card h4 {
     font-size: 15px;
     font-weight: 600;
     color: #334155;
-    margin: 0 0 24px;
+    margin: 0 0 10px;
 }
 
 .impact-card p {
@@ -1332,7 +1331,7 @@ Background Pattern
 .wave-wrapper {
     position: relative;
     width: 100%;
-    height: 160px;
+    height: 320px;
     margin-left: -45px;
     overflow: hidden;
 }
@@ -1418,6 +1417,63 @@ Responsive website builder section
 
     }
 
+    /* AI Features - stack and scale for tablets */
+    .ai-features-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 18px;
+        background-position: center top;
+    }
+
+    .ai-content {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .ai-content h2 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .ai-content p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 480px;
+    }
+
+    .ai-image {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ai-image img {
+        max-width: 520px;
+        width: 90%;
+        height: auto;
+    }
+
+    /* Impact / Growth Faster - single column flow */
+    .impact-body {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .impact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-card p {
+        max-width: 100%;
+    }
+
+    .wave-wrapper {
+        height: 260px;
+        margin-left: 0;
+    }
+
 }
 
 /* Media querys */
@@ -1435,6 +1491,12 @@ Responsive website builder section
 
 /* Large mobile */
 @media screen and (max-width:576px) {
+
+    .showcase-right h2 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
     .landing-section {
         height: auto;
     }
@@ -1517,6 +1579,53 @@ Responsive website builder section
 
     .cta-container-1 .main-container .content-container .title {
         font-size: 30px;
+    }
+
+    /* Website builder mobile adjustments */
+    .template-frame {
+        height: 420px;
+        border-radius: 20px;
+    }
+
+    .template-scroll-inner img.template-image {
+        object-fit: contain;
+    }
+
+    .showcase-right h2 {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .feature-list span {
+        font-size: 16px;
+    }
+
+    /* AI Features mobile tweaks */
+    .ai-content h2 {
+        font-size: 28px;
+    }
+
+    .ai-content p {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .ai-image img {
+        max-width: 360px;
+    }
+
+    /* Growth section mobile tweaks */
+    .impact-title {
+        font-size: 32px;
+    }
+
+    .impact-card h3 {
+        font-size: 28px;
+    }
+
+    .wave-wrapper {
+        height: 180px;
+        margin-left: 0;
     }
 }
 

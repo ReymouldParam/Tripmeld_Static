@@ -165,11 +165,69 @@ customizable templates, and seamless invoice management">
                             <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
                         </a>
                     </div>
+                    <div class="nav-item products-dropdown">
+
+                        <a href="javascript:void(0)" id="productsToggle" class="nav-link">
+                            Products
+                            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="products-menu" id="productsMenu">
+                            <a href="./travel-crm.html" class="product-item">
+                                <div class="product-content">
+                                    <h4>Travel CRM</h4>
+                                    <p>Create, launch, and grow your site — no code needed.</p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
+
+                            <a href="./website-builder-page.html" class="product-item">
+                                <div class="product-content">
+                                    <h4>Website Builder</h4>
+                                    <p>Create, launch, and grow your site — no code needed.</p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
+
+                            <a href="#" class="product-item">
+                                <div class="product-content">
+                                    <h4>WhatsApp Marketing</h4>
+                                    <p>Create, launch, and grow your site — no code needed.</p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
+
+                            <a href="#" class="product-item">
+                                <div class="product-content">
+                                    <h4>Growth Features</h4>
+                                    <p>Powerful built-in growth features to attract, convert and retain more visitors.
+                                    </p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
+
+                            <a href="#" class="product-item">
+                                <div class="product-content">
+                                    <h4>Vendor Transport CRM <span class="new-tag">(New)</span></h4>
+                                    <p>Powerful built-in growth features to attract, convert and retain more
+                                        transportation clients.</p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- <div class="nav-item">
                         <a href="./#pricingSection" style="text-decoration: none;">
                             <p onclick="scrollToSectionId('pricingSection')" class="nav-link">Prices</p>
                         </a>
                     </div> -->
+                    <div class="nav-item">
+                        <a href="./travel-crm-pricing.html" style="text-decoration: none;">
+                            <p class="nav-link">
+                                Pricing
+                            </p>
+                        </a>
+                    </div>
                     <div class="nav-item">
                         <a href="./#faqsSection" style="text-decoration: none;">
                             <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
@@ -212,6 +270,21 @@ gtag('event', 'generate_lead');">Demo</button>
                     <div class="nav-item">
                         <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
                     </div>
+                    <div class="nav-item">
+                        <a href="travel-crm" class="nav-link">Travel CRM</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="website-builder" class="nav-link">Website Builder</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a href="vendor-transport-crm" class="nav-link">
+                            Vendor Transport CRM
+                            <span class="new-tag">New</span>
+                        </a>
+                    </div>
+
                     <div class="nav-item">
                         <a style="text-decoration: none; color: inherit;" href="./blogs">
                             <p class="nav-link">Blogs</p>
@@ -920,6 +993,33 @@ gtag('event', 'whatsapp_click');" target="_blank">
                 fbq('trackCustom', 'BookDemo');
 
             });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const productsDropdown = document.querySelector(".products-dropdown");
+            const productsToggle = document.getElementById("productsToggle");
+            const dropdownArrow = productsToggle.querySelector(".dropdown-arrow");
+
+            productsToggle.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                productsDropdown.classList.toggle("active");
+
+                // Rotate arrow
+                dropdownArrow.classList.toggle("rotate");
+            });
+
+            // Close when clicking outside
+            document.addEventListener("click", function (e) {
+                if (!productsDropdown.contains(e.target)) {
+                    productsDropdown.classList.remove("active");
+                    dropdownArrow.classList.remove("rotate");
+                }
+            });
+
+        });
     </script>
 </body>
 

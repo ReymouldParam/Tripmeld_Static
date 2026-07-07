@@ -2,7 +2,6 @@
     max-width: 1180px;
     margin: 0 auto;
     padding: 50px 20px;
-    font-family: 'Poppins', 'Inter', sans-serif;
 }
 
 /* ---------- Top grid: text + form ---------- */
@@ -242,6 +241,36 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+
+.service-checkbox-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+}
+
+.service-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #4a4a68;
+    cursor: pointer;
+}
+
+.service-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #6e6ee0;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .service-checkbox-row {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
 
 @media (max-width: 900px) {

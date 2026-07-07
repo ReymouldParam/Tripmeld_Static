@@ -240,3 +240,22 @@ showMoreText.addEventListener("click", () => {
 
 // Initial rendering
 updateDisplayedFaqs();
+
+
+
+// AI DRIVEN VERITICAL CAROUSEL JS IN THE HOOME PAGE
+$(document).ready(function () {
+    $('.ai-vertical-carousel').slick({
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        pauseOnHover: true,
+        infinite: true,
+        speed: 600
+    });
+});

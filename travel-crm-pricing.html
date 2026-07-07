@@ -306,9 +306,7 @@ gtag('event', 'generate_lead');">Demo</button>
     <div class="main-body">
         <div>
             <section class="pricing-request-section">
-
                 <div class="pricing-request-grid">
-
                     <div class="pricing-request-left">
                         <h2 class="pricing-request-title">
                             A Pricing Model That Fuels<br>
@@ -354,15 +352,28 @@ gtag('event', 'generate_lead');">Demo</button>
                                 </div>
                             </div>
 
+                            <!-- Services as an inline row of checkboxes -->
                             <div class="form-group full">
                                 <label>Select Your Desired Service*</label>
-                                <select>
-                                    <option value="" selected disabled>Select Services</option>
-                                    <option>CRM Packages</option>
-                                    <option>Website Builder</option>
-                                    <option>Digital Marketing</option>
-                                    <option>WhatsApp Integration</option>
-                                </select>
+
+                                <div class="service-checkbox-row">
+                                    <label class="service-check">
+                                        <input type="checkbox" name="service" value="CRM Packages">
+                                        <span>CRM Packages</span>
+                                    </label>
+                                    <label class="service-check">
+                                        <input type="checkbox" name="service" value="Website Builder">
+                                        <span>Website Builder</span>
+                                    </label>
+                                    <label class="service-check">
+                                        <input type="checkbox" name="service" value="Digital Marketing">
+                                        <span>Digital Marketing</span>
+                                    </label>
+                                    <label class="service-check">
+                                        <input type="checkbox" name="service" value="WhatsApp Integration">
+                                        <span>WhatsApp Integration</span>
+                                    </label>
+                                </div>
                             </div>
 
                             <button type="submit" class="pricing-submit-btn">Submit</button>

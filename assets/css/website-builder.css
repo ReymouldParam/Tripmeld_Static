@@ -141,7 +141,6 @@
             rgba(255, 255, 255, .65) 55%,
             rgba(255, 255, 255, 0) 100%);
 }
-
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;

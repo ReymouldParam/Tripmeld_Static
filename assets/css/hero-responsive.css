@@ -89,8 +89,10 @@
 
     .badge {
         font-size: 12px;
-        padding: 8px 12px;
-        line-height: 1.4;
+        padding: 8px 0px;
+        line-height: 1.2;
+        /* display: block; */
+        margin-top: 10px;
     }
 
     .headline {

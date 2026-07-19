@@ -42,7 +42,7 @@
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
     gap: 26px;
-    max-width:1700px;
+    max-width: 1700px;
     margin: 0 auto;
     align-items: start;
     width: 100%;
@@ -654,6 +654,10 @@
 
     .flex-pricing-section .flex-pricing-grid {
         gap: 22px;
+        margin-top: 4%;
+        max-width: 95%;
+        margin: auto;
+        margin-top: 50px;
     }
 
     .flex-pricing-section .fp-heading {

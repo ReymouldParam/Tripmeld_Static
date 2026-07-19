@@ -724,7 +724,10 @@ button {
 }
 
 .features-section {
-    background-color: var(--theme-color-light-blue-2);
+    background-image: url("../images/home/sections-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 25px;
     width: 100%;
     height: 100%;
@@ -1589,7 +1592,10 @@ Background Pattern
     margin: 0 auto;
     border-radius: 26px;
     padding: 44px 50px 56px;
-    background: linear-gradient(to bottom, #A7B8E9 0%, #A7B8E9 100%);
+    background-image: url("../images/home/sections-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(30, 45, 110, 0.08);
 }
@@ -1771,13 +1777,14 @@ Background Pattern
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 4%;
     border-radius: 26px;
-    padding: 20px 50px 0px;
-    background: linear-gradient(to bottom, #A7B8E9 0%, #A7B8E9 100%);
+    padding: 44px 50px 56px;
+    background-image: url("../images/home/sections-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(30, 45, 110, 0.08);
-    height: 100vh;
 }
 
 /* decorative diagonal-line corner patterns */
@@ -1906,11 +1913,12 @@ Background Pattern
 
 .gdm-image-wrap img {
     width: 100%;
-    /* max-width: 420px; */
+    max-width: 450px;
     height: auto;
     display: block;
     border-radius: 16px;
     /* box-shadow: 0 20px 45px rgba(20, 30, 80, 0.22); */
+    transform: translateY(80px);
 }
 
 .gdm-icon {

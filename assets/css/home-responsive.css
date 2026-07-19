@@ -789,7 +789,7 @@
   .wam-section {
     max-width: 1800px;
     margin: 0 auto;
-    padding: 4.5rem 3rem;
+    padding: 1.5rem 3rem;
     margin-top: 1%
   }
 
@@ -801,8 +801,8 @@
     width: min(100%, 920px);
   }
 
-  .gdm-section .gdm-image-wrap {
-    width: 62%;
+  .gdm-image-wrap {
+    width: 100%;
   }
 
   .wam-section .wam-phone {

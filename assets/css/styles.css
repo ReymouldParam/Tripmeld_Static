@@ -1140,7 +1140,8 @@ button {
 
 /* ---------- LEFT: MAP ---------- */
 .map-wrap {
-    position: relative;gap: 1256px;
+    position: relative;
+    gap: 1256px;
     width: 100%;
     line-height: 0;
 }
@@ -1231,7 +1232,7 @@ button {
 .dmc-content h2 {
     font-size: 38px;
     line-height: 1.1;
-    color:var(--theme-color-orange);
+    color: var(--theme-color-orange);
     margin: 0 0 0px;
     font-weight: 600;
 }
@@ -1772,7 +1773,7 @@ Background Pattern
     margin: 0 auto;
     margin-top: 4%;
     border-radius: 26px;
-    padding: 20px 50px 50px;
+    padding: 20px 50px 0px;
     background: linear-gradient(to bottom, #A7B8E9 0%, #A7B8E9 100%);
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(30, 45, 110, 0.08);
@@ -1817,7 +1818,7 @@ Background Pattern
 }
 
 .gdm-top h2 {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
     color: #fff;
     letter-spacing: -0.5px;
@@ -1882,9 +1883,10 @@ Background Pattern
 .gdm-left .gdm-subtitle {
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.2;
+    /* line-height: 1.2; */
     color: #fff;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
+    width: 100%;
 }
 
 .gdm-left .gdm-desc {
@@ -1977,6 +1979,7 @@ Background Pattern
     margin: 0 0 4px;
     font-size: 16px;
     font-weight: 600;
+    color: #ffffff;
 }
 
 .gdm-features .feature p {
@@ -2016,10 +2019,10 @@ Background Pattern
 /* ******************** WhatsApp Marketing   */
 
 .wam-section {
-    max-width: 1160px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 20px 5% 30px;
-    margin-top: 1%;
+    padding: 1.5rem 2rem;
+    /* margin-top: 1%; */
 }
 
 .wam-body {
@@ -2155,7 +2158,7 @@ Background Pattern
 /* ---------- RIGHT: CONTENT ---------- */
 .wam-content h2 {
     margin: 0 0 10px;
-    font-size:38px;
+    font-size: 38px;
     font-weight: 700;
     color: var(--navy);
     letter-spacing: -0.3px;
@@ -2181,7 +2184,7 @@ Background Pattern
 .wam-features li {
     display: flex;
     /* align-items: center; */
-    gap: 12px;
+    gap: 5px;
     font-size: 16px;
     font-weight: 600;
     color: var(--navy);
@@ -2218,6 +2221,61 @@ Background Pattern
 
     .wam-visual {
         min-height: 340px;
+    }
+}
+
+.gdm-section {
+    height: auto;
+    min-height: auto;
+}
+
+@media (min-width: 1366px) {
+    .gdm-section {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 2.8rem 3rem 3.5rem;
+    }
+
+    .gdm-section .gdm-body {
+        gap: 24px;
+    }
+
+    .gdm-section .gdm-left {
+        flex: 0 0 240px;
+    }
+
+    .wam-section {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3.4rem 2.5rem;
+    }
+
+    .wam-section .wam-body {
+        gap: 48px;
+    }
+
+    .wam-section .wam-visual {
+        min-height: 360px;
+    }
+
+    .wam-section .wam-phone {
+        width: min(100%, 340px);
+    }
+}
+
+@media (min-width: 1920px) {
+    .gdm-section {
+        max-width: 1500px;
+        padding: 3rem 3.5rem 4rem;
+    }
+
+    .wam-section {
+        max-width: 1500px;
+        padding: 4rem 3rem;
+    }
+
+    .wam-section .wam-body {
+        gap: 56px;
     }
 }
 

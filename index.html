@@ -76,6 +76,7 @@ customizable templates, and seamless invoice management">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/home-responsive.css" />
+    <link rel="stylesheet" href="./assets/css/hero-responsive.css" />
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -155,6 +156,11 @@ customizable templates, and seamless invoice management">
             <div class="navbar-main-container">
                 <div class="navbar-container">
                     <div class="nav-item">
+                        <a href="." style="text-decoration: none;">
+                            <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Home</p>
+                        </a>
+                    </div>
+                    <div class="nav-item">
                         <a href="./#featuesSection" style="text-decoration: none;">
                             <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
                         </a>
@@ -166,7 +172,7 @@ customizable templates, and seamless invoice management">
                             <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
                         </a>
                         <div class="products-menu" id="productsMenu">
-                            <a href="./travel-crm.html" class="product-item">
+                            <a href="#featuesSection" class="product-item">
                                 <div class="product-content">
                                     <h4>Travel CRM</h4>
                                     <p>Create, launch, and grow your site — no code needed.</p>
@@ -174,15 +180,30 @@ customizable templates, and seamless invoice management">
                                 <span class="arrow">↗</span>
                             </a>
 
-                            <a href="./website-builder-page.html" class="product-item">
+                            <a href="./#website-builderSection" class="product-item">
                                 <div class="product-content">
                                     <h4>Website Builder</h4>
                                     <p>Create, launch, and grow your site — no code needed.</p>
                                 </div>
                                 <span class="arrow">↗</span>
                             </a>
+                            <a href="./#dmc-anget-integration" class="product-item">
+                                <div class="product-content">
+                                    <h4>DMC & Agent Integration</h4>
+                                    <p>Create, launch, and grow your site — no code needed.</p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
 
-                            <a href="#" class="product-item">
+                            <a href="./#transport-vendor-crm" class="product-item">
+                                <div class="product-content">
+                                    <h4>Vendor Transport CRM <span class="new-tag">(New)</span></h4>
+                                    <p>Powerful built-in growth features to attract, convert and retain more
+                                        transportation clients.</p>
+                                </div>
+                                <span class="arrow">↗</span>
+                            </a>
+                            <a href="./#whatsapp-marketing" class="product-item">
                                 <div class="product-content">
                                     <h4>WhatsApp Marketing</h4>
                                     <p>Create, launch, and grow your site — no code needed.</p>
@@ -190,20 +211,11 @@ customizable templates, and seamless invoice management">
                                 <span class="arrow">↗</span>
                             </a>
 
-                            <a href="#" class="product-item">
+                            <a href="./#growth-digital-marketing" class="product-item">
                                 <div class="product-content">
                                     <h4>Growth Features</h4>
                                     <p>Powerful built-in growth features to attract, convert and retain more visitors.
                                     </p>
-                                </div>
-                                <span class="arrow">↗</span>
-                            </a>
-
-                            <a href="#" class="product-item">
-                                <div class="product-content">
-                                    <h4>Vendor Transport CRM <span class="new-tag">(New)</span></h4>
-                                    <p>Powerful built-in growth features to attract, convert and retain more
-                                        transportation clients.</p>
                                 </div>
                                 <span class="arrow">↗</span>
                             </a>
@@ -256,6 +268,12 @@ gtag('event', 'generate_lead');">Demo</button>
             <div class="mobile-navbar-container">
                 <div>
                     <div class="nav-item">
+                        <a href="." style="text-decoration: none;">
+                            <p class="nav-link">Home</p>
+                        </a>
+                    </div>
+
+                    <div class="nav-item">
                         <p onclick="scrollToSectionId('featuesSection')" class="nav-link">Features</p>
                     </div>
                     <!-- <div class="nav-item">
@@ -265,19 +283,39 @@ gtag('event', 'generate_lead');">Demo</button>
                         <p onclick="scrollToSectionId('faqsSection')" class="nav-link">FAQs</p>
                     </div>
                     <div class="nav-item">
-                        <a href="travel-crm" class="nav-link">Travel CRM</a>
+                        <a href="./#featuesSection" class="nav-link">Travel CRM</a>
                     </div>
 
                     <div class="nav-item">
-                        <a href="website-builder" class="nav-link">Website Builder</a>
+                        <a href="./#website-builderSection" class="nav-link">Website Builder</a>
                     </div>
-
                     <div class="nav-item">
-                        <a href="vendor-transport-crm" class="nav-link">
+                        <a href="./#dmc-anget-integration" class="nav-link">
+                            DMC &amp; Agent Integration
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="./#transport-vendor-crm" class="nav-link">
                             Vendor Transport CRM
                             <span class="new-tag">New</span>
                         </a>
                     </div>
+                    <div class="nav-item">
+                        <a href="./#whatsapp-marketing" class="nav-link">
+                            WhatsApp Marketing
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="./#growth-digital-marketing" class="nav-link">
+                            Growth Features
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="./travel-crm-pricing.html" style="text-decoration: none;">
+                            <p class="nav-link">Pricing</p>
+                        </a>
+                    </div>
+
 
                     <div class="nav-item">
                         <a style="text-decoration: none; color: inherit;" href="./blogs">
@@ -299,54 +337,168 @@ gtag('event', 'generate_lead');">Demo</button>
     </header>
     <div class="main-body">
         <div>
-            <!-- Testing of tripmeld   -->
             <!-- landing section start -->
-            <section class="landing-section padding-x py-2">
-                <div class="d-flex h-100 main-container">
-                    <div class="inner-container-1 py-3">
-                        <div class="heading-container">
-                            <h1 class="landing-main-title text-capitilize">Discover Our All-In-One <span
-                                    class="orange-color">Travel CRM </span>
-                            </h1>
-                            <p class="page-text mb-2">
-                                Transform your travel business with our smart, AI-Powered platform designed especially
-                                for
-                                the travel
-                                industry. Effortlessly connect your data, improve team collaboration, and
-                                enhance customer
-                                relationships on a powerful CRM that scales with your growth.
-                            </p>
+            <section class="hero">
+                <!-- ================= MAIN CONTENT ================= -->
+                <div class="hero-content">
+
+                    <!-- LEFT COLUMN -->
+                    <div class="hero-left">
+
+                        <div class="badge">
+                            <span class="badge-emoji">🚀</span>
+                            The Complete Growth Platform for <span class="badge-accent">Travel Businesses</span>
                         </div>
 
-                        <div class="pb-3">
-                            <div class="d-flex flex-wrap mb-1" *ngIf="!userLoggedIn">
-                                <!-- <a href="./contact">
-                                    <button class="filled-orange-btn me-2  mb-1"
-                                        (click)="openSignUpModal()">Free
-                                        Trial</button>
-                                </a> -->
-                                <a href="./contact">
-                                    <button class="unfilled-orange-btn me-2  mb-1" id="bookDemo">Get Demo</button>
-                                </a>
-                                <button class="filled-orange-btn me-2   mb-1" onclick="downloadBrochure()">
-                                    Download Brochure
-                                </button>
+                        <h1 class="headline">
+                            Everything Your<br>
+                            Travel Business Needs.<br>
+                            <span class="headline-accent">One Powerful Platform.</span>
+                        </h1>
+
+                        <p class="subtext">
+                            Transform your travel business with our smart, AI-Powered platform designed especially for
+                            the travel industry. Effortlessly connect your data, improve team collaboration, and enhance
+                            customer relationships on a powerful CRM that scales with your growth
+                        </p>
+
+                        <div class="cta-row">
+                            <a href="./contact" class="demo-btn">Demo</a>
+                            <a href="#" class="filled-orange-btn" onclick="downloadBrochure()">
+                                Download Brochure
+                            </a>
+                        </div>
+
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-icon stat-icon-purple"><i class="fa-solid fa-microchip"></i></span>
+                                <span class="stat-text"><strong>AI-Powered</strong>Smart Travel Automation</span>
                             </div>
-                            <!-- <div *ngIf="userLoggedIn">
-                                <button class="filled-orange-btn me-2" (click)="accessYourApps()">Access Your
-                                    Apps</button>
-                            </div> -->
-                            <div>
-                                <p class="page-text">
-                                    Try our premium travel CRM for free. Get Started Today!
-                                </p>
+                            <div class="stat-item">
+                                <span class="stat-icon stat-icon-green">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </span>
+                                <span class="stat-text">
+                                    <strong>Multi-Channel</strong> Lead Capture
+                                </span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon stat-icon-purple">
+                                    <i class="fa-solid fa-route"></i>
+                                </span>
+                                <span class="stat-text">
+                                    <strong>Instant</strong> Itinerary Builder
+                                </span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon stat-icon-skyblue"><i class="fa-solid fa-cloud"></i></span>
+                                <span class="stat-text"><strong> Cloud-Based
+                                    </strong>
+                                    Secure & Reliable</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon stat-icon-orange"><i
+                                        class="fa-solid fa-mobile-screen-button"></i></span>
+                                <span class="stat-text"><strong>Mobile Ready
+                                    </strong>
+                                    Work Anywhere</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="inner-container-2">
-                        <div class="w-100 h-100">
-                            <img class="w-100" src="assets/images/home/landing-section-img.png" alt="landing-section">
+                    <!-- RIGHT COLUMN -->
+                    <div class="hero-right">
+
+                        <div class="dashboard-wrap">
+                            <!-- Existing dashboard image asset: swap the src below for the real export -->
+                            <img class="dashboard-img" src="./assets/images/home/landing-section-img.png"
+                                alt="TripMeld dashboard preview">
+                        </div>
+
+                        <!-- floating paper airplane -->
+                        <div class="floating-plane"><i class="fa-solid fa-paper-plane"></i></div>
+
+                        <!-- WhatsApp Campaign card -->
+                        <div class="float-card whatsapp-card">
+                            <div class="float-card-head">
+                                <span class="icon-circle icon-circle-green"><i class="fa-brands fa-whatsapp"></i></span>
+                                <span class="float-card-title">WhatsApp Campaign</span>
+                            </div>
+                            <div class="whatsapp-body">
+                                <p class="whatsapp-offer">Travel Promotion <span>✈️</span></p>
+                                <p class="whatsapp-desc"> Share personalized travel deals, offers, and updates with your
+                                    customers instantly.</p>
+                                <a href="./contact.html" class="send-campaign-btn"><i
+                                        class="fa-solid fa-paper-plane"></i> Send
+                                    Campaign</a>
+                            </div>
+                        </div>
+
+                        <!-- AI Itinerary Builder card -->
+                        <div class="float-card ai-card">
+                            <div class="float-card-head">
+                                <span class="icon-circle icon-circle-purple"><i
+                                        class="fa-solid fa-microchip"></i></span>
+                                <span class="float-card-title">AI Itinerary Builder</span>
+                            </div>
+                            <p class="ai-trip-title">Custom Travel Itinerary</p>
+                            <p class="ai-trip-sub">Personalized • Multi-Day Tour</p>
+                            <div class="ai-thumbs">
+                                <span class="ai-thumb ai-thumb-1">
+                                    <img src="https://picsum.photos/120/80?random=1" alt="Bali Temple">
+                                </span>
+
+                                <span class="ai-thumb ai-thumb-2">
+                                    <img src="https://picsum.photos/120/80?random=2" alt="Beach">
+                                </span>
+
+                                <span class="ai-thumb ai-thumb-3">
+                                    <img src="https://picsum.photos/120/80?random=3" alt="Resort">
+                                </span>
+                            </div>
+                            <a href="./contact.html" class="generate-itinerary-btn">Generate Itinerary</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= FEATURE STRIP ================= -->
+                <div class="feature-strip">
+                    <div class="feature-item">
+                        <span class="feature-icon feature-icon-navy"><i class="fa-solid fa-address-card"></i></span>
+                        <div class="feature-copy">
+                            <p class="feature-title">Travel CRM</p>
+                            <p class="feature-desc">Manage leads, enquiries, customers &amp; bookings efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon feature-icon-blue"><i class="fa-solid fa-display"></i></span>
+                        <div class="feature-copy">
+                            <p class="feature-title">Website Builder</p>
+                            <p class="feature-desc">Launch stunning travel websites in just 15 minutes.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon feature-icon-green"><i class="fa-brands fa-whatsapp"></i></span>
+                        <div class="feature-copy">
+                            <p class="feature-title">WhatsApp Marketing</p>
+                            <p class="feature-desc">Engage customers, send offers &amp; automate conversations.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon feature-icon-orange"><i class="fa-solid fa-car"></i></span>
+                        <div class="feature-copy">
+                            <p class="feature-title">TripMeld Fleet</p>
+                            <p class="feature-desc">Manage vehicles, drivers, trips &amp; transport operations
+                                seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon feature-icon-purple"><i class="fa-solid fa-chart-line"></i></span>
+                        <div class="feature-copy">
+                            <p class="feature-title">Growth Solutions</p>
+                            <p class="feature-desc">Digital marketing, SEO, ads &amp; consulting to grow your business.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -357,10 +509,12 @@ gtag('event', 'generate_lead');">Demo</button>
                 <div class="features-section padding-x py-2">
                     <div class="d-flex justify-content-between align-items-center features-title-flex-container">
                         <div>
+                            <h3 class="section-heading white-color"> <span class="orange-color">Travel CRM</span> That
+                                Powers Your Growth</h3>
                             <p class="page-text white-color">
-                                Satisfied Clients, Motivated Teams - Success That Always Speaks
+                                Everything you need to showcase tours, capture enquiries, and grow your travel business
+                                online
                             </p>
-                            <h3 class="section-heading white-color">TripMeld Features</h3>
                         </div>
                         <div>
                             <div class="d-flex mb-1" *ngIf="!userLoggedIn">
@@ -511,7 +665,7 @@ gtag('event', 'generate_lead');">Get Demo</button>
                 </div>
             </section>
             <!-- DMC INTEGRATION SECTION -->
-            <section class="dmc-section">
+            <section class="dmc-section" id="dmc-anget-integration">
                 <!-- LEFT: WORLD MAP -->
                 <div class="map-wrap">
                     <img class="world-map-img" src="assets/images/home/world-map.png" alt="World map">
@@ -561,12 +715,19 @@ gtag('event', 'generate_lead');">Get Demo</button>
                         </li>
                     </ul>
 
-                    <button class="know-more-btn" type="button">Know More</button>
+                    <div class="tcrm-actions">
+                        <a href="./contact.html" class="ai-btn">
+                            Know More
+                        </a>
+                        <a href="./contact.html" class="ai-btn">
+                            Demo
+                        </a>
+                    </div>
                 </div>
 
             </section>
             <!-- Website Builder Section -->
-            <section class="travel-showcase-section">
+            <section class="travel-showcase-section" id="website-builderSection">
 
                 <div class="bg-pattern bg-left"></div>
                 <div class="bg-pattern bg-right"></div>
@@ -628,7 +789,15 @@ gtag('event', 'generate_lead');">Get Demo</button>
                                         <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
                                             class="rocket-icon">
                                     </div>
-                                    <span>Customizable Templates</span>
+                                    <span>No Code Website</span>
+                                </li>
+
+                                <li>
+                                    <div class="feature-icon">
+                                        <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                            class="rocket-icon">
+                                    </div>
+                                    <span>No Setup Fees</span>
                                 </li>
 
                                 <li>
@@ -657,15 +826,14 @@ gtag('event', 'generate_lead');">Get Demo</button>
 
                             </ul>
 
-                            <a href="#" class="quote-btn">
-
-                                <span>Get Quote</span>
-
-                                <div class="btn-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-
-                            </a>
+                            <div class="tcrm-actions">
+                                <a href="./contact.html" class="ai-btn">
+                                    Know More
+                                </a>
+                                <a href="./contact.html" class="ai-btn">
+                                    Demo
+                                </a>
+                            </div>
 
                         </div>
 
@@ -674,49 +842,103 @@ gtag('event', 'generate_lead');">Get Demo</button>
 
             </section>
             <!-- TRANSPORT CRM SECTION -->
-            <section class="tcrm-section">
+            <section class="tcrm-section" id="transport-vendor-crm">
                 <div class="tcrm-header">
                     <div class="tcrm-heading">
-                        <h2>Transport CRM</h2>
-                        <p>Satisfied Clients, Motivated Teams &ndash; Success That Always Speaks</p>
+                        <h2>Run Your Transport Business Smarter with <span class="orange-color">TripMeld Fleet</span>
+                        </h2>
+                        <p>Everything you need to manage enquiries, vehicles, drivers, bookings, payments, and grow your
+                            transport business</p>
                     </div>
                     <div class="tcrm-actions">
-                        <a href="#" class="ai-btn">
+                        <a href="./contact.html" class="ai-btn">
                             Know More
                         </a>
-                        <a href="#" class="ai-btn">
+                        <a href="./contact.html" class="ai-btn">
                             Demo
                         </a>
                     </div>
                 </div>
 
                 <div class="tcrm-body">
+                    <!-- Left Side -->
                     <div class="tcrm-pills tcrm-pills-left">
-                        <div class="pill">Fleet &amp; Vehicle Management</div>
-                        <div class="pill">Trip &amp; Route Management</div>
-                        <div class="pill">Maintenance &amp; Expenses</div>
-                        <div class="pill">Maintenance &amp; Expenses</div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>Fleet &amp; Vehicle Management</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>Driver Management</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Booking &amp; Trip Management</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-route"></i>
+                            <span>Route Planning &amp; Allocation</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Maintenance &amp; Expense Tracking</span>
+                        </div>
+
                     </div>
 
+                    <!-- Center Image -->
                     <div class="tcrm-image">
-                        <img src="assets/images/home/travel-crm-banner.png" alt="Transport CRM dashboard">
+                        <img src="assets/images/home/travel-crm-banner.png" alt="Transport CRM Dashboard">
                     </div>
 
+                    <!-- Right Side -->
                     <div class="tcrm-pills tcrm-pills-right">
-                        <div class="pill">Fleet &amp; Vehicle Management</div>
-                        <div class="pill">Trip &amp; Route Management</div>
-                        <div class="pill">Maintenance &amp; Expenses</div>
-                        <div class="pill">Maintenance &amp; Expenses</div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span>Payments &amp; Invoicing</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Customer &amp; Vendor Management</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-link"></i>
+                            <span>TripMeld Travel CRM Integration</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>Lead Generation from Travel Agents</span>
+                        </div>
+
+                        <div class="pill">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span>Reports &amp; Business Analytics</span>
+                        </div>
+
                     </div>
+
                 </div>
             </section>
             <!-- GDM SECTION -->
-            <section class="gdm-section">
+            <section class="gdm-section" id="growth-digital-marketing">
                 <div class="gdm-top">
                     <h2>Growth &amp; Digital Marketing</h2>
-                    <div class="gdm-actions">
-                        <button class="btn-know-more" type="button">Know More</button>
-                        <button class="btn-get-quote" type="button">Get Quote</button>
+                    <div class="tcrm-actions">
+                        <a href="./contact.html" class="ai-btn">
+                            Know More
+                        </a>
+                        <a href="./contact.html" class="ai-btn">
+                            Demo
+                        </a>
                     </div>
                 </div>
 
@@ -799,7 +1021,7 @@ gtag('event', 'generate_lead');">Get Demo</button>
                 </div>
             </section>
             <!-- WhatsApp Marketing Section -->
-            <section class="wam-section">
+            <section class="wam-section" id="whatsapp-marketing">
                 <div class="wam-body">
 
                     <!-- LEFT: PHONE VISUAL -->
@@ -842,42 +1064,104 @@ gtag('event', 'generate_lead');">Get Demo</button>
 
                     <!-- RIGHT: CONTENT -->
                     <div class="wam-content">
-                        <h2>WhatsApp Marketing</h2>
-                        <p>Boost your sales success with our AI-powered features. Phase out manual processes, streamline
-                            communication and make data-driven decisions for smarter, faster sales.</p>
+                        <h2>Grow Bookings with</h2>
+                        <p>Reach customers instantly, automate conversations, share personalized travel offers, and
+                            convert more enquiries into confirmed bookings with powerful WhatsApp marketing</p>
 
                         <ul class="wam-features">
-                            <li>
-                                <div class="feature-icon">
-                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                        class="rocket-icon">
-                                </div>
-                                Broadcast Campaigns
-                            </li>
-                            <li>
-                                <div class="feature-icon">
-                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                        class="rocket-icon">
-                                </div>
-                                Automated Responses
-                            </li>
-                            <li>
-                                <div class="feature-icon">
-                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                        class="rocket-icon">
-                                </div>
-                                Customer Segmentation
-                            </li>
-                            <li>
-                                <div class="feature-icon">
-                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
-                                        class="rocket-icon">
-                                </div>
-                                Rich Media Messaging
-                            </li>
-                        </ul>
 
-                        <button class="wam-know-more" type="button">Know More</button>
+                            <li>
+                                <div class="feature-icon">
+                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                        class="rocket-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Broadcast Campaigns</h4>
+                                    <p style="font-weight: 500;margin-bottom: 0;">Send personalized promotions, offers, and updates to
+                                        thousands of customers in
+                                        just a few clicks.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="feature-icon">
+                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                        class="rocket-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Automated Responses</h4>
+                                    <p style="font-weight: 500;margin-bottom: 0;">Respond instantly to customer enquiries
+                                        with smart
+                                        automated replies and quick
+                                        response templates.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="feature-icon">
+                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                        class="rocket-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Customer Segmentation</h4>
+                                    <p style="font-weight: 500;margin-bottom: 0;">Create targeted campaigns based on
+                                        destinations,
+                                        interests, travel history, or
+                                        customer preferences.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="feature-icon">
+                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                        class="rocket-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Campaign Analytics</h4>
+                                    <p style="font-weight: 500;margin-bottom: 0;">Track message delivery, read rates,
+                                        customer
+                                        engagement, and campaign performance
+                                        in real time.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="feature-icon">
+                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                        class="rocket-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h4>CRM Integration</h4>
+                                    <p style="font-weight: 500;margin-bottom: 0;">Seamlessly sync customer data, leads,
+                                        and conversations
+                                        with TripMeld Travel CRM
+                                        for a unified workflow.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="feature-icon">
+                                    <img src="./assets/images/home/Icons/rocket-svg-icon.svg" alt="Rocket Icon"
+                                        class="rocket-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h4> Rich Media Messaging</h4>
+                                    <p style="font-weight: 500;margin-bottom: 0;">Share itineraries, brochures, images,
+                                        videos, PDFs, and
+                                        travel packages directly on WhatsApp</p>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <div class="tcrm-actions">
+                            <a href="./contact.html" class="ai-btn">
+                                Know More
+                            </a>
+                            <a href="./contact.html" class="ai-btn">
+                                Demo
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -1054,7 +1338,7 @@ gtag('event', 'generate_lead');">Get Demo</button>
                 <!-- Heading now spans full width, top of section -->
                 <div class="impact-heading">
                     <p class="impact-subtitle">TripMeld Business Impact</p>
-                    <h2 class="impact-title">Operate Better. Grow Faster</h2>
+                    <h2 class="impact-title">Operate Better. Grow Faster.</h2>
                 </div>
 
                 <div class="impact-body">
@@ -1063,39 +1347,41 @@ gtag('event', 'generate_lead');">Get Demo</button>
 
                         <div class="impact-card">
                             <h3>10X</h3>
-                            <h4>Rapid Response</h4>
-                            <p>Boost your sales success with our AI-powered features. Phase out manual processes,
-                                streamline communication and make data-driven decisions for smarter, faster sales.</p>
-                        </div>
-
-                        <div class="impact-card">
-                            <h3>95%</h3>
-                            <h4>Zero Defects</h4>
-                            <p>Boost your sales success with our AI-powered features. Phase out manual processes,
-                                streamline communication and make data-driven decisions for smarter, faster sales.</p>
+                            <h4>Faster
+                                Lead Response</h4>
+                            <p>Capture enquiries instantly and respond to customers before your competitors</p>
                         </div>
 
                         <div class="impact-card">
                             <h3>90%</h3>
-                            <h4>Work Eliminated</h4>
-                            <p>Boost your sales success with our AI-powered features. Phase out manual processes,
-                                streamline communication and make data-driven decisions for smarter, faster sales.</p>
+                            <h4> Less
+                                Manual Work</h4>
+                            <p>Automate quotations, itineraries, follow-ups, invoicing, and daily operations</p>
                         </div>
 
                         <div class="impact-card">
-                            <h3>95%</h3>
-                            <h4>Instant Generate Itineraries</h4>
-                            <p>Boost your sales success with our AI-powered features. Phase out manual processes,
-                                streamline communication and make data-driven decisions for smarter, faster sales.</p>
+                            <h3>5X</h3>
+                            <h4>Better
+                                Customer Engagement</h4>
+                            <p>Reach customers through WhatsApp, websites, CRM, and digital marketing—all from one
+                                platform</p>
+                        </div>
+
+                        <div class="impact-card">
+                            <h3>One Platform</h3>
+                            <h4>Complete Business Ecosystem
+                            </h4>
+                            <p>Travel CRM • Website Builder • Transport CRM • WhatsApp Marketing • Growth Solutions</p>
                         </div>
 
                     </div>
 
                     <!-- Paragraph + wave now live beside the cards, not under the heading -->
                     <div class="impact-side">
-                        <p class="impact-desc">Boost your sales success with our AI-powered features. Phase out manual
-                            processes, streamline communication and make data-driven decisions for smarter, faster
-                            sales.</p>
+                        <p class="impact-desc">From lead generation to customer engagement, bookings, operations,
+                            marketing, and business growth—TripMeld brings every aspect of your travel business together
+                            on one powerful platform, helping you save time, increase bookings, and scale with
+                            confidence</p>
 
                         <div class="wave-wrapper">
                             <div class="wave-track">
@@ -1893,6 +2179,39 @@ gtag('event', 'whatsapp_click');" target="_blank">
                 }
             });
 
+        });
+    </script>
+    <!-- HERO SECTION UPDATE  -->
+    <script>
+        // Minimal enhancement layer — no framework, vanilla JS only.
+        document.addEventListener('DOMContentLoaded', () => {
+            // Subtle press feedback on primary CTAs
+            document.querySelectorAll('.btn-primary, .send-campaign-btn, .generate-itinerary-btn')
+                .forEach(el => {
+                    el.addEventListener('mousedown', () => el.style.transform = 'scale(0.97)');
+                    el.addEventListener('mouseup', () => el.style.transform = '');
+                    el.addEventListener('mouseleave', () => el.style.transform = '');
+                });
+
+            // Gentle idle float on the two floating cards, paused on hover
+            const floatEls = document.querySelectorAll('.float-card, .floating-plane');
+            floatEls.forEach((el, i) => {
+                let raf;
+                const amplitude = 6;
+                const speed = 0.0016;
+                const offset = i * 1.3;
+                const start = performance.now();
+
+                function tick(now) {
+                    const t = (now - start) * speed + offset;
+                    el.style.transform = `translateY(${Math.sin(t) * amplitude}px)`;
+                    raf = requestAnimationFrame(tick);
+                }
+                raf = requestAnimationFrame(tick);
+
+                el.addEventListener('mouseenter', () => cancelAnimationFrame(raf));
+                el.addEventListener('mouseleave', () => { raf = requestAnimationFrame(tick); });
+            });
         });
     </script>
 </body>

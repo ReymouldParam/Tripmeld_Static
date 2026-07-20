@@ -2180,18 +2180,18 @@ Background Pattern
 
 .gdm-left .gdm-subtitle {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     /* line-height: 1.2; */
-    color: #fff;
+    color: #000;
     /* margin-bottom: 0px; */
     width: 100%;
 }
 
 .gdm-left .gdm-desc {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
-    color: #fff;
+    color: #000;
     margin-bottom: 0px;
 }
 
@@ -2277,8 +2277,8 @@ Background Pattern
 .gdm-features .feature h4 {
     margin: 0 0 4px;
     font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
+    font-weight: 700;
+    color: #253D8D;
 }
 
 .gdm-features .feature p {

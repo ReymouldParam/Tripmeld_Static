@@ -39,11 +39,13 @@
   .dmc-section .dmc-content h2 {
     font-size: clamp(1.6rem, 4vw, 2.2rem);
     line-height: 1.2;
+    text-align: left;
   }
 
   .dmc-section .dmc-content p {
     font-size: 0.96rem;
     line-height: 1.6;
+    text-align: left;
   }
 
   .dmc-section .dmc-features {
@@ -346,8 +348,9 @@
   .showcase-right {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    width: 100%;
+    /* align-items: center;
+    text-align: center; */
   }
 
   .website-builder-heading {
@@ -417,6 +420,7 @@
 
   .section-description {
     font-size: 0.95rem;
+    text-align: left;
   }
 
   .feature-list {
@@ -770,6 +774,7 @@
 
   .gdm-section .gdm-image-wrap {
     width: 60%;
+    margin-top: 1%;
   }
 
   .wam-section .wam-body {
@@ -786,11 +791,13 @@
   .dmc-section,
   .tcrm-section,
   .gdm-section,
-  .wam-section {
+  .wam-section,
+  .impact-section {
     max-width: 1800px;
     margin: 0 auto;
-    padding: 1.5rem 3rem;
-    margin-top: 1%
+    padding: 20px 3rem;
+    margin-top: 1%;
+    align-items: flex-start;
   }
 
   .dmc-section .dmc-content {

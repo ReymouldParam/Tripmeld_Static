@@ -905,7 +905,7 @@ button {
     .demo-btn,
     .filled-orange-btn {
         font-size: 14px;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .feature-strip {
@@ -2069,7 +2069,7 @@ Background Pattern
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 26px;
-    padding: 44px 50px 56px;
+    padding: 44px 50px 0px;
     background-image: url("../images/home/sections-bg.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -2276,7 +2276,7 @@ Background Pattern
 
 .gdm-features .feature h4 {
     margin: 0 0 4px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #253D8D;
 }
@@ -3474,6 +3474,7 @@ Responsive website builder section
     .showcase-right h2 {
         font-size: 32px;
         line-height: 1.1;
+        text-align: left;
     }
 
     .feature-list span {

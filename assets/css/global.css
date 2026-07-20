@@ -198,6 +198,7 @@
     visibility: hidden;
     transition: .3s ease;
     height: auto;
+    border-radius: 15px;
 }
 
 .products-dropdown.active .products-menu {
@@ -222,6 +223,7 @@
     padding: 12px 13px;
     text-decoration: none;
     color: #000;
+    border-radius: 15px;
 }
 
 .product-item:hover {

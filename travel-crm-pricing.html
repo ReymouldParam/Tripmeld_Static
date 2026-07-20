@@ -597,6 +597,13 @@ gtag('event', 'generate_lead');">Demo</button>
                             </div>
 
                         </div>
+                        <!-- pop-up card  -->
+                        <div id="popup-overlay"></div>
+                        <div id="popup-message">
+                            <h2 id="popup-heading"></h2>
+                            <p id="popup-para"></p>
+                            <button id="close-btn">Close</button>
+                        </div>
                     </div>
 
                 </div>
@@ -988,17 +995,6 @@ gtag('event', 'whatsapp_click');" target="_blank">
             return true; // To proceed with form submission
         }
     </script>
-    <!-- download of Brochure -->
-    <script>
-        function downloadBrochure() {
-            const link = document.createElement("a");
-            link.href = "assets/images/blogs/TripMeld%20Brochure-2.pdf"; // Use forward slashes and encode spaces as %20
-            link.download = "TripMeld Brochure.pdf"; // Downloaded file name
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
 
     <!-- 1SPOC chatbot -->
     <script>
@@ -1045,29 +1041,84 @@ gtag('event', 'whatsapp_click');" target="_blank">
     </script>
     <!-- PRICING SECTION UPDATE -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var form = document.querySelector('.fp-form');
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector(".fp-form");
+
             if (!form) return;
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
+            form.addEventListener("submit", function () {
 
-                var checked = form.querySelectorAll('input[name="solution"]:checked');
-                var selected = Array.prototype.map.call(checked, function (c) { return c.value; });
+                // Collect selected solutions
+                const checked = form.querySelectorAll('input[name="solution[]"]:checked');
+                const selected = [...checked].map(item => item.value);
 
-                var data = {
-                    fullName: form.querySelector('input[placeholder="Enter your full name"]').value,
-                    phone: form.querySelector('input[placeholder="Enter your phone number"]').value,
-                    email: form.querySelector('input[type="email"]').value,
-                    company: form.querySelector('input[placeholder="Enter your company name"]').value,
-                    role: form.querySelector('select').value,
-                    details: form.querySelector('textarea').value,
+                // Optional: Log form data for debugging
+                console.log({
+                    fullName: form.querySelector('input[name="name"]').value,
+                    phone: form.querySelector('input[name="phone"]').value,
+                    email: form.querySelector('input[name="email"]').value,
+                    company: form.querySelector('input[name="company"]').value,
+                    role: form.querySelector('select[name="role"]').value,
+                    business: form.querySelector('textarea[name="business"]').value,
                     solutions: selected
-                };
+                });
 
-                console.log('Quote request submitted:', data);
-                // TODO: wire this up to the actual backend / API endpoint.
+                // Change button text while submitting
+                const submitBtn = form.querySelector(".fp-submit-btn");
+
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = `
+            <span>Sending...</span>
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        `;
             });
+        });
+    </script>
+    <!-- Email integration Popup Functionality -->
+    <script>
+        // pop cards
+        document.addEventListener("DOMContentLoaded", function () {
+            const popupMessage = document.getElementById("popup-message");
+            const popupOverlay = document.getElementById("popup-overlay");
+            const popupHeading = document.getElementById("popup-heading");
+            const popupPara = document.getElementById("popup-para");
+            const closeBtn = document.getElementById("close-btn");
+
+            // Simulate a condition (replace with actual logic or URL parameters)
+            const urlParams = new URLSearchParams(window.location.search);
+            const mailStatus = urlParams.get("emailSuccess"); // e.g., mailStatus=true or mailStatus=false
+
+            if (popupMessage && popupHeading && popupOverlay) {
+                if (mailStatus === "true") {
+                    // Mail sent successfully
+                    popupHeading.innerText = "EMAIL SENT SUCCESSFULLY";
+                    popupPara.innerText = "Thank you for reaching out! We will get back to you shortly.";
+                    popupMessage.style.display = "block";
+                    popupOverlay.style.display = "block";
+                } else if (mailStatus === "false") {
+                    // Mail sending failed
+                    popupHeading.innerText = "EMAIL NOT SENT";
+                    popupPara.innerText = "Oops! Something went wrong. Please try again later.";
+                    popupMessage.style.display = "block";
+                    popupOverlay.style.display = "block";
+                }
+            }
+
+            // Close the popup when the close button is clicked
+            closeBtn.addEventListener("click", function () {
+                popupMessage.style.display = "none";
+                popupOverlay.style.display = "none";
+            });
+
+            // Close the popup when the overlay is clicked
+            popupOverlay.addEventListener("click", function () {
+                popupMessage.style.display = "none";
+                popupOverlay.style.display = "none";
+            });
+
+            // Optionally, clear URL parameters after displaying the popup
+            const baseUrl = window.location.href.split("?")[0];
+            history.replaceState(null, null, baseUrl);
         });
     </script>
 </body>

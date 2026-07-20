@@ -531,7 +531,7 @@ button {
     z-index: 1;
     margin-top: 16px;
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid var(--theme-color-orange);
     border-radius: 14px;
     box-shadow: 0 12px 30px -22px rgba(29, 28, 43, 0.12);
     display: flex;
@@ -556,16 +556,21 @@ button {
 
 .feature-icon,
 .feature-hero-icon {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 32px;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 28px;
+}
+
+.feature-icon i,
+.feature-hero-icon i {
+    font-size: 26px;
 }
 
 /* Icon Colors */
@@ -602,8 +607,8 @@ button {
 .feature-title {
     margin: 0 0 2px;
     font-size: 16px;
-    font-weight: 500;
-    color: var(--theme-color-dark);
+    font-weight: 600;
+    color: #253D8D;
 }
 
 .feature-desc {
@@ -776,12 +781,14 @@ button {
     }
 
     .feature-title {
-        font-size: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 6px;
     }
 
     .feature-desc {
-        font-size: 12px;
-        line-height: 1.45;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .blob-left {
@@ -811,6 +818,21 @@ button {
         height: 240px;
         right: -70px;
         bottom: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .feature-icon,
+    .feature-hero-icon {
+        width: 48px;
+        height: 48px;
+        flex: 0 0 48px;
+    }
+
+    .feature-icon i,
+    .feature-hero-icon i {
+        font-size: 22px;
     }
 }
 
@@ -1014,6 +1036,7 @@ button {
     }
 }
 
+/* ************* Features Section */
 .features-section {
     background-image: url("../images/home/sections-bg.png");
     background-repeat: no-repeat;
@@ -1091,6 +1114,48 @@ button {
 .feature-details-carousel .slick-current .carousel-item {
     opacity: 1;
     transform: translateY(0px);
+}
+
+/*==========================
+Features Section CTA
+==========================*/
+
+.features-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -8px;
+}
+
+.features-actions .ai-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 46px;
+    padding: 0 28px;
+    border-radius: 50px;
+    color: #ef7b31;
+    font-size: 15px;
+    font-weight: 600;
+    background: transparent;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border: 1px solid #ef7b31;
+}
+
+@media (max-width: 992px) {
+
+    .features-actions {
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .features-actions .ai-btn {
+        min-width: 140px;
+    }
+
 }
 
 .plans-section {
@@ -1564,29 +1629,45 @@ button {
     height: 20px;
 }
 
-.know-more-btn {
-    display: inline-block;
-    background: var(--orange);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 13px 34px;
-    border-radius: 999px;
-    border: none;
-    cursor: pointer;
-    transition: background .2s ease, transform .2s ease;
+/* DMC CTA Buttons */
+.dmc-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
 }
 
-.know-more-btn:hover {
-    background: var(--orange-dark);
-    transform: translateY(-1px);
+.dmc-actions .ai-btn,
+.dmc-actions .ai-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 46px;
+    padding: 0 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 @media (max-width:860px) {
     .dmc-section {
         grid-template-columns: 1fr;
         padding: 50px 6% 60px;
+    }
+
+    .dmc-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
+    .dmc-actions .ai-btn,
+    .dmc-actions .ai-btn-outline {
+        min-width: 140px;
     }
 
     .dmc-content h2 {
@@ -1779,7 +1860,7 @@ Right
 
 .feature-icon {
     width: 40px;
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1875,6 +1956,48 @@ Background Pattern
 
 }
 
+/*==========================
+Website Builder CTA
+===========================*/
+
+.website-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.website-actions .ai-btn,
+.website-actions .ai-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 46px;
+    padding: 0 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .website-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
+    .website-actions .ai-btn,
+    .website-actions .ai-btn-outline {
+        min-width: 140px;
+    }
+
+}
+
 /* ******************************* TRANSPORT CRM SECTION */
 
 .tcrm-section {
@@ -1950,7 +2073,8 @@ Background Pattern
 .tcrm-actions {
     display: flex;
     gap: 14px;
-    align-items: center;
+    align-self: flex-end;
+    margin-top: 1%;
 }
 
 .tcrm-actions button {
@@ -2027,6 +2151,25 @@ Background Pattern
     box-shadow: 0 25px 60px rgba(20, 30, 80, 0.25);
 }
 
+.tcrm-right {
+    /* width: 230px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tcrm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.tcrm-actions .ai-btn,
+.tcrm-actions .ai-btn-outline {
+    min-width: 120px;
+}
+
 @media (max-width:1000px) {
     .tcrm-body {
         flex-wrap: wrap;
@@ -2049,6 +2192,17 @@ Background Pattern
         order: -1;
         width: 100%;
     }
+
+    .tcrm-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .tcrm-actions {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
 }
 
 @media (max-width:600px) {
@@ -2125,40 +2279,42 @@ Background Pattern
 
 .gdm-actions {
     display: flex;
-    gap: 14px;
     align-items: center;
-    flex: none;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.gdm-actions button {
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 11px 24px;
+.gdm-actions .ai-btn,
+.gdm-actions .ai-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 44px;
+    padding: 0 24px;
     border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
     white-space: nowrap;
-    transition: transform .2s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.btn-know-more {
-    background: var(--orange);
+/* Primary Button */
+.gdm-actions .ai-btn {
+    background: #ef7b31;
     color: #fff;
+    border: 1px solid #ef7b31;
 }
 
-.btn-know-more:hover {
-    background: var(--orange-dark);
-    transform: translateY(-1px);
-}
 
-.btn-get-quote {
-    background: var(--navy);
-    color: #fff;
-}
-
-.btn-get-quote:hover {
-    background: var(--navy-light);
-    transform: translateY(-1px);
+/* Outline Button */
+.gdm-actions .ai-btn-outline {
+    background: transparent;
+    color: var(--theme-color-orange);
+    border: 1px solid var(--theme-color-orange);
 }
 
 /* ---------- BODY ROW: text / image / features ---------- */
@@ -2209,15 +2365,13 @@ Background Pattern
     display: block;
     border-radius: 16px;
     /* box-shadow: 0 20px 45px rgba(20, 30, 80, 0.22); */
-    transform: translateY(80px);
+    transform: translateY(160px);
 }
 
 .gdm-icon {
     position: absolute;
-    width: 85px;
-    height: 85px;
     border-radius: 50%;
-    background: #253D8D;
+    background: #5B86FF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2226,32 +2380,59 @@ Background Pattern
     animation: gdm-icon-float 3.2s ease-in-out infinite;
 }
 
-.gdm-icon svg {
-    width: 60px;
-    height: 60px;
+.gdm-icon-instagram,
+.gdm-icon-youtube,
+.gdm-icon-whatsapp {
+    width: 120px;
+    height: 120px;
 }
 
+.gdm-icon-instagram svg,
+.gdm-icon-youtube svg,
+.gdm-icon-whatsapp svg {
+    width: 62px;
+    height: 62px;
+}
+
+/* Facebook - smaller, as in reference image */
+.gdm-icon-facebook {
+    width: 56px;
+    height: 56px;
+}
+
+.gdm-icon-facebook svg {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* .gdm-icon svg {
+    width: 60px;
+    height: 60px;
+} */
+
+/* Positions - matched to reference image layout */
 .gdm-icon-instagram {
-    top: 10%;
-    left: 8%;
+    top: 15%;
+    left: 12%;
     animation-delay: 0s;
 }
 
 .gdm-icon-facebook {
-    top: -2%;
-    left: 82%;
+    top: 10%;
+    left: 72%;
     animation-delay: .5s;
 }
 
 .gdm-icon-youtube {
-    top: 48%;
-    left: 98%;
+    top: 52%;
+    left: 86%;
     animation-delay: 1s;
 }
 
 .gdm-icon-whatsapp {
-    top: 42%;
-    left: 6%;
+    top: 68%;
+    left: 15%;
     animation-delay: 1.5s;
 }
 
@@ -2267,6 +2448,16 @@ Background Pattern
     }
 }
 
+.gdm-actions {
+    display: flex;
+    gap: 14px;
+    align-self: flex-end;
+    justify-content: flex-end;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+
 .gdm-features {
     flex: 0 0 250px;
     display: flex;
@@ -2276,7 +2467,7 @@ Background Pattern
 
 .gdm-features .feature h4 {
     margin: 0 0 4px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: #253D8D;
 }
@@ -2454,6 +2645,33 @@ Background Pattern
     }
 }
 
+/*==========================
+WhatsApp Marketing CTA
+===========================*/
+
+.wam-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.wam-actions .ai-btn,
+.wam-actions .ai-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 46px;
+    padding: 0 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
 /* ---------- RIGHT: CONTENT ---------- */
 .wam-content h2 {
     margin: 0 0 10px;
@@ -2495,22 +2713,20 @@ Background Pattern
     height: 20px;
 }
 
-.wam-know-more {
-    display: inline-block;
-    background: var(--orange);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    padding: 13px 34px;
-    border-radius: 999px;
-    transition: background .2s ease, transform .2s ease;
-}
 
-.wam-know-more:hover {
-    background: var(--orange-dark);
-    transform: translateY(-1px);
+@media (max-width: 768px) {
+
+    .wam-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
+    .wam-actions .ai-btn,
+    .wam-actions .ai-btn-outline {
+        min-width: 140px;
+    }
+
 }
 
 @media (max-width:860px) {
@@ -2540,7 +2756,7 @@ Background Pattern
     }
 
     .gdm-section .gdm-left {
-        flex: 0 0 240px;
+        flex: 0 0 300px;
     }
 
     .wam-section {
@@ -3078,6 +3294,25 @@ Background Pattern
 .ai-btn:hover {
     background: #dd6a22;
 }
+
+.ai-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border: 1.2px solid var(--theme-color-orange);
+    background: transparent;
+    padding: 3px 15px;
+    color: var(--theme-color-orange);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
 
 /* Right */
 

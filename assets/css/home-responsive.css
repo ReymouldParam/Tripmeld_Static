@@ -172,6 +172,7 @@
     flex-wrap: wrap;
     gap: 0.75rem;
     width: 100%;
+    display: none;
   }
 
   .gdm-section .btn-know-more,
@@ -215,8 +216,8 @@
   }
 
   .gdm-section .gdm-icon {
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 80px;
+    height:80px;
     padding: 0.4rem;
   }
 
@@ -772,9 +773,94 @@
     gap: 2rem;
   }
 
-  .gdm-section .gdm-image-wrap {
-    width: 60%;
-    margin-top: 1%;
+  .gdm-image-wrap img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    /* box-shadow: 0 20px 45px rgba(20, 30, 80, 0.22); */
+    transform: translateY(80px);
+  }
+
+  .gdm-icon {
+    position: absolute;
+    border-radius: 50%;
+    background: #5B86FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 26px rgba(20, 30, 80, 0.32);
+    transform: translate(-50%, -50%);
+    animation: gdm-icon-float 3.2s ease-in-out infinite;
+  }
+
+  .gdm-icon-instagram,
+  .gdm-icon-youtube,
+  .gdm-icon-whatsapp {
+    width: 160px;
+    height: 160px;
+  }
+
+  .gdm-icon-instagram svg,
+  .gdm-icon-youtube svg,
+  .gdm-icon-whatsapp svg {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* Facebook - smaller, as in reference image */
+  .gdm-icon-facebook {
+    width: 56px;
+    height: 56px;
+  }
+
+  .gdm-icon-facebook svg {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  /* .gdm-icon svg {
+    width: 60px;
+    height: 60px;
+} */
+
+  /* Positions - matched to reference image layout */
+  .gdm-icon-instagram {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0s;
+  }
+
+  .gdm-icon-facebook {
+    top: 20%;
+    left: 70%;
+    animation-delay: .5s;
+  }
+
+  .gdm-icon-youtube {
+    top: 70%;
+    left: 75%;
+    animation-delay: 1s;
+  }
+
+  .gdm-icon-whatsapp {
+    top: 68%;
+    left: 30%;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes gdm-icon-float {
+
+    0%,
+    100% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+      transform: translate(-50%, -50%) translateY(-10px);
+    }
   }
 
   .wam-section .wam-body {

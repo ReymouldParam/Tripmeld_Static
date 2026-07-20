@@ -62,7 +62,7 @@
     font-weight: 600;
     padding: 6px 13px;
     border-radius: 999px;
-    margin-bottom: 12px;
+    margin-bottom: 0;
 }
 
 .fp-badge-emoji {
@@ -84,7 +84,8 @@
 }
 
 .fp-desc {
-    font-size: 16px;
+    font-size: 20px;
+    /* max-width: 700px; */
     line-height: 1.55;
     color: #6b7280;
     /* max-width: 440px; */
@@ -98,7 +99,8 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 22px;
     row-gap: 14px;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
+    margin-top: 3%;
 }
 
 .fp-feature-card {
@@ -150,7 +152,7 @@
 }
 
 .fp-feature-card h3 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #111827;
     line-height: 1.2;
@@ -158,20 +160,22 @@
 }
 
 .fp-feature-card p {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.4;
     color: #6b7280;
     margin: 0;
     /* max-width: 210px; */
+    font-weight: 500;
 }
 
 /* ---------- Solutions title + cards ---------- */
 
 .fp-solutions-title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     color: #111827;
     margin: 0 0 10px;
+    margin-top: 3%;
 }
 
 .fp-solutions-grid {
@@ -190,7 +194,7 @@
     background: #ffffff;
     border: 1px solid #eef0f4;
     border-radius: 13px;
-    padding: 12px 11px;
+    padding: 20px 11px;
     box-shadow: 0 4px 12px rgba(17, 24, 39, 0.04);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
@@ -237,10 +241,11 @@
 }
 
 .fp-solution-card span {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
-    color: #111827;
-    line-height: 1.2;
+    color: #000;
+    /* line-height: 1.2; */
+    margin-top: 2%;
 }
 
 .fp-pill-note {
@@ -703,7 +708,8 @@
     }
 
     .flex-pricing-section .fp-heading {
-        font-size: 36px;
+        font-size: 64px;
+        margin: 0;
     }
 }
 

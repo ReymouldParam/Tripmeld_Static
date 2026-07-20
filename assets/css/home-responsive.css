@@ -813,6 +813,6 @@
   }
 
   .wam-section .wam-phone {
-    width: min(100%, 460px);
+    width: min(100%, 300px);
   }
 }

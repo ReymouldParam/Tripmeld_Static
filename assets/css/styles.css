@@ -173,7 +173,7 @@ button {
     color: var(--theme-color-dark);
     font-size: 14px;
     font-weight: 400;
-    padding: 9px 0px;
+    padding: 9px 10px;
     border-radius: 999px;
     margin-bottom: 0px;
 }

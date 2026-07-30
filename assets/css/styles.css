@@ -2112,7 +2112,7 @@ Website Builder CTA
     position: relative;
     z-index: 1;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     gap: 24px;
 }
@@ -2144,8 +2144,10 @@ Website Builder CTA
 
 .tcrm-image img {
     width: 100%;
-    max-width: 600px;
-    height: 350px;
+    max-width: 920px;
+    /* was 600px — raise to your largest breakpoint value */
+    height: 380px;
+    /* was 350px — slightly taller to match the bigger width */
     display: block;
     border-radius: 16px;
     box-shadow: 0 25px 60px rgba(20, 30, 80, 0.25);

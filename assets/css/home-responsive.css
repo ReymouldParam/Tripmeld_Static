@@ -217,7 +217,7 @@
 
   .gdm-section .gdm-icon {
     width: 80px;
-    height:80px;
+    height: 80px;
     padding: 0.4rem;
   }
 
@@ -642,11 +642,11 @@
   }
 
   .tcrm-section .tcrm-body {
-    gap: 1.25rem;
+    /* gap: 1.25rem; */
   }
 
   .tcrm-section .tcrm-image img {
-    width: min(100%, 760px);
+    width: min(100%, 700px);
   }
 
   .gdm-section .gdm-body {

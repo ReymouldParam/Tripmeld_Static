@@ -800,6 +800,7 @@
   .gdm-icon-whatsapp {
     width: 160px;
     height: 160px;
+    left: 30%;
   }
 
   .gdm-icon-instagram svg,
@@ -845,7 +846,8 @@
     animation-delay: 1s;
   }
 
-  .gdm-icon-whatsapp {
+  .gdm-icon-whatsapp i {
+    font-size: 110px;
     top: 68%;
     left: 30%;
     animation-delay: 1.5s;

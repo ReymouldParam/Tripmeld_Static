@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Demo | TripMeld</title>
+  <meta name="description" content="See how TripMeld can transform your travel business. Book your personalized demo.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="icon" type="image/png" href="https://tripmeld.com/assets/images/TripMeld_Icon.png" />
+
+  <style>
+    :root {
+      --navy: #233c8c;
+      --navy-text: #1d2b5e;
+      --blue: #2b3fa6;
+      --orange: #e2752a;
+      --orange-hover: #cc6520;
+      --peach: #fdd9bd;
+      --ink: #111;
+      --muted: #555;
+      --container: 1298px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #fff;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ---------- Side chevron decoration ---------- */
+    .side-deco {
+      position: absolute;
+      top: 90px;
+      width: 120px;
+      height: 580px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .side-deco.left { left: 0; }
+    .side-deco.right { right: 0; transform: scaleX(-1); }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      background: #fff;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(80, 100, 200, 0.18);
+      position: relative;
+      z-index: 5;
+    }
+    .site-header .logo img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ---------- Hero / Demo section ---------- */
+    .demo-section {
+      display: grid;
+      grid-template-columns: 1fr 740px;
+      gap: 40px;
+      padding: 20px 0 20px;
+    }
+
+    .hero-left { padding-left: 8px; padding-top: 6px; }
+
+    .hero-title {
+      font-size: 49px;
+      line-height: 1.07;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      background: linear-gradient(115deg, #2c3fb4 0%, #4a52b0 18%, #9a7090 42%, #d98348 64%, #e98c3a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      max-width: 480px;
+    }
+
+    .hero-sub {
+      margin-top: 52px;
+      font-size: 15px;
+      line-height: 1.3;
+      font-weight: 500;
+      color: var(--navy-text);
+      max-width: 470px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-between;
+      margin-top: 78px;
+      max-width: 486px;
+    }
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #eef1fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 26px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+    .feature-icon .fa-plane {
+      position: absolute;
+      font-size: 13px;
+      left: 11px;
+      bottom: 14px;
+      transform: rotate(-20deg);
+      text-shadow: 0 0 0 #eef1fa, 1px 1px 0 #eef1fa, -1px -1px 0 #eef1fa;
+    }
+    .feature-icon svg { width: 30px; height: 30px; }
+    .feature-label {
+      font-size: 13px;
+      line-height: 1.3;
+      font-weight: 500;
+      color: var(--navy-text);
+    }
+
+    /* ---------- Form card ---------- */
+    .form-card {
+      background: linear-gradient(180deg, #c3cff0 0%, #d6def5 45%, #f1f4fc 85%, #fbfcff 100%);
+      border: 2px solid #fff;
+      border-radius: 24px;
+      box-shadow: 0 2px 10px rgba(90, 110, 190, 0.15);
+      padding: 18px 32px 22px;
+      min-height: 484px;
+    }
+
+    .form-card h2 {
+      font-size: 25px;
+      font-weight: 500;
+      color: #14162b;
+      letter-spacing: 0.1px;
+    }
+    .form-card .form-sub {
+      margin-top: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 13.5px;
+      color: #2635a0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 14px;
+      row-gap: 12px;
+      margin-top: 8px;
+    }
+    .field label {
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #1f2a44;
+      margin-bottom: 3px;
+    }
+    .field input,
+    .field textarea {
+      width: 100%;
+      height: 42px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: #fff;
+      padding: 0 8px;
+      font-family: "Poppins", sans-serif;
+      font-size: 13px;
+      color: #222;
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .field textarea {
+      height: 78px;
+      padding: 10px 8px;
+      resize: none;
+    }
+    .field input::placeholder,
+    .field textarea::placeholder { color: #666; }
+    .field input:focus,
+    .field textarea:focus {
+      border-color: #9fb0ea;
+      box-shadow: 0 0 0 3px rgba(43, 63, 166, 0.12);
+    }
+    .field.full { grid-column: 1 / -1; margin-top: 10px; }
+
+    .field.invalid input,
+    .field.invalid textarea { border-color: #e04848; }
+    .error-msg {
+      display: none;
+      font-size: 11.5px;
+      color: #d33;
+      margin-top: 3px;
+    }
+    .invalid .error-msg { display: block; }
+
+    .explore { margin-top: 10px; }
+    .explore-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: #1f2a44;
+    }
+    .options {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 14px;
+      margin-top: 12px;
+      padding-left: 2px;
+    }
+    .option {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 15px;
+      color: #454545;
+      cursor: pointer;
+      user-select: none;
+      width: max-content;
+    }
+    .option input {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #333;
+      border-radius: 2px;
+      background: transparent;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      flex-shrink: 0;
+    }
+    .option input:checked {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+    .option input:checked::after {
+      content: "";
+      width: 4px;
+      height: 8px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg) translate(-1px, -1px);
+    }
+    .option input:focus-visible { outline: 2px solid #9fb0ea; outline-offset: 2px; }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 4px;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      height: 40px;
+      width: 221px;
+      cursor: pointer;
+      transition: background .15s, transform .1s;
+    }
+    .btn-orange:hover { background: var(--orange-hover); }
+    .btn-orange:active { transform: translateY(1px); }
+    .btn-orange:disabled { opacity: .7; cursor: wait; }
+
+    /* ---------- Success view ---------- */
+    .success-view {
+      display: none;
+      padding: 36px 0 70px;
+    }
+    body.submitted .demo-section { display: none; }
+    body.submitted .success-view { display: block; }
+
+    .success-card {
+      max-width: 736px;
+      margin: 0 auto;
+      background: #f0f5fd;
+      border-radius: 20px;
+      padding: 18px 24px 38px;
+      text-align: center;
+    }
+    .success-icon {
+      width: 160px;
+      height: 140px;
+      margin: 0 auto 16px;
+      display: block;
+    }
+    .success-card h2 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #000;
+      line-height: 1.1;
+    }
+    .success-card .lead {
+      font-size: 29px;
+      font-weight: 400;
+      color: #000;
+      margin-top: 8px;
+    }
+    .success-card .note {
+      font-size: 17px;
+      color: #555;
+      margin-top: 16px;
+    }
+    .success-card .btn-orange {
+      width: 275px;
+      margin-top: 24px;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      position: relative;
+      z-index: 1;
+      margin-top: auto;
+      padding-top: 0;
+    }
+    .footer-band {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 40px;
+      background: var(--peach);
+      clip-path: polygon(0 100%, 0 30%, 4% 0, 96% 0, 100% 30%, 100% 100%);
+      z-index: 0;
+    }
+    .footer-card {
+      position: relative;
+      z-index: 1;
+      background: var(--navy);
+      border-radius: 20px;
+      color: #fff;
+      height: 140px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      padding: 24px 116px 0 63px;
+    }
+    /* faint vertical grid lines */
+    .footer-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgba(255,255,255,.09) 1px, transparent 1px);
+      background-size: 216px 100%;
+      background-position: 90px 0;
+      pointer-events: none;
+    }
+    .footer-col { position: relative; }
+    .footer-col h3 {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .footer-col p,
+    .footer-col a {
+      font-size: 17px;
+      line-height: 1.32;
+      color: #fff;
+      font-weight: 400;
+    }
+    .footer-col a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    .footer-col a:hover { opacity: .85; }
+    .footer-col.contact { padding-left: 73px; }
+    .socials { display: flex; gap: 17px; }
+    .socials a {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      background: #fff;
+      color: #6b6b6b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 19px;
+      transition: transform .15s;
+    }
+    .socials a:hover { transform: translateY(-2px); opacity: 1; }
+
+    .copyright {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      font-size: 11px;
+      color: #222;
+      padding: 8px 0 7px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1200px) {
+      .demo-section { grid-template-columns: 1fr; gap: 40px; }
+      .hero-left { padding-left: 0; }
+      .hero-title, .hero-sub { max-width: none; }
+      .hero-sub { margin-top: 24px; }
+      .features { margin-top: 36px; }
+      .footer-card { padding: 24px 40px 0; }
+      .footer-col.contact { padding-left: 40px; }
+    }
+    @media (max-width: 900px) {
+      .footer-card {
+        height: auto;
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+        padding: 26px 24px 30px;
+      }
+      .footer-col.contact { padding-left: 0; }
+      .side-deco { display: none; }
+    }
+    @media (max-width: 640px) {
+      .hero-title { font-size: 36px; }
+      .features { grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
+      .form-card { padding: 18px 16px 22px; min-height: 0; }
+      .form-card h2 { font-size: 22px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { margin-top: 0; }
+      .options { grid-template-columns: 1fr 1fr; }
+      .form-actions .btn-orange { width: 100%; }
+      .success-card h2 { font-size: 30px; }
+      .success-card .lead { font-size: 21px; }
+      .success-card .note { font-size: 15px; }
+      .success-card .btn-orange { width: 100%; max-width: 275px; }
+      .footer-col p, .footer-col a { font-size: 15px; }
+      .footer-band { clip-path: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Side decorations -->
+  <svg class="side-deco left" viewBox="0 0 120 580" fill="none" aria-hidden="true">
+    <g stroke="#f4d4d8" stroke-width="1.2">
+      <polyline points="-40,0 116,270 -40,540" />
+      <polyline points="-40,15 100,270 -40,525" />
+      <polyline points="-40,30 84,270 -40,510" />
+      <polyline points="-40,45 68,270 -40,495" />
+      <polyline points="-40,60 52,270 -40,480" />
+    </g>
+  </svg>
+  <svg class="side-deco right" viewBox="0 0 120 580" fill="none" aria-hidden="true">
+    <g stroke="#f4d4d8" stroke-width="1.2">
+      <polyline points="-40,0 116,270 -40,540" />
+      <polyline points="-40,15 100,270 -40,525" />
+      <polyline points="-40,30 84,270 -40,510" />
+      <polyline points="-40,45 68,270 -40,495" />
+      <polyline points="-40,60 52,270 -40,480" />
+    </g>
+  </svg>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="https://tripmeld.com" class="logo" aria-label="TripMeld home">
+        <img src="https://tripmeld.com/assets/images/TM_Logo.png" alt="TripMeld - Technology Meets Travel">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Demo form section -->
+      <section class="demo-section" id="demoSection">
+        <div class="hero-left">
+          <h1 class="hero-title">See How TripMeld Can Transform Your Travel Business</h1>
+          <p class="hero-sub">Discover a smarter way to manage leads, quotations, itineraries, customers and operations — all in one place</p>
+
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-earth-americas"></i>
+                <i class="fa-solid fa-plane"></i>
+              </div>
+              <span class="feature-label">Build for Travel<br>Businesses</span>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <span class="feature-label">One Connected<br>Platform</span>
+            </div>
+            <div class="feature">
+              <div class="feature-icon"><i class="fa-solid fa-gear"></i></div>
+              <span class="feature-label">Smarter<br>Workflows</span>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <!-- AI chip with sparkle -->
+                <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                  <rect x="3" y="3" width="21" height="21" rx="4" stroke="currentColor" stroke-width="2.4"/>
+                  <text x="13.5" y="18.5" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-size="11" font-weight="700" fill="currentColor">AI</text>
+                  <path d="M25 18.5c.5 2.6 1.9 4 4.5 4.5-2.6.5-4 1.9-4.5 4.5-.5-2.6-1.9-4-4.5-4.5 2.6-.5 4-1.9 4.5-4.5z" fill="currentColor" stroke="#eef1fa" stroke-width="1.2"/>
+                </svg>
+              </div>
+              <span class="feature-label">AI-Powered<br>Solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Book Your Personalized Demo</h2>
+          <p class="form-sub">Tell us about your business and discover how tripmeld can fit into your workflow.</p>
+
+          <form id="demoForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="fullName">Full Name*</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Name" autocomplete="name" required>
+                <span class="error-msg">Please enter your full name.</span>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone No." autocomplete="tel" pattern="^\+?[0-9\s\-]{7,15}$" required>
+                <span class="error-msg">Please enter a valid phone number.</span>
+              </div>
+              <div class="field">
+                <label for="email">E-Mail*</label>
+                <input type="email" id="email" name="email" placeholder="@gmail.com" autocomplete="email" required>
+                <span class="error-msg">Please enter a valid email address.</span>
+              </div>
+              <div class="field">
+                <label for="company">Company Name*</label>
+                <input type="text" id="company" name="company" placeholder="Name" autocomplete="organization" required>
+                <span class="error-msg">Please enter your company name.</span>
+              </div>
+              <div class="field full">
+                <textarea id="message" name="message" placeholder="Write a message" aria-label="Message"></textarea>
+              </div>
+            </div>
+
+            <fieldset class="explore" id="exploreGroup" style="border:0">
+              <legend class="explore-title">What would you like to explore?*</legend>
+              <div class="options">
+                <label class="option"><input type="checkbox" name="explore" value="Travel CRM"> Travel CRM</label>
+                <label class="option"><input type="checkbox" name="explore" value="DMC CRM"> DMC CRM</label>
+                <label class="option"><input type="checkbox" name="explore" value="Fleet CRM"> Fleet CRM</label>
+                <label class="option"><input type="checkbox" name="explore" value="Travel Website"> Travel Website</label>
+                <label class="option"><input type="checkbox" name="explore" value="WhatsApp Marketing"> WhatsApp Marketing</label>
+              </div>
+              <span class="error-msg">Please select at least one option.</span>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-orange" id="submitBtn">Book My Demo</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Success view -->
+      <section class="success-view" id="successView" aria-live="polite">
+        <div class="success-card">
+          <svg class="success-icon" viewBox="0 0 160 140" aria-hidden="true">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+                <stop offset="70%" stop-color="#ffffff" stop-opacity=".7"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="0" y="0" width="160" height="140" fill="url(#glow)"/>
+            <!-- confetti -->
+            <rect x="36" y="32" width="7" height="4" rx="1" fill="#e05bd8" transform="rotate(25 39 34)"/>
+            <rect x="34" y="47" width="4" height="4" rx="1" fill="#c9a6f2"/>
+            <rect x="24" y="56" width="6" height="4" rx="1" fill="#3bb995" transform="rotate(-30 27 58)"/>
+            <rect x="32" y="63" width="5" height="4" rx="1" fill="#3bb995" transform="rotate(20 34 65)"/>
+            <path d="M26 82l3 3-3 3-3-3z" fill="#f6c21c"/>
+            <rect x="44" y="102" width="6" height="3" rx="1" fill="#3bb995" transform="rotate(-40 47 103)"/>
+            <rect x="66" y="27" width="2" height="5" rx="1" fill="#3bb995"/>
+            <rect x="108" y="28" width="6" height="3" rx="1" fill="#3bb995" transform="rotate(-50 111 29)"/>
+            <path d="M131 50l3 3-3 3-3-3z" fill="#f29a2e"/>
+            <rect x="132" y="77" width="6" height="4" rx="1" fill="#3bb995" transform="rotate(15 135 79)"/>
+            <rect x="119" y="96" width="6" height="5" rx="1" fill="#f29a2e" transform="rotate(30 122 98)"/>
+            <rect x="89" y="111" width="3" height="6" rx="1" fill="#3bb995" transform="rotate(-20 90 114)"/>
+            <rect x="57" y="40" width="3" height="3" rx="1" fill="#f6c21c"/>
+            <!-- check -->
+            <circle cx="80" cy="70" r="29" fill="#36b597"/>
+            <path d="M67 70.5l9 9 17-17" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2>Thank You!</h2>
+          <p class="lead">Your enquiry has been successfully submitted.</p>
+          <p class="note">Our team will get back to you shortly</p>
+          <button type="button" class="btn-orange" id="doneBtn">Done</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-band" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-card">
+        <div class="footer-col">
+          <h3>Address</h3>
+          <p>1st Floor, Plot no 81, Green Park Avenue,<br>Jeedimetla Village, Hyderabad, India, Telangana</p>
+        </div>
+        <div class="footer-col contact">
+          <h3>Contact</h3>
+          <p>
+            <a href="tel:+919281412020">+91-928 141 2020 | +91-928 141 2030</a><br>
+            <a href="mailto:contact@tripmeld.com">contact@tripmeld.com</a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Social Media</h3>
+          <div class="socials">
+            <a href="https://www.facebook.com/share/1Ay6rToAD5/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/tripmeld_travelcrm/?hl=en" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/tripmeld" target="_blank" aria-label="Instagram"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© Copyright 2024, All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const form = document.getElementById('demoForm');
+      const exploreGroup = document.getElementById('exploreGroup');
+      const submitBtn = document.getElementById('submitBtn');
+      const doneBtn = document.getElementById('doneBtn');
+
+      function validateField(input) {
+        const field = input.closest('.field');
+        const ok = input.checkValidity() && input.value.trim() !== '';
+        field.classList.toggle('invalid', !ok);
+        return ok;
+      }
+
+      function validateExplore() {
+        const ok = form.querySelectorAll('input[name="explore"]:checked').length > 0;
+        exploreGroup.classList.toggle('invalid', !ok);
+        return ok;
+      }
+
+      form.querySelectorAll('input[required]').forEach(function (input) {
+        input.addEventListener('blur', function () { validateField(input); });
+        input.addEventListener('input', function () {
+          if (input.closest('.field').classList.contains('invalid')) validateField(input);
+        });
+      });
+      form.querySelectorAll('input[name="explore"]').forEach(function (cb) {
+        cb.addEventListener('change', function () {
+          if (exploreGroup.classList.contains('invalid')) validateExplore();
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+        let firstInvalid = null;
+        form.querySelectorAll('input[required]').forEach(function (input) {
+          if (!validateField(input)) {
+            valid = false;
+            firstInvalid = firstInvalid || input;
+          }
+        });
+        if (!validateExplore()) valid = false;
+        if (!valid) {
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        data.explore = Array.from(form.querySelectorAll('input[name="explore"]:checked')).map(function (c) { return c.value; });
+
+        // TODO: send `data` to the backend endpoint, then show success on response.
+        submitBtn.disabled = true;
+        setTimeout(function () {
+          submitBtn.disabled = false;
+          document.body.classList.add('submitted');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 400);
+      });
+
+      doneBtn.addEventListener('click', function () {
+        form.reset();
+        document.body.classList.remove('submitted');
+      });
+    })();
+  </script>
+</body>
+</html>

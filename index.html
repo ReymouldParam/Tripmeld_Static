@@ -287,6 +287,11 @@
       justify-content: flex-end;
       margin-top: 4px;
     }
+    .form-status {
+      margin-top: 10px;
+      color: #b42318;
+      font-size: 13px;
+    }
 
     .btn-orange {
       background: var(--orange);
@@ -541,7 +546,7 @@
           <h2>Book Your Personalized Demo</h2>
           <p class="form-sub">Tell us about your business and discover how tripmeld can fit into your workflow.</p>
 
-          <form id="demoForm" novalidate>
+          <form id="demoForm" action="contact-page.php" method="post" novalidate>
             <div class="form-grid">
               <div class="field">
                 <label for="fullName">Full Name*</label>
@@ -583,6 +588,7 @@
             <div class="form-actions">
               <button type="submit" class="btn-orange" id="submitBtn">Book My Demo</button>
             </div>
+            <p class="form-status" id="formStatus" role="alert" hidden></p>
           </form>
         </div>
       </section>
@@ -662,6 +668,7 @@
       const exploreGroup = document.getElementById('exploreGroup');
       const submitBtn = document.getElementById('submitBtn');
       const doneBtn = document.getElementById('doneBtn');
+      const formStatus = document.getElementById('formStatus');
 
       function validateField(input) {
         const field = input.closest('.field');
@@ -707,13 +714,34 @@
         const data = Object.fromEntries(new FormData(form).entries());
         data.explore = Array.from(form.querySelectorAll('input[name="explore"]:checked')).map(function (c) { return c.value; });
 
-        // TODO: send `data` to the backend endpoint, then show success on response.
         submitBtn.disabled = true;
-        setTimeout(function () {
-          submitBtn.disabled = false;
-          document.body.classList.add('submitted');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 400);
+        formStatus.hidden = true;
+        formStatus.textContent = '';
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function (response) {
+            return response.json().then(function (result) {
+              if (!response.ok || !result.success) {
+                throw new Error(result.message || 'We could not submit your request. Please try again.');
+              }
+              return result;
+            });
+          })
+          .then(function () {
+            document.body.classList.add('submitted');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          })
+          .catch(function (error) {
+            formStatus.textContent = error.message || 'We could not submit your request. Please try again.';
+            formStatus.hidden = false;
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+          });
       });
 
       doneBtn.addEventListener('click', function () {
